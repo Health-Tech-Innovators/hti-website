@@ -1,0 +1,1640 @@
+<!DOCTYPE html>
+<!-- saved from url=(0026)https://www.vigeodash.com/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" class="pointer skrollr skrollr-desktop"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style id="customRules"></style>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script async="" src="./vigeodash_files/sp-2.0.0-dm-0.1.min.js"></script><script type="text/javascript">
+    window._currentDevice = 'desktop';
+    window.Parameters = window.Parameters || {
+        HomeUrl: 'https://www.vigeodash.com/',
+        AccountUUID: '53fc7b3125d549ac9cca0dc708efbddf',
+        SystemID: 'US_DIRECT_PRODUCTION',
+        SiteAlias: 'd2116928',
+        SiteType: atob('RFVEQU9ORQ=='),
+        PublicationDate: 'Thu Apr 18 17:13:33 UTC 2024',
+        ExternalUid: null,
+        IsSiteMultilingual: false,
+        InitialPostAlias: '',
+        InitialDynamicItem: '',
+        DynamicPageInfo: {
+            isDynamicPage: false,
+            base64JsonRowData: 'null',
+        },
+        InitialPageAlias: 'home',
+        InitialPageUuid: 'c499b217ae52467a91c48470bb99ef0f',
+        InitialPageId: '1149131121',
+        InitialEncodedPageAlias: 'aG9tZQ==',
+        InitialHeaderUuid: '42fce7744b424161b90c793a0d4ea010',
+        CurrentPageUrl: '',
+        IsCurrentHomePage: true,
+        AllowAjax: false,
+        AfterAjaxCommand: null,
+        HomeLinkText: 'Back To Home',
+        UseGalleryModule: false,
+        CurrentThemeName: 'Layout Theme',
+        ThemeVersion: '43720',
+        DefaultPageAlias: '',
+        RemoveDID: true,
+        WidgetStyleID: null,
+        IsHeaderFixed: false,
+        IsHeaderSkinny: false,
+        IsBfs: true,
+        StorePageAlias: 'null',
+        StorePagesUrls: 'e30=',
+        IsNewStore: 'false',
+        StorePath: '',
+        StoreId: 'null',
+        StoreVersion: 0,
+        StoreBaseUrl: '',
+        StoreCleanUrl: true,
+        StoreDisableScrolling: true,
+        IsStoreSuspended: false,
+        HasCustomDomain: true,
+        SimpleSite: false,
+        showCookieNotification: false,
+        cookiesNotificationMarkup: 'null',
+        translatedPageUrl: '',
+        isFastMigrationSite: false,
+        sidebarPosition: 'NA',
+        currentLanguage: 'en',
+        currentLocale: 'en',
+        NavItems: '{}',
+        errors: {
+            general: 'There was an error connecting to the page.<br/> Make sure you are not offline.',
+            password: 'Incorrect name/password combination',
+            tryAgain: 'Try again'
+        },
+        NavigationAreaParams: {
+            ShowBackToHomeOnInnerPages: true,
+            NavbarSize: -1,
+            NavbarLiveHomePage: 'https://www.vigeodash.com/',
+            BlockContainerSelector: '.dmBody',
+            NavbarSelector: '#dmNav:has(a)',
+            SubNavbarSelector: '#subnav_main'
+        },
+        hasCustomCode: false,
+        planID: '7',
+        customTemplateId: 'null',
+        siteTemplateId: 'null',
+        productId: 'DM_DIRECT',
+        disableTracking: false,
+        pageType: 'FROM_SCRATCH',
+        isRuntimeServer: true,
+        isInEditor: false,
+        hasNativeStore: false,
+        defaultLang: 'en',
+        hamburgerMigration: null
+    };
+
+    window.Parameters.LayoutID = {};
+    window.Parameters.LayoutID[window._currentDevice] = 6;
+    window.Parameters.LayoutVariationID = {};
+    window.Parameters.LayoutVariationID[window._currentDevice] = 5;
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Injecting site-wide to the head -->
+
+
+
+
+<!-- End Injecting site-wide to the head -->
+
+<!-- Inject secured cdn script -->
+
+
+<!-- ========= Meta Tags ========= -->
+<!-- PWA settings -->
+<script>
+    function toHash(str) {
+        var hash = 5381, i = str.length;
+        while (i) {
+            hash = hash * 33 ^ str.charCodeAt(--i)
+        }
+        return hash >>> 0
+    }
+</script>
+<script>
+    (function (global) {
+    //const cacheKey = global.cacheKey;
+    const isOffline = 'onLine' in navigator && navigator.onLine === false;
+    const hasServiceWorkerSupport = 'serviceWorker' in navigator;
+    if (isOffline) {
+        console.log('offline mode');
+    }
+    if (!hasServiceWorkerSupport) {
+        console.log('service worker is not supported');
+    }
+    if (hasServiceWorkerSupport && !isOffline) {
+        window.addEventListener('load', function () {
+            const serviceWorkerPath = '/runtime-service-worker.js?v=3';
+            navigator.serviceWorker
+                .register(serviceWorkerPath, { scope: './' })
+                .then(
+                    function (registration) {
+                        // Registration was successful
+                        console.log(
+                            'ServiceWorker registration successful with scope: ',
+                            registration.scope
+                        );
+                    },
+                    function (err) {
+                        // registration failed :(
+                        console.log('ServiceWorker registration failed: ', err);
+                    }
+                )
+                .catch(function (err) {
+                    console.log(err);
+                });
+        });
+
+        // helper function to refresh the page
+        var refreshPage = (function () {
+            var refreshing;
+            return function () {
+                if (refreshing) return;
+                // prevent multiple refreshes
+                var refreshkey = 'refreshed' + location.href;
+                var prevRefresh = localStorage.getItem(refreshkey);
+                if (prevRefresh) {
+                    localStorage.removeItem(refreshkey);
+                    if (Date.now() - prevRefresh < 30000) {
+                        return; // dont go into a refresh loop
+                    }
+                }
+                refreshing = true;
+                localStorage.setItem(refreshkey, Date.now());
+                console.log('refereshing page');
+                window.location.reload();
+            };
+        })();
+
+        function messageServiceWorker(data) {
+            return new Promise(function (resolve, reject) {
+                if (navigator.serviceWorker.controller) {
+                    var worker = navigator.serviceWorker.controller;
+                    var messageChannel = new MessageChannel();
+                    messageChannel.port1.onmessage = replyHandler;
+                    worker.postMessage(data, [messageChannel.port2]);
+                    function replyHandler(event) {
+                        resolve(event.data);
+                    }
+                } else {
+                    resolve();
+                }
+            });
+        }
+    }
+})(window);
+</script>
+<!-- Add manifest -->
+<!-- End PWA settings -->
+
+
+
+<link rel="canonical" href="https://www.vigeodash.com/">
+
+<meta id="view" name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<!--Add favorites icons-->
+
+<link rel="apple-touch-icon" href="https://irp.cdn-website.com/d2116928/dms3rep/multi/vigeodash+logo.png">
+
+<link rel="icon" type="image/x-icon" href="https://irp.cdn-website.com/d2116928/site_favicon_16_1659883416372.ico">
+
+<!-- End favorite icons -->
+<link rel="preconnect" href="https://lirp.cdn-website.com/">
+
+
+
+<!-- render the required CSS and JS in the head section -->
+<script id="d-js-dmapi">
+    window.SystemID = 'US_DIRECT_PRODUCTION';
+
+    if (!window.dmAPI) {
+        window.dmAPI = {
+            registerExternalRuntimeComponent: function () {
+            },
+            getCurrentDeviceType: function () {
+                return window._currentDevice;
+            },
+            runOnReady: (ns, fn) => {
+                const safeFn = dmAPI.toSafeFn(fn);
+                ns = ns || 'global_' + Math.random().toString(36).slice(2, 11);
+                const eventName = 'afterAjax.' + ns;
+
+                if (document.readyState === 'complete') {
+                    $.DM.events.off(eventName).on(eventName, safeFn);
+                    setTimeout(function () {
+                        safeFn({
+                            isAjax: false,
+                        });
+                    }, 0);
+                } else {
+                    window?.waitForDeferred?.('dmAjax', () => {
+                        $.DM.events.off(eventName).on(eventName, safeFn);
+                        safeFn({
+                            isAjax: false,
+                        });
+                    });
+                }
+            },
+            toSafeFn: (fn) => {
+                if (fn?.safe) {
+                    return fn;
+                }
+                const safeFn = function (...args) {
+                    try {
+                        return fn?.apply(null, args);
+                    } catch (e) {
+                        console.log('function failed ' + e.message);
+                    }
+                };
+                safeFn.safe = true;
+                return safeFn;
+            }
+        };
+    }
+
+    if (!window.requestIdleCallback) {
+        window.requestIdleCallback = function (fn) {
+            setTimeout(fn, 0);
+        }
+    }
+</script>
+
+<!-- loadCSS function header.jsp-->
+
+
+
+
+
+
+<script id="d-js-load-css">
+/**
+ * There are a few <link> tags with CSS resource in them that are preloaded in the page
+ * in each of those there is a "onload" handler which invokes the loadCSS callback
+ * defined here.
+ * We are monitoring 3 main CSS files - the runtime, the global and the page.
+ * When each load we check to see if we can append them all in a batch. If threre
+ * is no page css (which may happen on inner pages) then we do not wait for it
+ */
+(function () {
+  let cssLinks = {};
+  function loadCssLink(link) {
+    link.onload = null;
+    link.rel = "stylesheet";
+    link.type = "text/css";
+  }
+  
+    function checkCss() {
+      const pageCssLink = document.querySelector("[id*='CssLink']");
+      const widgetCssLink = document.querySelector("[id*='widgetCSS']");
+
+        if (cssLinks && cssLinks.runtime && cssLinks.global && (!pageCssLink || cssLinks.page) && (!widgetCssLink || cssLinks.widget)) {
+            const storedRuntimeCssLink = cssLinks.runtime;
+            const storedPageCssLink = cssLinks.page;
+            const storedGlobalCssLink = cssLinks.global;
+            const storedWidgetCssLink = cssLinks.widget;
+
+            storedGlobalCssLink.disabled = true;
+            loadCssLink(storedGlobalCssLink);
+
+            if (storedPageCssLink) {
+                storedPageCssLink.disabled = true;
+                loadCssLink(storedPageCssLink);
+            }
+
+            if(storedWidgetCssLink) {
+                storedWidgetCssLink.disabled = true;
+                loadCssLink(storedWidgetCssLink);
+            }
+
+            storedRuntimeCssLink.disabled = true;
+            loadCssLink(storedRuntimeCssLink);
+
+            requestAnimationFrame(() => {
+                setTimeout(() => {
+                    storedRuntimeCssLink.disabled = false;
+                    storedGlobalCssLink.disabled = false;
+                    if (storedPageCssLink) {
+                      storedPageCssLink.disabled = false;
+                    }
+                    if (storedWidgetCssLink) {
+                      storedWidgetCssLink.disabled = false;
+                    }
+                    // (SUP-4179) Clear the accumulated cssLinks only when we're
+                    // sure that the document has finished loading and the document 
+                    // has been parsed.
+                    if(document.readyState === 'interactive') {
+                      cssLinks = null;
+                    }
+                }, 0);
+            });
+        }
+    }
+  
+
+  function loadCSS(link) {
+    try {
+      var urlParams = new URLSearchParams(window.location.search);
+      var noCSS = !!urlParams.get("nocss");
+      var cssTimeout = urlParams.get("cssTimeout") || 0;
+
+      if (noCSS) {
+        return;
+      }
+      if (link.href && link.href.includes("d-css-runtime")) {
+        cssLinks.runtime = link;
+        checkCss();
+      } else if (link.id === "siteGlobalCss") {
+        cssLinks.global = link;
+        checkCss();
+      } 
+      
+      else if (link.id && link.id.includes("CssLink")) {
+        cssLinks.page = link;
+        checkCss();
+      } else if (link.id && link.id.includes("widgetCSS")) {
+        cssLinks.widget = link;
+        checkCss();
+      }
+      
+      else {
+        requestIdleCallback(function () {
+          window.setTimeout(function () {
+            loadCssLink(link);
+          }, parseInt(cssTimeout, 10));
+        });
+      }
+    } catch (e) {
+      throw e
+    }
+  }
+  window.loadCSS = window.loadCSS || loadCSS;
+})();
+</script>
+
+
+
+<script data-role="deferred-init" type="text/javascript">
+    /* usage: window.getDeferred(<deferred name>).resolve() or window.getDeferred(<deferred name>).promise.then(...)*/
+    function Def() {
+        this.promise = new Promise((function (a, b) {
+            this.resolve = a, this.reject = b
+        }).bind(this))
+    }
+
+    const defs = {};
+    window.getDeferred = function (a) {
+        return null == defs[a] && (defs[a] = new Def), defs[a]
+    }
+    window.waitForDeferred = function (b, a, c) {
+        let d = window?.getDeferred?.(b);
+        d
+            ? d.promise.then(a)
+            : c && ["complete", "interactive"].includes(document.readyState)
+                ? setTimeout(a, 1)
+                : c
+                    ? document.addEventListener("DOMContentLoaded", a)
+                    : console.error(`Deferred  does not exist`);
+    };
+</script>
+<style id="forceCssIncludes">
+    /* This file is auto-generated from a `scss` file with the same name */
+
+.videobgwrapper{overflow:hidden;position:absolute;z-index:0;width:100%;height:100%;top:0;left:0;pointer-events:none;border-radius:inherit}.videobgframe{position:absolute;width:101%;height:100%;top:50%;left:50%;transform:translateY(-50%) translateX(-50%);object-fit:fill}#dm video.videobgframe{margin:0}@media (max-width:767px){.dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:80vh}}@media (min-width:1025px){.dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:45vh}}@media (min-width:768px) and (max-width:1024px){.responsiveTablet .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:45vh}}#dm [data-show-on-page-only]{display:none!important}#dmRoot div.stickyHeaderFix div.site_content{margin-top:0!important}#dmRoot div.stickyHeaderFix div.hamburger-header-container{position:relative}
+    
+
+</style>
+<style id="cssVariables" type="text/css">
+    
+</style>
+
+
+<style id="hideAnimFix">
+    .dmDesktopBody:not(.editGrid) [data-anim-desktop]:not([data-anim-desktop='none']), .dmDesktopBody:not(.editGrid) [data-anim-extended] {
+        visibility: hidden;
+    }
+
+    .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-desktop]:not([data-anim-desktop='none']), .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-extended] {
+        visibility: hidden !important;
+    }
+
+  
+  #dmRoot:not(.editGrid) .flex-element [data-anim-extended]
+  {
+    visibility: hidden;
+  }
+  
+</style>
+
+
+
+<style id="criticalCss">
+    @charset "UTF-8";@font-face{font-family:'Be Vietnam';font-style:normal;font-weight:300;font-display:swap;src:url(https://irp.cdn-website.com/fonts/s/bevietnam/v10/FBVwdDflz-iPfoPuIC2iKg0F_UBFJg.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Poppins;font-style:normal;font-weight:300;font-display:swap;src:url(https://irp.cdn-website.com/fonts/s/poppins/v21/pxiByp8kv8JHgFVrLDz8Z1xlFQ.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Poppins;font-style:italic;font-weight:300;font-display:swap;src:url(https://irp.cdn-website.com/fonts/s/poppins/v21/pxiDyp8kv8JHgFVrJJLm21lVF9eO.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Poppins;font-style:normal;font-weight:400;font-display:swap;src:url(https://irp.cdn-website.com/fonts/s/poppins/v21/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Poppins;font-style:italic;font-weight:400;font-display:swap;src:url(https://irp.cdn-website.com/fonts/s/poppins/v21/pxiGyp8kv8JHgFVrJJLucHtA.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Poppins;font-style:normal;font-weight:700;font-display:swap;src:url(https://irp.cdn-website.com/fonts/s/poppins/v21/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Poppins;font-style:italic;font-weight:700;font-display:swap;src:url(https://irp.cdn-website.com/fonts/s/poppins/v21/pxiDyp8kv8JHgFVrJJLmy15VF9eO.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@media (max-width:767px){.dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:80vh}}@media (min-width:1025px){.dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:45vh}}@media (min-width:768px) and (max-width:1024px){.responsiveTablet .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:45vh}}.dmInner{min-height:100vh!important;position:relative;min-width:768px!important}[dmtemplateid*=amburger] .dmLayoutWrapper{overflow:hidden}.clearfix:after{clear:both;visibility:hidden;line-height:0;height:0}.clearfix:after,.clearfix:before{content:' ';display:table}.clearfix{display:inline-block}.dmDesktopBody .shadowEffectToChildren li{box-shadow:none!important}#dm .dmWidget .icon{font-size:26px}body.dmRoot #dm .dmOuter .dmInner .dmWidget .icon.hasFontIcon{height:26px;margin-top:-13px;line-height:normal;text-align:center;background-image:none}.dmRoot .hasFontIcon{background-image:none!important}.dmPopupMask{position:fixed;margin:0;display:none;width:10px;z-index:1000000999;top:0;left:0}#dmRoot .dmPopup,.dmPopup,.dmPopupClose:before,[data-display-type=block]{display:block}.dmPopup{text-align:left;position:fixed;top:10px;left:0;width:93%;z-index:1000009999!important;box-sizing:border-box;background:#f5f5f5;overflow-y:auto;height:100%}.dmPopup .dmPopupTitle{text-align:left;font:700 19px Helvetica,Arial;margin:20px 20px 35px;color:#999}.lh-1,button,input{line-height:normal}#dmPopup{opacity:0}.dmPopupClose,.dmPopupClose:before{position:absolute;visibility:visible}.dmPopupClose{border-radius:25px;width:27px;height:27px;z-index:1;background-color:rgba(255,255,255,.4);top:12px;right:12px}.dmPopupClose:before{font-size:20px;color:#000;top:3px;right:3px}.dmRespRow.fullBleedMode>.dmRespColsWrapper{width:100%!important;max-width:100%!important}.dmRespRow.fullBleedMode{padding-left:0!important;padding-right:0!important}#dm .dmRespRow .dmRespColsWrapper{display:flex}.pswp{z-index:9999999999!important}#dm .dmInner .dmWidget.align-center,.align-center{margin-left:auto;margin-right:auto}.text-align-center{text-align:center}body.fix-mobile-scrolling{overflow:initial}#dmRoot{text-decoration-skip-ink:none}.dmform-title{padding-right:15px;padding-left:15px}@media (min-width:1025px){#dmRoot.responsiveTablet #dm #dmStyle_outerContainer #dmStyle_innerContainer .showOnMedium,#dmRoot.responsiveTablet #dm .dmInner .hide-for-large{display:none!important}#dmRoot.responsiveTablet #dm [data-responsive-name=ResponsiveDesktopTopTabletHamburger] .site_content{margin-top:0!important}:root{--btn-text-font-size:15px}}@media (min-width:768px) and (max-width:1024px){#dmRoot.responsiveTablet #dm #dmStyle_outerContainer #dmStyle_innerContainer #hamburger-header-container~#stickyHeaderSpacer,#dmRoot.responsiveTablet #dm #dmStyle_outerContainer #dmStyle_innerContainer .showOnLarge,#dmRoot.responsiveTablet #dm .dmInner .hide-for-medium{display:none!important}:root{--btn-text-font-size:15px}}@media (max-width:767px){#dmRoot.responsiveTablet #dm #dmStyle_outerContainer #dmStyle_innerContainer #hamburger-header-container~#stickyHeaderSpacer,#dmRoot.responsiveTablet #dm #dmStyle_outerContainer #dmStyle_innerContainer .showOnLarge{display:none!important}}#dm .flexslider[sliderscriptparams*="'isFade':true"] .slides li{width:100%!important;float:left!important;margin-right:-100%!important;position:relative!important}#dm .flexslider .slides li:first-child>img{width:100%;height:100%;object-fit:contain;position:absolute;display:block}body{-webkit-overflow-scrolling:touch}:not(.runtime-module-container) .layout-drawer,:not(.runtime-module-container) .layout-drawer-hamburger,:not(.runtime-module-container) .layout-drawer-overlay{visibility:hidden}.pswp__ui,.runtime-module-container .layout-drawer,.runtime-module-container .layout-drawer-hamburger,.runtime-module-container .layout-drawer-overlay{visibility:visible}:not(.runtime-module-container) .layout-drawer{position:fixed;transform:translate(-100%,-100%)}:not(.runtime-module-container) .layout-drawer[data-origin=side-reverse]{transform:translate(100%,0)}:not(.runtime-module-container) .layout-drawer-overlay{opacity:0}.runtime-module-container{width:100%}.runtime-module-container[dmtemplateid*=amburger] #site_content,.runtime-module-container[dmtemplateid*=amburger] .dmInner{position:static}.runtime-module-container[dmtemplateid*=amburger] #site_content .site_content{position:relative}.runtime-module-container[dmtemplateid*=amburger] .dmLayoutWrapper{background-color:transparent}.runtime-module-container .hamburger-header-container{position:fixed;z-index:2;top:0;left:0;width:100%}.runtime-module-container .hamburger-header-container .hamburger-header{min-height:43px}.runtime-module-container[dmtemplateid*=amburger] .site_content{margin-top:59px}.runtime-module-container .layout-drawer,.runtime-module-container .layout-drawer-overlay{height:100%;position:fixed;top:0;left:0}.runtime-module-container .layout-drawer{background-color:#fff;width:75vw;transform:translate(-100%,0);overflow:auto;-webkit-overflow-scrolling:auto;z-index:13;display:flex;flex-direction:column}.runtime-module-container .layout-drawer .dmRespRow:not(.dmPlaceHolderRespRow) .dmRespColsWrapper .dmRespCol:not(.content-removed):only-child:empty{min-height:0}.runtime-module-container .layout-drawer[data-origin=side-reverse]{transform:translate(100%,0);left:auto;right:0}.runtime-module-container .layout-drawer-overlay{width:100vw;background-color:rgba(0,0,0,.4);opacity:0;z-index:6}body:not([data-flex-site]) .layout-drawer .dmRespRow:not(:first-of-type):not(:last-of-type){flex:1 1 auto}.layout-drawer-hamburger{position:fixed;left:18px;margin-left:env(safe-area-inset-left);padding:17px 11px;z-index:13;width:52px;height:52px;background-color:transparent;color:#787878;display:flex;flex-direction:column;border:0;justify-content:space-between;align-items:stretch;outline:0;top:18px;border-radius:0}.layout-drawer-hamburger .hamburger__slice{display:block;height:0;width:100%;border:1px solid currentColor;transform-origin:center}@media (max-width:767px){.layout-drawer-hamburger{position:fixed;left:10px;margin-left:env(safe-area-inset-left);padding:13px 9px;z-index:13;width:40px;height:40px;background-color:transparent;color:#787878;display:flex;flex-direction:column;border:0;justify-content:space-between;align-items:stretch;outline:0;top:10px;border-radius:0}.layout-drawer-hamburger .hamburger__slice{display:block;height:0;width:100%;border:1px solid currentColor;transform-origin:center}}.hamburger-reverse .layout-drawer-hamburger{left:auto;right:10px;margin-right:env(safe-area-inset-right)}#dm-outer-wrapper #hamburger-header-container #hamburger-header .dmRespCol{display:flex;flex-direction:column;justify-content:center}nav{display:block}html{font-family:Source Sans Pro;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}img{border:0;max-width:100%;-ms-interpolation-mode:bicubic;display:inline-block}button,input{font-family:inherit;font-size:100%;margin:0}button{text-transform:none;-webkit-appearance:button}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}*,:after,:before{box-sizing:border-box}.dmRespRow{padding-top:15px;padding-bottom:15px}.dmRespRow:after,.dmRespRow:before{content:' ';display:table}.dmRespRow:after{clear:both}.dmRespRow,.dmRespRow .dmRespColsWrapper{max-width:960px;position:relative;margin:0 auto;width:100%}@media screen and (min-width:1200px){.rows-1200 .dmRespRow:not(.fullBleedMode) .dmRespColsWrapper{max-width:1200px}}.dmRespRow .dmRespCol{position:relative;width:100%;display:inline-block;vertical-align:top;float:left}.dmRespRow .dmRespCol>*{max-width:100%}.dmDesktopBody .dmRespRow .large-4{position:relative;width:33.33333%}.dmDesktopBody .dmRespRow .large-8{position:relative;width:66.66667%}.dmDesktopBody .dmRespRow .large-12{position:relative;width:100%}[class*=' dm-common-icons-']{speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:dm-common-icons!important}.dm-common-icons-close:before{content:'\e901'}#dm div.dmContent [class*=' icon-'],[class*=' icon-']{font-family:FontAwesome!important;font-weight:400;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased}[class*=' icon-']:before{text-decoration:none;display:inline-block;speak:none}a [class*=' icon-']{display:inline}[class*=' icon-']{display:inline;width:auto;height:auto;line-height:normal;vertical-align:baseline;background-image:none;background-position:0 0;background-repeat:repeat;margin-top:0}.icon-star:before{content:'\f005'}.icon-angle-down:before{content:'\f107'}#dm .dmRespRow .dmRespCol>.dmWidget{overflow:initial}.pswp,.pswp__item,.pswp__scroll-wrap{overflow:hidden}@media (min-width:768px){.hamburger-reverse .layout-drawer-hamburger{right:18px}#dm .dmRespRow .dmRespCol>.dmWidget{width:280px;max-width:100%}}@media (max-width:767px){#dm .dmInner .dmWidget{width:100%}}#dm .dmInner .dmWidget:not(.displayNone){display:inline-block}#dm .dmInner .dmWidget:not(.flexButton):not(.displayNone)[data-display-type=block]{display:block}#dm .dmInner .dmWidget{text-decoration:none;margin:10px 0;clear:both;position:relative;text-align:center;line-height:22px;box-shadow:none;background-image:none;padding:0;height:auto;border-style:solid;white-space:nowrap}#dm .dmInner .dmWidget.slide-button{margin-bottom:0}#dm .dmInner .dmWidget:after{content:'';display:inline-block;height:100%;vertical-align:middle;width:0;margin-right:-.25em}#dm .dmInner .dmWidget .iconBg{position:absolute;left:0;width:50px;top:50%;margin-top:-13px}#dm .dmWidget .text{display:inline-block;vertical-align:middle;font-size:1.125em;line-height:normal;white-space:normal;padding:10px 7px;max-width:98%}#dm .dmWidget.slide-button:after,.pswp{display:none}.dmImageSlider{height:350px;position:relative}.flexslider{-webkit-transform:translate3d(0,0,0)}html:not(.ios-preview) #dm .hasStickyHeader .dmInner div.dmHeaderContainer{position:fixed!important;z-index:101;width:100%;min-width:768px}.dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:30vh}.dmNewParagraph[data-version]{line-height:initial}.dmNewParagraph[data-version] .text-align-center{text-align:center!important}.dmNewParagraph[data-version] p{margin-top:0;margin-bottom:0}#dm div.dmInner .dmform[data-layout=layout-3] .dmforminput>:not(label):not(div):not(small):not(.frc-banner){background:0;border:0;border-radius:0;-webkit-appearance:none;border-bottom:1px solid;height:30px}.pswp,.pswp__bg,.pswp__scroll-wrap{width:100%;height:100%;top:0;left:0;position:absolute}.pswp{-ms-touch-action:none;touch-action:none;-webkit-text-size-adjust:100%;-webkit-backface-visibility:hidden;outline:0}.pswp *{-webkit-box-sizing:border-box;box-sizing:border-box}.pswp__bg{background:#000;opacity:0;-webkit-backface-visibility:hidden;will-change:opacity}.pswp__container{-webkit-touch-callout:none;-ms-touch-action:none;touch-action:none;position:absolute;left:0;right:0;top:0;bottom:0;-webkit-backface-visibility:hidden;will-change:transform}.pswp__item{position:absolute;left:0;right:0;top:0;bottom:0}.pswp__button{position:relative;overflow:visible;-webkit-appearance:none;display:block;border:0;padding:0;margin:0;float:right;opacity:.75;-webkit-box-shadow:none;box-shadow:none}.pswp__button::-moz-focus-inner{padding:0;border:0}.pswp__button,.pswp__button--arrow--left:before,.pswp__button--arrow--right:before{background:url(/_dm/s/rt/scripts/vendor/photoswipe4/icons/default-skin.png) no-repeat;background-size:264px 88px;width:44px;height:44px}.pswp__button--close{background-position:0 -44px}.pswp__button--share{background-position:-44px -44px}.pswp__button--fs{display:none}.pswp__button--zoom{display:none;background-position:-88px 0}.pswp__button--arrow--left,.pswp__button--arrow--right{background:0 0;top:50%;margin-top:-50px;width:70px;height:100px;position:absolute}.pswp__button--arrow--left{left:0}.pswp__button--arrow--right{right:0}.pswp__button--arrow--left:before,.pswp__button--arrow--right:before{content:'';top:35px;background-color:rgba(0,0,0,.3);height:30px;width:32px;position:absolute}.pswp__button--arrow--left:before{left:6px;background-position:-138px -44px}.pswp__button--arrow--right:before{right:6px;background-position:-94px -44px}.pswp__share-modal{display:block;background:rgba(0,0,0,.5);width:100%;height:100%;top:0;left:0;padding:10px;position:absolute;z-index:1600;opacity:0;-webkit-backface-visibility:hidden;will-change:opacity}.pswp__share-modal--hidden{display:none}.pswp__share-tooltip{z-index:1620;position:absolute;background:#FFF;top:56px;border-radius:2px;display:block;width:auto;right:44px;-webkit-box-shadow:0 2px 5px rgba(0,0,0,.25);box-shadow:0 2px 5px rgba(0,0,0,.25);-webkit-transform:translateY(6px);-ms-transform:translateY(6px);transform:translateY(6px);-webkit-backface-visibility:hidden;will-change:transform}.pswp__counter,.pswp__preloader{height:44px;position:absolute;top:0}.pswp__counter{left:0;font-size:13px;line-height:44px;color:#FFF;opacity:.75;padding:0 10px}.pswp__caption{position:absolute;left:0;bottom:0;width:100%;min-height:44px}.pswp__caption__center{max-width:95%;margin:0 auto;font-size:16px;padding:10px;line-height:20px;color:#CCC;width:960px;font-weight:700;text-align:center}.pswp__preloader{width:44px;left:50%;margin-left:-22px;opacity:0;will-change:opacity}.pswp__preloader__icn{width:20px;height:20px;margin:12px}@media screen and (max-width:1024px){.pswp__preloader{position:relative;left:auto;top:auto;margin:0;float:right}}.pswp__ui{-webkit-font-smoothing:auto;opacity:1;z-index:1550}.pswp__top-bar{position:absolute;left:0;top:0;height:44px;width:100%}.pswp__caption,.pswp__top-bar{-webkit-backface-visibility:hidden;will-change:opacity;background-color:rgba(0,0,0,.5)}.pswp__ui--hidden .pswp__button--arrow--left,.pswp__ui--hidden .pswp__button--arrow--right,.pswp__ui--hidden .pswp__caption,.pswp__ui--hidden .pswp__top-bar{opacity:.001}.dmPhotoGallery{margin:10px 0;width:100%;overflow:hidden;min-height:1px}.dmPhotoGallery .dmPhotoGalleryHolder .photoGalleryThumbs .image-container{height:100%}.dmPhotoGallery .dmPhotoGalleryHolder .photoGalleryThumbs{width:58px;height:58px;margin:2px;display:inline-block;vertical-align:middle;text-align:center;overflow:hidden}.dmPhotoGalleryResp.dmPhotoGallery .dmPhotoGalleryHolder .photoGalleryThumbs img{box-shadow:0 0 3px #888}.dmPhotoGalleryResp.dmPhotoGallery .dmPhotoGalleryHolder .photoGalleryThumbs{margin:0;padding:10px}.dmPhotoGalleryHolder{text-align:center}.dmPhotoGallery .dmPhotoGalleryHolder .photoGalleryThumbs img{display:inline!important;margin:0!important;vertical-align:middle;text-align:center;position:relative}.dmPhotoGallery .image-container{position:relative}#dm .dmPhotoGallery.newPhotoGallery li{list-style:none}#dm .dmPhotoGallery.newPhotoGallery .photoGalleryViewAll{box-shadow:0 0!important;font-size:inherit!important;margin:0!important}#dm .dmPhotoGallery.newPhotoGallery .dmPhotoGalleryHolder{width:100%;padding:0;display:none}#dm .dmPhotoGallery.newPhotoGallery li.photoGalleryThumbs{position:relative}#dm .dmPhotoGallery.newPhotoGallery li.photoGalleryThumbs .image-container{overflow:hidden}#dm .dmPhotoGallery.newPhotoGallery li.photoGalleryThumbs .image-container a{background-repeat:no-repeat;background-position:center}#dm .dmPhotoGallery.newPhotoGallery li.photoGalleryThumbs .caption-container .caption-inner{align-items:center;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;z-index:1;background-color:rgba(255,255,255,.9);color:#333;padding:15px;height:100%;box-sizing:border-box}#dm .dmPhotoGallery.newPhotoGallery li.photoGalleryThumbs .caption-container .caption-inner .caption-button{margin:10px auto;max-width:100%}#dm .dmPhotoGallery.newPhotoGallery li.photoGalleryThumbs .caption-container .caption-inner .caption-button .text{padding:10px 20px!important}.slides{margin:0;padding:0;list-style:none}.flexslider,.flexslider .slides>li{height:100%;overflow:hidden;position:relative}.flexslider{padding:0;-webkit-transform:translateZ(0);direction:ltr;margin:0;zoom:1;opacity:1!important}.flexslider .slides{height:100%;zoom:1}.flexslider .slides>li{display:none;text-align:center}.flexslider .slides img{width:100%;display:block;margin:auto}.slides:after{content:'\0020';display:block;clear:both;visibility:hidden;line-height:0;height:0}html[xmlns] .slides{display:block}.flexslider .color-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,.25);display:block}.flexslider .slides>li .slide-inner{font-weight:700;color:#fff;position:absolute;z-index:1;visibility:hidden}.flexslider .slides>li .slide-inner *{line-height:normal}.flexslider .slides>li .slide-inner .slide-title{margin:0}.flexslider .slides>li .slide-inner .slide-text{margin:0;font-size:19px;font-weight:400}#dm .dmInner .flexslider .slides>li .slide-inner .slide-button{margin-top:20px;margin-left:auto;margin-right:auto}.flexslider .slides>li[layout=center] .slide-inner{max-width:70%;max-height:80%}#dm .flexslider .slides .dmWidget .text{max-width:100%;width:100%;padding:10px 20px!important}#dm .dmInner .flexslider.ed-version .slide-button{-js-display:inline-flex;display:inline-flex;justify-content:center;align-items:center}.flexslider:not([position]):not([layout]) .slides>li[layout=center][position=center] .slide-inner{right:auto!important;bottom:auto!important;text-align:center}.flexslider.ed-version .slides img{display:none}.flexslider.ed-version:not([layout]) .slides>li[layout=center]{-ms-flex-pack:center;-ms-flex-align:center;display:flex!important;justify-content:center;align-items:center}#dm .dmPhotoGallery .dmPhotoGalleryHolder .photoGalleryThumbs img,.flexslider.ed-version:not([layout]) .slides>li[layout=center] .slide-inner .slide-button.slide-button-invisible{display:none!important}.flexslider.ed-version:not([layout]) .slides>li[layout=center] .slide-inner{position:static!important;top:auto!important;left:auto!important;margin:0!important}.flexslider.ed-version:not([layout]) .slide-inner{max-width:70%;max-height:80%;background-color:transparent;top:50%!important;left:50%!important;right:auto!important;width:auto}.flexslider.ed-version:not([layout]) .slide-inner .slide-title{display:block!important;text-align:center!important}.imageWidget{position:relative}.imageWidget a{font-style:italic;text-align:center}.imageWidget img[width][height],img[width][height]{height:auto}*{border:0 solid #333;scrollbar-arrow-color:#fff;scrollbar-track-color:#F2F2F2;scrollbar-face-color:silver;scrollbar-highlight-color:silver;scrollbar-3dlight-color:silver;scrollbar-shadow-color:silver;scrollbar-darkshadow-color:silver;scrollbar-width:12px}body{width:100%;overflow:hidden;-webkit-text-size-adjust:100%!important;-ms-text-size-adjust:100%!important}A IMG{border:none}h3,ul{margin-left:0;margin-right:0}.dmInner *{-webkit-font-smoothing:antialiased}.clearfix,a,img,li,ul{vertical-align:top}#site_content{position:relative}.dmOuter{word-wrap:break-word}.dmInner{font-size:16px;background:#fff;color:#666}.dmDesktopBody .dmInner{min-width:960px}.dmInner a{color:#463939;outline:0;vertical-align:inherit}.dmInner ul:not(.defaultList){padding:0}.dmHeader{background:#68ccd1;color:#666;text-align:center;position:relative;width:100%;max-width:100%}DIV.dmBody{padding:0;clear:both}.dmContent{margin:0;padding:0}#site_content ul:not(.defaultList){-webkit-padding-start:0;-moz-padding-start:0;list-style-position:inside}.dmRespRowsWrapper{max-width:960px;margin:0 auto}.dmRespCol>[dmle_extension]:not(:first-child){margin-top:10px}.dmLargeBody .imageWidget:not(.displayNone){display:inline-block;max-width:100%}#dm .dmRespColsWrapper,.dmStandardDesktop{display:block}.imageWidget:not(.displayNone) img{width:100%}h3{font-weight:400;font-size:23px}.dmNewParagraph{text-align:left;margin:8px 0;padding:2px 0}.dmLargeBody .dmRespRowsWrapper>.dmRespRow .dmRespCol,.dmLargeBody .fHeader .dmRespRow .dmRespCol{padding-left:.75%;padding-right:.75%}.dmLargeBody .dmRespRowsWrapper>.dmRespRow .dmRespCol:first-child,.dmLargeBody .fHeader .dmRespRow .dmRespCol:first-child{padding-left:0;padding-right:1.5%}.dmLargeBody .dmRespRowsWrapper>.dmRespRow .dmRespCol:last-child,.dmLargeBody .fHeader .dmRespRow .dmRespCol:last-child{padding-right:0;padding-left:1.5%}.dmLargeBody .dmRespRowsWrapper>.dmRespRow .dmRespCol:only-child{padding-left:0;padding-right:0}#dmFirstContainer .dmRespRowsWrapper:after,#dmFirstContainer .dmRespRowsWrapper:before{content:"";display:table}.dmLinksMenu>ul{display:block;margin:0;font-size:inherit}.dmStandardDesktop{margin:0 auto}#dm .dmInner .dmWidget{color:#f7f7f7;background-color:#f95759}#dm h3.dmwidget-title[hide=true]{display:none}#dm .dmwidget-title{margin:10px 0;font-size:23px;text-shadow:none;text-align:left;text-transform:capitalize;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;word-wrap:normal}.dmImageSlider,.dmPhotoGallery{clear:both}.dmPhotoGalleryHolder{font-size:medium!important;margin:0;list-style:none}#dm .dmPhotoGallery .dmPhotoGalleryHolder,#dm .dmPhotoGallery .dmPhotoGalleryHolder>li{width:100%;padding:0}#dm .dmPhotoGallery .dmPhotoGalleryHolder .photoGalleryThumbs{background:url(https://dd-cdn.multiscreensite.com/runtime-img/galleryLoader.gif) 50% 50% no-repeat #eee;float:left;clear:none;padding:0;margin:0;width:100%}.dmDesktopBody .dmPhotoGallery .photoGalleryViewAll{background:0 0;border:none;padding:3px 0;font-size:16px;width:auto;height:auto;line-height:normal;box-shadow:0 -2px 0 0;display:block;margin:40px 0;text-align:left}body{background-color:#eee}.dmPhotoGallery:not(.dmFacebookGallery) .dmPhotoGalleryHolder:not(.ready) li.photoGalleryThumbs{display:inline!important;visibility:hidden}.flexslider .slides>li .slide-inner .slide-text{white-space:pre-line}.main-navigation.unifiednav{-js-display:flex;display:flex;justify-content:flex-start;align-items:stretch;overflow:visible}.main-navigation.unifiednav ul{list-style:none;padding:0;margin:0;font-size:1rem}.main-navigation.unifiednav .unifiednav__container{-js-display:flex;display:flex;justify-content:flex-start;list-style:none}.main-navigation.unifiednav .unifiednav__container>.unifiednav__item-wrap{-js-display:flex;display:flex;justify-content:flex-start;position:relative;font-weight:400}.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap::after,.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap::before{content:'';align-self:center;font-weight:700}.main-navigation.unifiednav .unifiednav__container>.unifiednav__item-wrap>.unifiednav__item{-js-display:flex;display:flex;justify-content:flex-start;align-items:center;flex-direction:row;color:inherit;text-decoration:none;position:relative;padding:12px 15px;margin:0;font-weight:inherit;letter-spacing:.03em}.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item{padding:0 15px}.main-navigation.unifiednav .unifiednav__container>.unifiednav__item-wrap>.unifiednav__item .nav-item-text{white-space:nowrap}.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item .nav-item-text::after,.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item .nav-item-text::before{content:'';width:100%;height:0;border:0 solid transparent;border-top-color:currentColor;display:block;opacity:0}#dm .dmWidget:not([data-buttonstyle]) .iconBg,.main-navigation.unifiednav .unifiednav__container .unifiednav__item:not(.unifiednav__item_has-sub-nav) .icon{display:none}.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item.dmNavItemSelected .nav-item-text::after,.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item.dmNavItemSelected .nav-item-text::before{opacity:1}.main-navigation.unifiednav.effect-bottom2{padding:calc(12px - .2em - 2px) 15px}.main-navigation.unifiednav.effect-bottom2 .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item .nav-item-text::after,.main-navigation.unifiednav.effect-bottom2 .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item .nav-item-text::before{transform:scaleX(0);border-top-width:2px}.main-navigation.unifiednav.effect-bottom2 .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item .nav-item-text::after{margin-top:.2em}.main-navigation.unifiednav.effect-bottom2 .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item .nav-item-text::before{margin-bottom:.2em;border-top-color:transparent}.main-navigation.unifiednav.effect-bottom2 .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item.dmNavItemSelected .nav-item-text::after,.main-navigation.unifiednav.effect-bottom2 .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item.dmNavItemSelected .nav-item-text::before{transform:scaleX(1)}.main-navigation.unifiednav.effect-bottom2 .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item .nav-item-text::after,.main-navigation.unifiednav.effect-bottom2 .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item .nav-item-text::before{transform-origin:left}.main-navigation.unifiednav:not(.unifiednav_vertical)>.unifiednav__container{justify-content:inherit}#dm .p_hfcontainer nav.main-navigation.unifiednav{min-width:9em!important;text-align:initial!important}#dm .main-navigation.unifiednav[data-nav-structure=VERTICAL] .unifiednav__container{flex-direction:column;flex:1 1 100%}#dm .main-navigation.unifiednav[data-nav-structure=VERTICAL] .unifiednav__container>.unifiednav__item-wrap>.unifiednav__item{padding:8px 0;margin:0}#dm .main-navigation.unifiednav[data-nav-structure=VERTICAL] .unifiednav__container>.unifiednav__item-wrap>.unifiednav__item .nav-item-text{white-space:initial}#dm .main-navigation.unifiednav[data-nav-structure=VERTICAL] .unifiednav__container:not([data-depth])>.unifiednav__item-wrap{flex-direction:column}#dm .main-navigation.unifiednav[data-nav-structure=VERTICAL] .unifiednav__container:not([data-depth])>.unifiednav__item-wrap::after{content:''!important;width:100%;height:0;color:#d1d1d1;align-self:flex-start;border:0 solid currentColor}#dm .main-navigation.unifiednav[data-nav-structure=VERTICAL][layout-main=vertical_nav_layout_2] .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item{padding:5px 0}#dm .main-navigation.unifiednav[data-nav-structure=VERTICAL][data-show-vertical-sub-items=HIDE]>.unifiednav__container:not([data-depth])>.unifiednav__item-wrap .unifiednav__item.dmNavItemSelected>.nav-item-text .icon::before{transform:rotate(180deg)}#dm .main-navigation.unifiednav:not([data-nav-structure=VERTICAL])>.unifiednav__container{flex-wrap:wrap;justify-content:inherit}#dm .main-navigation.unifiednav:not([data-nav-structure=VERTICAL])>.unifiednav__container .nav-item-text::before{text-align:left}#dm .main-navigation.unifiednav:not([data-nav-structure=VERTICAL]) .unifiednav__container:not([data-depth])>.unifiednav__item-wrap:not(:last-child)::after,#dm .main-navigation.unifiednav:not([data-nav-structure=VERTICAL]) .unifiednav__container:not([data-depth])>.unifiednav__item-wrap:not(:last-child)::before{content:''}#dm .dmBody .dmRespRowsWrapper{max-width:none;background-color:transparent}.dmLargeBody .dmRespRow{width:100%;max-width:none;margin-left:0;margin-right:0;padding-left:40px;padding-right:40px}.dm-bfs.dm-layout-home div.dmInner{background-color:#fff}.dmStandardDesktop .dmHeader{background-color:#68ccd1;max-width:100%}#dm .dmInner div.u_hcontainer,#dm .p_hfcontainer div.u_1919575698{top:0!important;width:100%!important;position:relative!important;max-width:100%!important;min-width:0!important;float:none!important}.dmRespRow:not(.dmPlaceHolderRespRow) .dmRespColsWrapper .dmRespCol:not(.content-removed).empty-column,.dmRespRow:not(.dmPlaceHolderRespRow) .dmRespColsWrapper .dmRespCol:not(.content-removed):only-child:empty{min-height:100px}.dmRespRow:not(.dmPlaceHolderRespRow) .dmRespCol:not(.content-removed).empty-column,.dmRespRow:not(.dmPlaceHolderRespRow) .dmRespCol:not(.content-removed):empty{min-height:1px}.dmRespRow:not(.dmPlaceHolderRespRow) .dmRespColsWrapper .dmRespCol:not(.content-removed):only-child.empty-column{min-height:100px}#dm div.dmRespCol>*{line-height:normal}#dm div.dmContent h3{color:#fff;font-weight:700}#dm div.dmInner{line-height:initial}#dm div.dmInner h3{font-family:Montserrat,"Montserrat Fallback"}#dm DIV.dmInner{background-repeat:no-repeat;background-image:url(https://irt-cdn.multiscreensite.com/ce0bb35f932b47bb809d0e37905542ba/dms3rep/multi/site_background_education-2087x1173.jpg);background-size:cover;background-position:50% 0}#dm div.dmOuter div.dmInner{background-position:center center;background-repeat:repeat;background-size:auto}#dm div.dmInner,#dm div.dmInner .dmRespCol{font-weight:300;font-size:16px}.dmLargeBody .dmBody .dmRespRowsWrapper{background-color:transparent}.newPhotoGallery .photoGalleryViewAll.link{color:rgba(147,147,147,1)}#dm .dmRespCol div.dmNewParagraph,#dm div.dmContent h3,#dm div.dmInner,#dm div.dmInner .dmRespCol{font-family:Poppins,"Poppins Fallback";color:rgba(0,0,0,1)}#dm div.dmContent h3{line-height:initial;font-size:24px}#dm DIV.dmOuter DIV.dmInner{background-image:none;background-color:rgba(255,255,255,1)}@media all{:root{--btn-text-direction:ltr;--btn-border-r-color:var(--btn-border-color);--btn-border-l-color:var(--btn-border-color);--btn-border-b-width:var(--btn-border-width);--btn-border-width:1px;--btn-border-radius:50px;--btn-border-t-width:var(--btn-border-width);--btn-border-tl-radius:var(--btn-border-radius);--btn-border-br-radius:var(--btn-border-radius);--btn-border-bl-radius:var(--btn-border-radius);--btn-bg-color:rgb(147, 147, 147);--btn-border-color:rgba(0, 0, 0, 0);--btn-border-tr-radius:var(--btn-border-radius);--btn-border-r-width:var(--btn-border-width);--btn-bg-image:none;--btn-border-b-color:var(--btn-border-color);--btn-border-l-width:var(--btn-border-width);--btn-border-t-color:var(--btn-border-color);--btn-text-align:center;--btn-text-color:rgb(255, 255, 255);--btn-text-decoration:none;--btn-text-font-weight:400;--btn-icon-color:rgb(247, 247, 247);--btn-icon-fill:rgb(247, 247, 247);--btn-icon-wrpr-display:none;--btn-hover-border-b-color:var(--btn-hover-border-color);--btn-hover-bg:rgb(65, 67, 69);--btn-hover-border-t-color:var(--btn-hover-border-color);--btn-hover-border-r-color:var(--btn-hover-border-color);--btn-hover-border-l-color:var(--btn-hover-border-color);--btn-hover-border-color:rgb(65, 67, 69);--btn-hover-text-color:var(--btn-text-color);--btn-hover-text-font-weight:var(--btn-text-font-weight);--btn-hover-text-decoration:var(--btn-text-decoration);--btn-hover-text-font-style:var(--btn-text-font-style)}}@media (min-width:0px) and (max-width:767px){:root{--btn-text-font-size:15px}}#dm .dmWidget:not([data-buttonstyle]){border-radius:50px}#dm .dmWidget:not([data-buttonstyle]) .text{padding:10px 0}#dm div.dmInner #site_content .dmWidget{background-color:var(--btn-bg-color);background-image:var(--btn-bg-image);border-color:var(--btn-border-color);border-bottom-color:var(--btn-border-b-color);border-left-color:var(--btn-border-l-color);border-right-color:var(--btn-border-r-color);border-top-color:var(--btn-border-t-color);border-radius:var(--btn-border-radius);border-bottom-left-radius:var(--btn-border-bl-radius);border-bottom-right-radius:var(--btn-border-br-radius);border-top-left-radius:var(--btn-border-tl-radius);border-top-right-radius:var(--btn-border-tr-radius);border-width:var(--btn-border-width);border-bottom-width:var(--btn-border-b-width);border-left-width:var(--btn-border-l-width);border-right-width:var(--btn-border-r-width);border-top-width:var(--btn-border-t-width);direction:var(--btn-text-direction);text-align:var(--btn-text-align)}#dm div.dmInner #site_content .dmWidget span.text{color:var(--btn-text-color);font-size:var(--btn-text-font-size);font-weight:var(--btn-text-font-weight);text-decoration:var(--btn-text-decoration)}#dm .p_hfcontainer .main-navigation.unifiednav:not(.unifiednav_vertical) .unifiednav__container:not([data-depth])>.unifiednav__item-wrap:not(:last-child)::after,#dm .p_hfcontainer .main-navigation.unifiednav:not(.unifiednav_vertical) .unifiednav__container:not([data-depth])>.unifiednav__item-wrap:not(:last-child)::before,#dm .p_hfcontainer .u_1112353738.main-navigation.unifiednav:not(.unifiednav_vertical) .unifiednav__container:not([data-depth])>.unifiednav__item-wrap:not(:last-child)::after,#dm .p_hfcontainer .u_1112353738.main-navigation.unifiednav:not(.unifiednav_vertical) .unifiednav__container:not([data-depth])>.unifiednav__item-wrap:not(:last-child)::before{font-size:14px!important}#dm div.dmInner #site_content .dmWidget span.icon{color:var(--btn-icon-color);fill:var(--btn-icon-fill)}#dm div.dmInner #site_content .dmWidget:not([data-buttonstyle]) .iconBg{display:var(--btn-icon-wrpr-display)}#dm .p_hfcontainer div.u_1923160809 img{border-radius:0!important;-moz-border-radius:0!important;-webkit-border-radius:0!important}#dm .p_hfcontainer .u_1144820115.main-navigation.unifiednav[data-nav-structure=VERTICAL] .unifiednav__container:not([data-depth])>.unifiednav__item-wrap::after{align-self:flex-start!important}#dm .p_hfcontainer nav.u_1144820115.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item{color:rgba(147,147,147,1)!important;font-weight:400!important}#dm .p_hfcontainer nav.u_1144820115.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item.dmNavItemSelected{font-weight:400!important;color:rgba(100,100,100,1)!important}#dm .p_hfcontainer .u_1144820115.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item{text-align:left!important;padding-top:10px!important;padding-bottom:10px!important}#dm .p_hfcontainer div.u_1011018909 img{border-radius:0!important;-moz-border-radius:0!important;-webkit-border-radius:0!important}#dm .p_hfcontainer .u_1112353738.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item{padding-right:15px!important;padding-left:15px!important}#dm .p_hfcontainer .u_1112353738.main-navigation.unifiednav:not([data-nav-structure=VERTICAL]) .unifiednav__container:not([data-depth])>.unifiednav__item-wrap:not(:last-child)::after,#dm .p_hfcontainer .u_1112353738.main-navigation.unifiednav:not([data-nav-structure=VERTICAL]) .unifiednav__container:not([data-depth])>.unifiednav__item-wrap:not(:last-child)::before,#dm .p_hfcontainer nav.u_1112353738.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item{font-size:15px!important}#dm .p_hfcontainer nav.u_1112353738{color:#000!important}#dm .p_hfcontainer nav.u_1112353738.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item{color:rgba(119,119,119,1)!important}#dm .p_hfcontainer nav.u_1112353738.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item.dmNavItemSelected{color:rgba(0,0,0,1)!important}#dm .p_hfcontainer nav.u_1112353738.main-navigation.unifiednav.effect-bottom2 .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item .nav-item-text::after{border-top-color:rgba(0,0,0,1)!important;border-top-width:2px!important;border-top-style:solid!important}#dm .dmInner div.dmHeader,#dm .dmInner div.dmHeader.u_hcontainer,#dm .dmInner div.u_hcontainer{background-color:rgba(255,255,255,1)!important;box-shadow:none!important;-moz-box-shadow:none!important;-webkit-box-shadow:none!important}#dm .p_hfcontainer .u_1011018909,#dm .p_hfcontainer .u_1923160809{width:100%!important}#dm .p_hfcontainer nav.u_1144820115{color:#000!important}#dm .dmInner div.u_hcontainer{left:0!important;height:auto!important;text-align:center!important;padding:25px 0 20px!important;margin:0 auto!important}#dm .dmInner div.dmHeader.u_hcontainer{padding-bottom:20px!important;padding-top:25px!important}[dmtemplateid=Hamburger] .layout-drawer-hamburger.hamburger-on-header{color:rgba(102,102,102,1)!important;background-color:rgba(0,0,0,0)!important}#dm .p_hfcontainer div.u_1705692124{float:none!important;top:0!important;left:0!important;width:100%!important;position:relative!important;height:auto!important;max-width:none!important;min-width:0!important;text-align:center!important;margin:0 auto!important;padding:15px 40px!important}#dm .p_hfcontainer div.u_1183846399{padding:0!important;margin:0!important}#dm .p_hfcontainer nav.u_1144820115.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item{font-size:24px!important}#dm .p_hfcontainer div.u_1826294544{margin-top:0!important;padding:0!important}#dm .p_hfcontainer div.u_1919575698{display:block!important;left:0!important;height:auto!important;text-align:left!important;padding:2px 0!important;margin:0 auto 8px 0!important}#dm .p_hfcontainer div.u_1359743311,#dm .p_hfcontainer nav.u_1144820115{max-width:calc(100% - 0px)!important;min-width:25px!important;height:auto!important;top:0!important;left:0!important;position:relative!important}#dm .p_hfcontainer div.u_1021493186{padding-top:30px!important;margin-top:0!important;padding-right:40px!important;padding-left:40px!important}#dm .p_hfcontainer div.u_1676049285{margin-top:0!important;padding:100px 40px!important}#dm .p_hfcontainer div#hamburger-drawer.layout-drawer{background-color:rgba(255,255,255,1)!important}#dm .p_hfcontainer div.u_1655486006{margin-left:0!important;margin-right:0!important;padding-left:0!important;padding-right:0!important}#dm .p_hfcontainer #hamburger-drawer.layout-drawer:not([data-origin=top]){width:49vw!important}#dm .p_hfcontainer nav.u_1144820115{float:none!important;width:100%!important;justify-content:flex-start!important;align-items:stretch!important;text-align:start!important;padding:0!important;margin:113px 0 0!important}#dm .p_hfcontainer div.u_1359743311{display:block!important;float:none!important;width:100%!important;text-align:left!important;padding:2px 0!important;margin:16px 0 8px!important}#dm .dmInner div.fHeader .dmHeader[freeheader=true]{padding-top:12px!important;padding-bottom:12px!important}.fHeader #hcontainer.dmHeader[freeheader=true]{padding-top:initial!important;padding-bottom:initial!important}#dm .p_hfcontainer div.u_1677919435{padding:0!important}#dm .p_hfcontainer div.u_1246161842{padding-left:10px!important}#dm .p_hfcontainer nav.u_1112353738.main-navigation.unifiednav:not(.unifiednav_vertical) .unifiednav__container:not([data-depth])>.unifiednav__item-wrap:not(:last-child)::after,#dm .p_hfcontainer nav.u_1112353738.main-navigation.unifiednav:not(.unifiednav_vertical) .unifiednav__container:not([data-depth])>.unifiednav__item-wrap:not(:last-child)::before{padding-top:0!important;padding-bottom:0!important;margin-top:0!important;margin-bottom:0!important}#dm .dmInner div.fHeader.dmHeaderContainer #hcontainer.dmHeader[freeheader=true]{margin:0!important;padding:5px 0!important}#dm .p_hfcontainer div.u_1861705244{width:auto!important;padding:8px 40px!important;margin:0!important}#dm .p_hfcontainer nav.u_1112353738{float:none!important;top:0!important;left:0!important;width:986.66px!important;position:relative!important;height:auto!important;max-width:100%!important;justify-content:center!important;align-items:stretch!important;min-width:0!important;text-align:center!important;padding:6.8px 15px!important;margin:44px auto 0!important}#dm .p_hfcontainer div.u_1011018909{float:none!important;top:0!important;left:0!important;width:calc(100% - 216px)!important;position:relative!important;max-width:266.59px!important;min-width:25px!important;text-align:center!important;display:block!important;height:auto!important;padding:0!important;margin:-1px 0 0 216.78px!important}.stickyHeaderSpacer{height:132px!important}#dm .p_hfcontainer div.u_1923160809{float:none!important;top:0!important;left:0!important;width:170px!important;position:relative!important;max-width:100%!important;min-width:0!important;text-align:center!important;display:block!important;padding:0!important;margin:0 auto 0 0!important}[dmtemplateid=Hamburger].runtime-module-container .layout-drawer-hamburger{top:23px!important}[dmtemplateid=Hamburger] .site_content{margin-top:98px!important}#dm .p_hfcontainer div#hamburger-header{background-color:rgba(255,255,255,1)!important;box-shadow:none!important;-moz-box-shadow:none!important;-webkit-box-shadow:none!important;border-bottom-style:solid!important;border-bottom-color:rgba(249,249,249,1)!important;border-bottom-width:0!important}@media (min-width:1025px){.responsiveTablet .stickyHeaderSpacer{height:132.19px!important}}#dm .dmBody div.dmform-error{font-style:normal!important}#dm .dmBody div.u_1243667655{background-repeat:no-repeat!important;background-image:url(https://lirp.cdn-website.com/d2116928/dms3rep/multi/opt/Untitled+design-4.svg),url(data:image/png-2880w;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAABhGlDQ1BJQ0MgcHJvZmlsZQAAKJF9kT1Iw0AcxV9TpUUqHSwo4pChOlkQFemoVShChVArtOpgcukXNGlIUlwcBdeCgx+LVQcXZ10dXAVB8APEzc1J0UVK/F9aaBHjwXE/3t173L0DhEaFaVbPBKDptplOJsRsblUMvEJAGEEMIi4zy5iTpBQ8x9c9fHy9i/Es73N/jn41bzHAJxLPMsO0iTeIZzZtg/M+cYSVZJX4nHjcpAsSP3JdafEb56LLAs+MmJn0PHGEWCx2sdLFrGRqxNPEUVXTKV/ItljlvMVZq9RY+578haG8vrLMdZojSGIRS5AgQkENZVRgI0arToqFNO0nPPzDrl8il0KuMhg5FlCFBtn1g//B726twtRkKymUAHpfHOdjFAjsAs2643wfO07zBPA/A1d6x19tAPFP0usdLXoEhLeBi+uOpuwBlzvA0JMhm7Ir+WkKhQLwfkbflAMGboG+tVZv7X2cPgAZ6ip1AxwcAmNFyl73eHewu7d/z7T7+wFwJnKmZ9+MiwAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAAuIwAALiMBeKU/dgAAAAd0SU1FB+UCDwksLkLIPkkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAAC0lEQVQI12NgAAIAAAUAAeImBZsAAAAASUVORK5CYII=)!important;background-size:cover!important}#dm .dmBody a.u_1779879898{background-color:rgba(141,198,63,1)!important}#dm .dmBody a.u_1779879898 span.text{font-weight:700!important;font-size:16px!important}#dm .dmBody div.u_1485014208 input:not([type=submit]){border-bottom-color:rgba(165,165,165,1)!important}#dm .dmBody div.u_1227965228 .color-overlay,#dm .dmBody div.u_1227965228 .slides .slide-button{background-color:rgba(0,0,0,0)!important}#dm .dmBody .u_1013299730,#dm .dmBody .u_1163677436,#dm .dmBody .u_1196698191,#dm .dmBody .u_1247469229,#dm .dmBody .u_1251611446,#dm .dmBody .u_1589151584,#dm .dmBody .u_1647971718,#dm .dmBody .u_1740086870,#dm .dmBody .u_1865558103,#dm .dmBody .u_1881428033{display:none!important}#dm .dmBody .u_1355104297 .photoGalleryThumbs .image-container a,#dm .dmBody .u_1686754196 .photoGalleryThumbs .image-container a,#dm .dmBody .u_1770801841 .photoGalleryThumbs .image-container a{background-size:contain!important}#dm .d-page-1716942098 DIV.dmInner{background-repeat:no-repeat!important;background-size:cover!important;background-attachment:fixed!important;background-position:50% 50%!important}#dm .dmBody div.u_1227965228{important:true!important;width:100%!important;height:524px!important}#dm .dmBody div.u_1243667655,#dm .dmBody div.u_1418870314,#dm .dmBody div.u_1686754196{top:0!important;left:0!important;position:relative!important;height:auto!important;max-width:100%!important}#dm .dmBody div.u_1418870314{float:none!important;width:calc(100% - 0px)!important;min-width:25px!important;padding:2px 0!important;margin:0 auto 8px!important}#dm .dmBody div.u_1243667655{float:none!important;width:auto!important;min-width:0!important;text-align:center!important;background-position:50% 100%!important;margin:0!important;padding:35px 40px 60px!important}#dm .dmBody .u_1355104297 .photoGalleryThumbs{padding:10px!important}#dm .dmBody .u_1355104297 .photoGalleryViewAll{padding:0 20px!important}#dm .dmBody .u_1686754196 .photoGalleryThumbs{padding:10px!important}#dm .dmBody .u_1686754196 .photoGalleryViewAll{padding:0 20px!important}#dm .dmBody div.u_1686754196{float:none!important;width:calc(100% - 0px)!important;min-width:25px!important;text-align:start!important;padding:0!important;margin:-50px 0 10px!important}#dm .dmBody .u_1770801841 .photoGalleryThumbs{padding:10px!important}#dm .dmBody .u_1770801841 .photoGalleryViewAll{padding:0 20px!important}.font-size-22{font-size:22px!important}.font-size-18{font-size:18px!important}.font-size-50,.size-50{font-size:50px!important}.font-size-60{font-size:60px!important}
+    .dmDesktopBody [data-anim-desktop]:not([data-anim-desktop='none']) {
+        visibility: hidden;
+    }
+
+    
+</style>
+
+
+
+<style id="fontFallbacks">
+    @font-face {
+  font-family: "Roboto Fallback";
+  src: local('Arial');
+  ascent-override: 92.6709%;
+  descent-override: 24.3871%;
+  size-adjust: 100.1106%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Montserrat Fallback";
+  src: local('Arial');
+  ascent-override: 84.9466%;
+  descent-override: 22.0264%;
+  size-adjust: 113.954%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Poppins Fallback";
+  src: local('Arial');
+  ascent-override: 92.326%;
+  descent-override: 30.7753%;
+  line-gap-override: 8.793%;
+  size-adjust: 113.7274%;
+}
+</style>
+
+
+<!-- End render the required css and JS in the head section -->
+
+
+
+
+
+
+
+
+<meta property="og:type" content="website">
+
+  <title>
+    VigeoDash | Business Intelligence for Health Care Excellence
+  </title>
+  <meta name="description" content="VigeoDash was created by and for home healthcare professionals. With a custom approach, we utilize technology convergence of multiple platforms into one dashboard.">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="VigeoDash | Business Intelligence for Health Care Excellence">
+  <meta name="twitter:description" content="VigeoDash was created by and for home healthcare professionals. With a custom approach, we utilize technology convergence of multiple platforms into one dashboard.">
+  <meta name="twitter:image" content="https://lirp.cdn-website.com/d2116928/dms3rep/multi/opt/vigeodash+logo-4x-1920w.png">
+  <meta property="og:description" content="VigeoDash was created by and for home healthcare professionals. With a custom approach, we utilize technology convergence of multiple platforms into one dashboard.">
+  <meta property="og:title" content="VigeoDash | Business Intelligence for Health Care Excellence">
+  <meta property="og:image" content="https://lirp.cdn-website.com/d2116928/dms3rep/multi/opt/vigeodash+logo-4x-1920w.png">
+
+
+
+
+<!-- SYS- VVNfRElSRUNUX1BST0RVQ1RJT04= -->
+<script src="./vigeodash_files/skrollr.min.js"></script><script src="./vigeodash_files/jquery.flexslider.min.js"></script><script src="./vigeodash_files/lottie.min.js"></script></head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body id="dmRoot" data-page-alias="home" class="dmRoot dmDesktopBody fix-mobile-scrolling addCanvasBorder dmResellerSite dmLargeBody responsiveTablet d1SiteBody dmBodyNoIscroll" style="padding:0;margin:0;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ========= Site Content ========= -->
+<div id="dm" class="dmwr">
+    
+    <div class="dm_wrapper standard-var5 widgetStyle-3 standard">
+         <div dmwrapped="true" id="1901957768" class="dm-home-page" themewaschanged="true"> <div dmtemplateid="Hamburger" data-responsive-name="ResponsiveDesktopTopTabletHamburger" class="runtime-module-container dm-bfs dm-layout-home hasAnimations hasStickyHeader inMiniHeaderMode rows-1200 hamburger-reverse dmPageBody d-page-1716942098 dmFreeHeader" id="dm-outer-wrapper" data-page-class="1716942098" data-soch="true" data-background-parallax-selector=".dmHomeSection1, .dmSectionParallex"> <div id="dmStyle_outerContainer" class="dmOuter"> <div id="dmStyle_innerContainer" class="dmInner"> <div class="dmLayoutWrapper standard-var dmStandardDesktop"> <div id="site_content"> <div class="p_hfcontainer showOnMedium"> <div id="hamburger-drawer" class="hamburger-drawer layout-drawer" layout="e9d510f4eb904e939c2be8efaf777e6e===header" data-origin="side-reverse" data-auto-height="true" aria-hidden="true" inert=""> <div class="u_1826294544 dmRespRow" style="text-align: center;" id="1826294544"> <div class="dmRespColsWrapper" id="1337204992"> <div class="u_1183846399 dmRespCol small-12 medium-12 large-12 empty-column" id="1183846399"></div> 
+</div> 
+</div> 
+ <div class="u_1021493186 dmRespRow middleDrawerRow" style="text-align: center;" id="1021493186"> <div class="dmRespColsWrapper" id="1170137577"> <div class="dmRespCol small-12 u_1808057136 medium-12 large-12" id="1808057136"> <nav class="u_1144820115 effect-bottom2 main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="vertical_nav_layout_2" layout-sub="" data-show-vertical-sub-items="HIDE" id="1144820115" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-logo-src="" alt="" data-nav-structure="VERTICAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container  " data-auto="navigation-pages"> <li role="menuitem" class="unifiednav__item-wrap" data-auto="more-pages" data-depth="0"> <a href="https://www.vigeodash.com/" class="unifiednav__item dmUDNavigationItem_00 currentPage dmNavItemSelected" target="" data-target-page-alias="" data-auto="selected-page" tabindex="0"> <span class="nav-item-text " data-link-text="
+         Home
+        " data-auto="page-text-style">Home<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class="unifiednav__item-wrap" data-auto="more-pages" data-depth="0"> <a href="https://www.vigeodash.com/services" class="unifiednav__item dmUDNavigationItem_010101357537" target="" data-target-page-alias="" tabindex="0"> <span class="nav-item-text " data-link-text="
+         Services
+        " data-auto="page-text-style">Services<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class="unifiednav__item-wrap" data-auto="more-pages" data-depth="0"> <a href="https://www.vigeodash.com/contact#Team" class="unifiednav__item dmUDNavigationItem_010101695722" target="" data-target-page-alias="" tabindex="0"> <span class="nav-item-text " data-link-text="
+         Team
+        " data-auto="page-text-style">Team<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class="unifiednav__item-wrap" data-auto="more-pages" data-depth="0"> <a href="https://www.vigeodash.com/#Integrations" class="unifiednav__item dmUDNavigationItem_010101937869" target="" data-target-page-alias="" tabindex="0"> <span class="nav-item-text " data-link-text="
+         Integrations
+        " data-auto="page-text-style">Integrations<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class="unifiednav__item-wrap" data-auto="more-pages" data-depth="0"> <a href="https://www.vigeodash.com/contact" class="unifiednav__item dmUDNavigationItem_010101943230" target="" data-target-page-alias="" tabindex="0"> <span class="nav-item-text " data-link-text="
+         Contact
+        " data-auto="page-text-style">Contact<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</nav> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1676049285" style="text-align: center;" id="1676049285"> <div class="dmRespColsWrapper" id="1888750820"> <div class="u_1916182198 dmRespCol small-12 medium-12 large-12" id="1916182198"> <div class="u_1919575698 dmNewParagraph" id="1919575698" style="transition: none;"><div style=""><span style=""><span style=""><span style="" class="font-size-22 lh-1"><span style="font-weight: 500;"><font style="color: rgb(100, 100, 100);">Get in touch</font></span></span></span></span></div></div> <div class="u_1359743311 dmNewParagraph" id="1359743311"><div><span style="font-size: 20px;"><font style="color: rgb(255, 255, 255);"></font></span></div><div><span style="font-weight: 300;" class="font-size-18 lh-1"><font style="color: rgb(103, 103, 103);"><div style="text-align: left;">(210) 988-6066</div><div style="text-align: left;">info@vigeodash.com<br></div></font></span></div><div><span style="font-size: 20px;"><font style="color: rgb(255, 255, 255);"></font></span></div></div></div> 
+</div> 
+</div> 
+</div> 
+ <div class="layout-drawer-overlay" id="layout-drawer-overlay"></div> 
+</div> 
+ <div class="site_content"> <div id="hamburger-header-container" class="showOnMedium hamburger-header-container p_hfcontainer"> <div id="hamburger-header" class="hamburger-header p_hfcontainer" layout="44dc38f951e9489490b055748e10ba9f===header"> <div class="u_1705692124 dmRespRow" style="text-align: center;" id="1705692124"> <div class="dmRespColsWrapper" id="1469942216"> <div class="dmRespCol small-12 u_1655486006 medium-12 large-12" id="1655486006"> <div class="u_1923160809 imageWidget align-center" data-element-type="image" data-widget-type="image" id="1923160809" editablewidget="true"> <a href="https://www.vigeodash.com/" id="1573522578" file="false"><img src="./vigeodash_files/vigeodash+logo+tm-4x-1920w.png" id="1761992403" class="" data-dm-image-path="https://irp.cdn-website.com/d2116928/dms3rep/multi/vigeodash+logo+tm-4x.png" width="1057" height="425" onerror="handleImageLoadError(this)"></a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <button class="showOnMedium layout-drawer-hamburger hamburger-on-header" id="layout-drawer-hamburger" aria-label="menu"> <span class="hamburger__slice"></span> 
+ <span class="hamburger__slice"></span> 
+ <span class="hamburger__slice"></span> 
+</button> 
+ <div class="dmHeaderContainer fHeader d-header-wrapper showOnLarge"> <div id="hcontainer" class="u_hcontainer dmHeader p_hfcontainer scroll-responder_set" freeheader="true" headerlayout="b58ba5b5703b4cd7b5f5f7951565dc87===horizontal-layout-5" data-scrollable-target="body" data-scrollable-target-threshold="1" data-scroll-responder-id="1" preserve-sticky-header="true" logo-size-target="83%" layout="78f5c343822e4eb3aac27f4ad5d13812===header"> <div dm:templateorder="85" class="dmHeaderResp dmHeaderStack noSwitch" id="1709005236"> <div class="dmRespRow dmDefaultListContentRow u_1861705244 fullBleedChanged fullBleedMode mini-header-show-row" style="text-align:center" id="1861705244"> <div class="dmRespColsWrapper" id="1914255413"> <div class="u_1677919435 small-12 dmRespCol large-4 medium-4 has-one-widget-only" id="1677919435"> <div class="u_1011018909 imageWidget align-center" data-widget-type="image" id="1011018909" data-element-type="image" editablewidget="true"><img src="./vigeodash_files/vigeodash+logo+tm-4x-319w.png" id="1456770677" class="" data-dm-image-path="https://irp.cdn-website.com/d2116928/dms3rep/multi/vigeodash+logo+tm-4x.png" width="1057" height="425" alt="VigeoDash Logo" title="VigeoDash Logo" onerror="handleImageLoadError(this)"></div> 
+</div> 
+ <div class="u_1246161842 dmRespCol small-12 large-8 medium-8 has-one-widget-only" id="1246161842"> <span id="1630001966"></span> 
+ <nav class="u_1112353738 effect-bottom2 main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="horizontal_nav_layout_1" layout-sub="submenu_horizontal_2" data-show-vertical-sub-items="HOVER" id="1112353738" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container  " data-auto="navigation-pages"> <li role="menuitem" class="unifiednav__item-wrap" data-auto="more-pages" data-depth="0"> <a href="https://www.vigeodash.com/" class="unifiednav__item dmUDNavigationItem_00 currentPage dmNavItemSelected" target="" data-target-page-alias="" data-auto="selected-page" tabindex="0"> <span class="nav-item-text " data-link-text="
+         Home
+        " data-auto="page-text-style">Home<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class="unifiednav__item-wrap" data-auto="more-pages" data-depth="0"> <a href="https://www.vigeodash.com/services" class="unifiednav__item dmUDNavigationItem_010101357537" target="" data-target-page-alias="" tabindex="0"> <span class="nav-item-text " data-link-text="
+         Services
+        " data-auto="page-text-style">Services<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class="unifiednav__item-wrap" data-auto="more-pages" data-depth="0"> <a href="https://www.vigeodash.com/contact#Team" class="unifiednav__item dmUDNavigationItem_010101695722" target="" data-target-page-alias="" tabindex="0"> <span class="nav-item-text " data-link-text="
+         Team
+        " data-auto="page-text-style">Team<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class="unifiednav__item-wrap" data-auto="more-pages" data-depth="0"> <a href="https://www.vigeodash.com/#Integrations" class="unifiednav__item dmUDNavigationItem_010101937869" target="" data-target-page-alias="" tabindex="0"> <span class="nav-item-text " data-link-text="
+         Integrations
+        " data-auto="page-text-style">Integrations<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class="unifiednav__item-wrap" data-auto="more-pages" data-depth="0"> <a href="https://www.vigeodash.com/contact" class="unifiednav__item dmUDNavigationItem_010101943230" target="" data-target-page-alias="" tabindex="0"> <span class="nav-item-text " data-link-text="
+         Contact
+        " data-auto="page-text-style">Contact<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</nav> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="stickyHeaderSpacer" id="stickyHeaderSpacer" data-new="true"></div> 
+ <div dmwrapped="true" id="dmFirstContainer" class="dmBody u_dmStyle_template_home dm-home-page" themewaschanged="true"> <div id="allWrapper" class="allWrapper"><!-- navigation placeholders --> <div id="dm_content" class="dmContent"> <div dm:templateorder="170" class="dmHomeRespTmpl mainBorder dmRespRowsWrapper dmFullRowRespTmpl dmRespRowsWrapperSize2" id="1716942098"> <div class="u_1243667655 dmRespRow" style="text-align: center;" id="1243667655"> <div class="dmRespColsWrapper" id="1173148036"> <div class="dmRespCol small-12 u_1620106714 medium-12 large-12" id="1620106714"> <div class="u_1418870314 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1418870314" style="transition: none 0s ease 0s; text-align: left; display: block;"><p class="m-size-28 text-align-center size-50"><span style="color: rgb(41, 52, 142); display: unset; font-weight: bold;" class="m-font-size-28 font-size-50" m-font-size-set="true">Patient care is</span><span single-space="true" class="m-font-size-28 font-size-50" style="color: rgb(41, 52, 142); display: unset; font-weight: bold;"> <span style="color: rgb(41, 52, 142); display: unset; font-weight: bold;" class="m-font-size-28 font-size-50"></span> 
+</span><span style="color: rgb(41, 52, 142); display: unset; font-weight: bold; font-style: italic;" class="font-size-60 m-font-size-40" m-font-size-set="true">your</span><span single-space="true" class="m-font-size-28 font-size-50" style="color: rgb(41, 52, 142); display: unset; font-weight: bold;"> <span style="color: rgb(41, 52, 142); display: unset; font-weight: bold;" class="m-font-size-28 font-size-50"></span> 
+</span><span style="color: rgb(41, 52, 142); display: unset; font-weight: bold;" class="m-font-size-28 font-size-50" m-font-size-set="true">priority.</span></p><p class="m-size-28 text-align-center size-50"><span style="font-style: italic; color: rgb(41, 52, 142); display: unset; font-weight: bold;" class="font-size-60 m-font-size-40" m-font-size-set="true">Saving</span><span single-space="true" class="m-font-size-28 font-size-50" style="color: rgb(41, 52, 142); display: unset; font-weight: bold;"> <span style="color: rgb(41, 52, 142); display: unset; font-weight: bold;" class="m-font-size-28 font-size-50"></span> 
+</span><span style="color: rgb(41, 52, 142); display: unset; font-weight: bold;" class="m-font-size-28 font-size-50" m-font-size-set="true">you time and money is ours!</span></p></div> 
+ <a data-display-type="block" class="u_1779879898 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="https://calendly.com/d/cp3p-x3w-xd4/vigeodash-discovery?month=2024-04" data-element-type="dButtonLinkId" id="1779879898" target="_blank"> <span class="iconBg" id="1354131109"> <span class="icon hasFontIcon icon-star" id="1440285424"></span> 
+</span> 
+ <span class="text" id="1266151589">Schedule Demo</span> 
+</a> 
+ <div class="flex-container dmImageSlider dmNoMargin dmNoMark u_1227965228 hasFullWidth" data-widget-type="imageSlider" dmle_volatile_widget="true" data-element-type="dSliderId" id="1227965228" editablewidget="true"> <div class="flexslider ed-version" sliderscriptparams="{&#39;stretch&#39;:false,&#39;animation&#39;:true,&#39;randomize&#39;:false,&#39;directionNav&#39;:false,&#39;isAutoPlay&#39;:true,&#39;isFade&#39;:true,&#39;controlNav&#39;:false,&#39;slideshowSpeed&#39;:7000,&#39;animationDuration&#39;:600,&#39;pausePlay&#39;:true}" id="1824109876"> <ul class="slides" id="1233286646" style=""> <li layout="center" position="center" animation="fadeInUp" show-content="true" color-overlay="true" text-background="true" id="1226251852" class="dmCoverImgContainer" show-caption="false" style="background-image: url(&quot;https://lirp.cdn-website.com/d2116928/dms3rep/multi/opt/5-4d4db788-1440w.png&quot;); background-size: contain; background-repeat: no-repeat; background-position: center center; width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;"><img dm="true" src="./vigeodash_files/5-4d4db788-1440w.png" id="1056075040" class="" alt="VigeoDash Dashboard" onerror="handleImageLoadError(this)" height="524.0" width="1200.0" style="display: none;" draggable="false"> <div class="color-overlay" id="1615224329"></div> 
+ <div class="slide-inner" id="1408606741" duda_id="1408606741"> <div class="text-wrapper" id="1982340838"> <h3 class="slide-title u_1247469229" id="1247469229">Slide title</h3> 
+ <div class="slide-text richText u_1589151584" id="1589151584">Write your caption here</div> 
+</div> 
+ <div class="slide-button dmWidget clearfix slide-button-invisible" id="1202029493"> <span class="iconBg" id="1780377841"> <span class="icon hasFontIcon icon-star" id="1167505015"></span> 
+</span> 
+ <span class="text" id="1251009126">Button</span> 
+</div> 
+</div> 
+</li> 
+ <li layout="center" position="center" animation="fadeInUp" show-content="true" color-overlay="true" text-background="true" id="1080945150" class="dmCoverImgContainer" show-caption="false" style="background-image: url(&quot;https://lirp.cdn-website.com/d2116928/dms3rep/multi/opt/1-1fc9bf12-1440w.png&quot;); background-size: contain; background-repeat: no-repeat; background-position: center center; width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;"><img dm="true" src="./vigeodash_files/1-1fc9bf12-1440w.png" id="1537246290" onerror="handleImageLoadError(this)" height="524.0" width="1200.0" style="display: none;" draggable="false"> <div class="color-overlay" id="1013248366"></div> 
+ <div class="slide-inner" id="1849278070" duda_id="1849278070"> <div class="text-wrapper" id="1828852096"> <h3 class="slide-title u_1740086870" id="1740086870">Slide title</h3> 
+ <div class="slide-text richText u_1881428033" id="1881428033">Write your caption here</div> 
+</div> 
+ <div class="slide-button dmWidget clearfix slide-button-invisible" id="1004893455"> <span class="iconBg" id="1675025196"> <span class="icon hasFontIcon icon-star" id="1101907410"></span> 
+</span> 
+ <span class="text" id="1119295729">Button</span> 
+</div> 
+</div> 
+</li> 
+ <li layout="center" position="center" animation="fadeInUp" show-content="true" color-overlay="true" text-background="true" id="1196491312" class="dmCoverImgContainer flex-active-slide" show-caption="false" style="background-image: url(&quot;https://lirp.cdn-website.com/d2116928/dms3rep/multi/opt/3-bfbcee7e-1440w.png&quot;); background-size: contain; background-repeat: no-repeat; background-position: center center; width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;"><img dm="true" src="./vigeodash_files/3-bfbcee7e-1440w.png" id="1809761905" onerror="handleImageLoadError(this)" height="524.0" width="1200.0" style="display: none;" draggable="false"> <div class="color-overlay" id="1847434921"></div> 
+ <div class="slide-inner fadeInUp animated" id="1533480937" duda_id="1533480937"> <div class="text-wrapper" id="1712329357"> <h3 class="slide-title u_1251611446" id="1251611446">Slide title</h3> 
+ <div class="slide-text richText u_1865558103" id="1865558103">Write your caption here</div> 
+</div> 
+ <div class="slide-button dmWidget clearfix slide-button-invisible" id="1447992433"> <span class="iconBg" id="1537742388"> <span class="icon hasFontIcon icon-star" id="1017287985"></span> 
+</span> 
+ <span class="text" id="1700485456">Button</span> 
+</div> 
+</div> 
+</li> 
+ <li layout="center" position="center" animation="fadeInUp" show-content="true" color-overlay="true" text-background="true" id="1756697855" class="dmCoverImgContainer" show-caption="false" style="background-image: url(&quot;https://lirp.cdn-website.com/d2116928/dms3rep/multi/opt/4-da63deff-1440w.png&quot;); background-size: contain; background-repeat: no-repeat; background-position: center center; width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;"><img dm="true" src="./vigeodash_files/4-da63deff-1440w.png" id="1913066897" onerror="handleImageLoadError(this)" height="524.0" width="1200.0" style="display: none;" draggable="false"> <div class="color-overlay" id="1672597782"></div> 
+ <div class="slide-inner" id="1226274491" duda_id="1226274491"> <div class="text-wrapper" id="1699274010"> <h3 class="slide-title u_1647971718" id="1647971718">Slide title</h3> 
+ <div class="slide-text richText u_1196698191" id="1196698191">Write your caption here</div> 
+</div> 
+ <div class="slide-button dmWidget clearfix slide-button-invisible" id="1230920410"> <span class="iconBg" id="1291044472"> <span class="icon hasFontIcon icon-star" id="1787171962"></span> 
+</span> 
+ <span class="text" id="1715280413">Button</span> 
+</div> 
+</div> 
+</li> 
+ <li layout="center" position="center" animation="fadeInUp" show-content="true" color-overlay="true" text-background="true" id="1455542005" class="dmCoverImgContainer" show-caption="false" style="background-image: url(&quot;https://lirp.cdn-website.com/d2116928/dms3rep/multi/opt/2-a476f3c4-1440w.png&quot;); background-size: contain; background-repeat: no-repeat; background-position: center center; width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;"><img dm="true" src="./vigeodash_files/2-a476f3c4-1440w.png" id="1442202367" onerror="handleImageLoadError(this)" height="524.0" width="1200.0" style="display: none;" draggable="false"> <div class="color-overlay" id="1309871712"></div> 
+ <div class="slide-inner" id="1221661151" duda_id="1221661151"> <div class="text-wrapper" id="1628288829"> <h3 class="slide-title u_1013299730" id="1013299730">Slide title</h3> 
+ <div class="slide-text richText u_1163677436" id="1163677436">Write your caption here</div> 
+</div> 
+ <div class="slide-button dmWidget clearfix slide-button-invisible" id="1403809344"> <span class="iconBg" id="1348947459"> <span class="icon hasFontIcon icon-star" id="1279620132"></span> 
+</span> 
+ <span class="text" id="1572808952">Button</span> 
+</div> 
+</div> 
+</li> 
+</ul> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1024610933 dmRespRow fullBleedChanged fullBleedMode" style="text-align: center;" id="1024610933"> <div class="dmRespColsWrapper" id="1141904561"> <div class="u_1075934130 dmRespCol small-12 medium-12 large-12" id="1075934130"> <span id="1037876148"></span> 
+ <div class="u_1428634164 dmNewParagraph" id="1428634164" style="transition: opacity 1s ease-in-out;" data-version="5"><p class="text-align-center m-text-align-center size-20 m-size-16"><span style="display: initial;" class="font-size-20 m-font-size-16">Overwhelmed by intricate revenue cycle management processes? It’s time for a fresh perspective. With VigeoDASH you can assess episode utilization, claims and denial data for enhanced operational efficiency and boosted collections.</span></p></div></div> 
+</div> 
+</div> 
+ <div class="u_1614325560 dmRespRow hide-for-small" style="text-align: center;" id="1614325560"> <div class="dmRespColsWrapper" id="1275201690"> <div class="u_1293813003 dmRespCol small-12 medium-12 large-12" id="1293813003"> <span id="1424712561"></span> 
+ <div data-element-type="spacer" class="dmSpacer u_1684651105" id="1684651105"></div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_About dmRespRow" style="text-align: center;" id="About" data-anchor="About"> <div class="dmRespColsWrapper" id="1922515905"> <div class="u_1260365640 dmRespCol small-12 medium-12 large-12" id="1260365640"> <div class="u_1091038086 dmNewParagraph" id="1091038086" style="transition: opacity 1s ease-in-out; display: block;" data-element-type="paragraph" data-version="5"> <h3 class="m-size-36 size-45"><span style="display: initial; color: rgb(41, 52, 142);" class="font-size-45 m-font-size-36">Who we are...</span></h3> 
+</div> <div class="u_1582116953 dmNewParagraph" id="1582116953" style="transition: none 0s ease 0s; display: block; text-align: left;" data-version="5"><p class="m-size-14 text-align-left"><span style="display: initial; font-weight: 300;" class="m-font-size-14">VigeoDash</span><sup class="m-font-size-14" style="display: initial; font-weight: 300;">TM</sup><span class="m-font-size-14" style="display: initial; font-weight: 300;"> <span class="m-font-size-14" style="display: initial; font-weight: 300;">is your trusted partner for solving home healthcare issues. We are an organization focused on innovative solutions to your complex challenges. Our focus is on utilizing practical problem-solving techniques combined with proven programs and proprietary systems to maximize your patient and business outcomes.</span></span></p><p class="text-align-left"><span style="display: initial;"><br></span></p><p class="text-align-left"><span style="display: initial;">With over 50 years of combined experience, we have worked in every aspect of the healthcare continuum. VigeoDash works with your home healthcare business to identify your unique challenges and establishes a framework to achieve your goals, including patient outcomes, fiscal performance, and operational excellence. &nbsp;With a bias for action, we work with your team to find the best way to implement the best patient continuum strategy. Let VigeoDash help you navigate your patients through the healthcare continuum.</span></p></div> <div class="u_1649608023 dmNewParagraph" id="1649608023" style="transition: none 0s ease 0s; display: block; text-align: left;" data-element-type="paragraph" data-version="5"> <h3 class="m-size-36 size-45"><span style="display: initial; color: rgb(1, 154, 77);" class="font-size-45 m-font-size-36">What we do...</span></h3> 
+</div> <div class="u_1357780014 dmNewParagraph" id="1357780014" style="transition: none 0s ease 0s; display: block; text-align: left;" data-version="5"><p class="text-align-left m-size-14"><span style="font-weight: 300; display: initial;" class="m-font-size-14">VigeoDash</span><sup class="m-font-size-14" style="font-weight: 300; display: initial;">TM</sup><span class="m-font-size-14" style="font-weight: 300; display: initial;"> <span class="m-font-size-14" style="font-weight: 300; display: initial;">was created by and for home healthcare professionals. We understand all aspects of the Post-Acute Care Continuum (PACC). Experiencing our own industry challenges prompted the need for an impactful solution. With a custom approach, we utilize technology convergence of multiple platforms into one dashboard. The unique solution extracts, translates and loads electronic healthcare record data that leads to improved operational throughput.</span></span><span style="display: initial;"><span class="ql-cursor">﻿</span></span></p></div></div> 
+</div> 
+</div> 
+ <div class="u_1605031878 dmRespRow" id="1605031878"> <div class="dmRespColsWrapper" id="1494108765"> <div class="dmRespCol large-12 medium-12 small-12" id="1335275306"> <div data-element-type="spacer" class="dmSpacer u_1597021531" id="1597021531"></div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1040343938 dmRespRow dmSectionParallaxNew hasBackgroundOverlay skrollable skrollable-before" style="text-align: center; background-position: 50% 100px;" id="1040343938" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -100px;" data-bottom-top="background-position: 50% 100px;"> <div class="dmRespColsWrapper" id="1347269803"> <div class="dmRespCol small-12 u_1501773740 medium-6 large-6" id="1501773740"> <span id="1611872869"></span> 
+ <div class="u_1361556039 graphicWidget" data-widget-type="graphic" id="1361556039" data-layout="graphic-style-1" data-element-type="graphic"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70" id="1305219420" class="svg u_1305219420" data-icon-name="wp-doctor"> <g> <rect x="32.9" y="40.9" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -20.1543 37.3431)" width="4.2" height="4.2"></rect> 
+ <path d="M41,33l1.8-5c0,0,1.2,0,1.9-0.7c0.8-0.7,1.3-1.8,1.3-3.1c0-2.3-2-2.3-2-2.3s0-2.1,0-4.6c0-2.8-1.3-5.1-3.7-5.1
+		C39.5,10.5,37.5,10,35,10c-5.4,0-9,3-9,7c0,2.6,0,5,0,5s-2,0-2,2.3c0,1.3,0.5,2.4,1.3,3.1c0.8,0.7,1.9,0.7,1.9,0.7l1.8,5v2l6,4l6-4
+		V33z"></path> 
+ <path d="M58.5,48.3c-0.3-2.3-1.8-4.2-4.2-5.5l-12-5.2L38,54.9c-0.1-6.8-3-8.9-3-8.9s-2.9,2.1-3,8.9l-4.3-17.3l-12,5.2
+		c-2.4,1.3-3.9,3.2-4.2,5.5L10,60h25h25L58.5,48.3z M53,52h-3v3h-2v-3h-3v-2h3v-3h2v3h3V52z"></path> 
+</g> 
+</svg> 
+</div> 
+ <div class="u_1578516874 dmNewParagraph" id="1578516874" style="transition:opacity 1s ease-in-out;line-height:initial;" data-element-type="paragraph" data-version="5"> <h3 class="text-align-center size-24 m-size-19"><span style="display: initial; color: rgb(41, 52, 142); font-weight: 700;" class="font-size-24 m-font-size-19">Our Mission</span></h3> 
+</div> <div class="dmNewParagraph" id="1283052653" style="transition: opacity 1s ease-in-out;" data-version="5"><p class="text-align-center"><span style="color: rgb(0, 0, 0); display: initial; font-weight: normal;">Improve health outcomes through collaboration, data analytics, technological innovation, and operational excellence services</span></p></div></div> 
+ <div class="dmRespCol small-12 u_1543275157 medium-6 large-6" id="1543275157"> <span id="1842424689"></span> 
+ <div class="graphicWidget u_1707641578" data-widget-type="graphic" id="1707641578" data-layout="graphic-style-1" data-element-type="graphic"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" id="1280479278" class="svg u_1280479278" data-icon-name="fa-eye"> <path fill="inherit" d="M1664 960q-152-236-381-353 61 104 61 225 0 185-131.5 316.5t-316.5 131.5-316.5-131.5-131.5-316.5q0-121 61-225-229 117-381 353 133 205 333.5 326.5t434.5 121.5 434.5-121.5 333.5-326.5zM944 576q0-20-14-34t-34-14q-125 0-214.5 89.5t-89.5 214.5q0 20 14 34t34 14 34-14 14-34q0-86 61-147t147-61q20 0 34-14t14-34zM1792 960q0 34-20 69-140 230-376.5 368.5t-499.5 138.5-499.5-139-376.5-368q-20-35-20-69t20-69q140-229 376.5-368t499.5-139 499.5 139 376.5 368q20 35 20 69z"></path> 
+</svg> 
+</div> 
+ <div class="u_1797466127 dmNewParagraph" id="1797466127" style="transition:opacity 1s ease-in-out;line-height:initial;" data-element-type="paragraph" data-version="5"> <h3 class="m-size-19 text-align-center size-24"><span style="font-weight: 700; color: rgb(41, 52, 142); display: initial;" class="m-font-size-19 font-size-24">Our Vision</span></h3> 
+</div> <div class="dmNewParagraph" id="1887177526" style="transition: opacity 1s ease-in-out;" data-version="5"><p class="text-align-center"><span style="color: rgb(0, 0, 0); display: initial; font-weight: normal;">To transform the delivery of healthcare through technology integration</span></p></div></div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1345549673" id="1345549673"> <div class="dmRespColsWrapper" id="1099929132"> <div class="dmRespCol large-12 medium-12 small-12" id="1802923387"> <div data-element-type="spacer" class="dmSpacer u_1811283744" id="1811283744"></div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1052993259" id="1052993259"> <div class="dmRespColsWrapper" id="1937749176"> <div class="dmRespCol large-12 medium-12 small-12" id="1474005023"> <div class="u_1735316873 dmNewParagraph" id="1735316873" style="transition: none 0s ease 0s; display: block; text-align: left;" data-element-type="paragraph" data-version="5"> <h3 class="m-size-36 size-45"><span style="display: initial; color: rgb(128, 204, 39);" class="font-size-45 m-font-size-36">Industries we serve...</span></h3> 
+</div> <div class="u_1398839429 dmNewParagraph" id="1398839429" style="transition: none 0s ease 0s; display: block; text-align: left;" data-version="5"><p class="text-align-left m-size-14"><span style="font-weight: 300; display: initial;" class="m-font-size-14">VigeoDash</span><sup class="m-font-size-14" style="font-weight: 300; display: initial;">TM</sup><span class="m-font-size-14" style="font-weight: 300; display: initial;"> <span class="m-font-size-14" style="font-weight: 300; display: initial;">was created by and for home healthcare professionals. We understand all aspects of the Post-Acute Care Continuum (PACC). Experiencing our own industry challenges prompted the need for an impactful solution. With a custom approach, we utilize technology convergence of multiple platforms into one dashboard. The unique solution extracts, translates and loads electronic healthcare record data that leads to improved operational throughput.</span></span></p><p class="text-align-left"><span class="m-font-size-14" style="font-weight: 300; display: initial;"><span class="ql-cursor">﻿</span></span></p><p class="text-align-left"><span style="display: initial;">Catering to diverse industries, we specialize in optimizing revenue cycles and financial management through our billing platform and RCM services. From home health and hospice to physician practices and billing companies, we empower organizations to streamline operations, reduce indirect costs and maximize collections.</span></p></div> <div class="dmRespRow" id="1650054351"> <div class="dmRespColsWrapper" id="1948644473"> <div class="u_1732336553 dmRespCol small-12 large-3 medium-3" id="1732336553"> <div class="graphicWidget graphicWidgetV2 graphicWidgetV3 u_1900873927" data-element-type="graphic" data-widget-type="graphic" id="1900873927"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" id="1018924006" class="svg u_1018924006" data-icon-custom="true" data-icon-name="12205497671642998739.svg"> <title>Medical Check</title> 
+ <g id="_21_-_30" data-name="21 - 30"> <g id="Medical_Check" data-name="Medical Check"> <path d="M35,6H31a2,2,0,0,0-2-2H27.451a3.977,3.977,0,0,0-6.9,0H19a2,2,0,0,0-2,2H13a5.006,5.006,0,0,0-5,5V41a5.006,5.006,0,0,0,5,5H35a5.006,5.006,0,0,0,5-5V11A5.006,5.006,0,0,0,35,6ZM19,6h2.184a1,1,0,0,0,.942-.665,1.983,1.983,0,0,1,3.748,0A1,1,0,0,0,26.816,6H29V8H19ZM38,41a3,3,0,0,1-3,3H13a3,3,0,0,1-3-3V11a3,3,0,0,1,3-3h4a2,2,0,0,0,2,2H29a2,2,0,0,0,2-2h4a3,3,0,0,1,3,3Z"></path> 
+ <path d="M17.293,32.293,16,33.586l-.293-.293a1,1,0,0,0-1.414,1.414l1,1a1,1,0,0,0,1.414,0l2-2a1,1,0,0,0-1.414-1.414Z"></path> 
+ <path d="M33,33H21a1,1,0,0,0,0,2H33a1,1,0,0,0,0-2Z"></path> 
+ <path d="M17.293,27.293,16,28.586l-.293-.293a1,1,0,0,0-1.414,1.414l1,1a1,1,0,0,0,1.414,0l2-2a1,1,0,0,0-1.414-1.414Z"></path> 
+ <path d="M33,28H21a1,1,0,0,0,0,2H33a1,1,0,0,0,0-2Z"></path> 
+ <path d="M17.293,37.293,16,38.586l-.293-.293a1,1,0,0,0-1.414,1.414l1,1a1,1,0,0,0,1.414,0l2-2a1,1,0,0,0-1.414-1.414Z"></path> 
+ <path d="M33,38H21a1,1,0,0,0,0,2H33a1,1,0,0,0,0-2Z"></path> 
+ <path d="M22.586,24.056a2,2,0,0,0,2.828,0l3.849-3.849A4.222,4.222,0,0,0,24,13.666a4.222,4.222,0,0,0-5.263,6.541Zm-2.435-8.405a2.221,2.221,0,0,1,3.142,0,1,1,0,0,0,1.414,0,2.275,2.275,0,0,1,3.142,0,2.221,2.221,0,0,1,0,3.142L24,22.642l-3.849-3.849a2.221,2.221,0,0,1,0-3.142Z"></path> 
+</g> 
+</g> 
+</svg> 
+</div> 
+ <div class="u_1981357926 dmNewParagraph" id="1981357926" style="transition:opacity 1s ease-in-out;line-height:initial;" data-element-type="paragraph" data-version="5"> <h3 class="text-align-center m-size-19 size-24"><span style="display: initial; color: rgb(128, 204, 39); font-weight: 700;" class="font-size-24 m-font-size-19">Home Health</span></h3> 
+</div></div> 
+ <div class="u_1906683181 dmRespCol small-12 large-2 medium-2" id="1906683181"> <div class="u_1526953742 graphicWidget graphicWidgetV2 graphicWidgetV3" data-element-type="graphic" data-widget-type="graphic" id="1526953742"> <svg id="1502536878" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 42" class="svg u_1502536878" data-icon-custom="true" data-icon-name="Asset 17.svg"> <defs> <style>.cls-1-1500683757{fill:none;stroke:#7fcc28;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style> 
+</defs> 
+ <g id="Layer_1-2"> <path class="cls-1-1500683757" d="M11,1h16c1.1,0,2,.9,2,2v38H9V3c0-1.1.9-2,2-2Z"></path> 
+ <line class="cls-1-1500683757" x1="19" y1="5" x2="19" y2="13"></line> 
+ <line class="cls-1-1500683757" x1="23" y1="9" x2="15" y2="9"></line> 
+ <line class="cls-1-1500683757" x1="13" y1="16" x2="17" y2="16"></line> 
+ <line class="cls-1-1500683757" x1="21" y1="16" x2="25" y2="16"></line> 
+ <line class="cls-1-1500683757" x1="13" y1="21" x2="17" y2="21"></line> 
+ <line class="cls-1-1500683757" x1="21" y1="21" x2="25" y2="21"></line> 
+ <line class="cls-1-1500683757" x1="13" y1="26" x2="17" y2="26"></line> 
+ <line class="cls-1-1500683757" x1="21" y1="26" x2="25" y2="26"></line> 
+ <line class="cls-1-1500683757" x1="30" y1="21" x2="33" y2="21"></line> 
+ <line class="cls-1-1500683757" x1="30" y1="25" x2="33" y2="25"></line> 
+ <path class="cls-1-1500683757" d="M17,30h3c1.1,0,2,.9,2,2v9h-7v-9c0-1.1.9-2,2-2Z"></path> 
+ <path class="cls-1-1500683757" d="M29,11h6c1.1,0,2,.9,2,2v28h-8V11h0Z"></path> 
+ <line class="cls-1-1500683757" x1="5" y1="21" x2="9" y2="21"></line> 
+ <line class="cls-1-1500683757" x1="5" y1="25" x2="9" y2="25"></line> 
+ <path class="cls-1-1500683757" d="M3,11h6v30H1V13c0-1.1.9-2,2-2Z"></path> 
+</g> 
+</svg> 
+</div> 
+ <div class="u_1736375424 dmNewParagraph" id="1736375424" style="transition:opacity 1s ease-in-out;line-height:initial;" data-element-type="paragraph" data-version="5"> <h3 class="m-size-19 text-align-center size-24"><span style="font-weight: 700; color: rgb(128, 204, 39); display: initial;" class="m-font-size-19 font-size-24">Hospice</span></h3> 
+</div></div> 
+ <div class="u_1286948871 dmRespCol small-12 large-4 medium-4" id="1286948871"> <div class="u_1673589418 graphicWidget graphicWidgetV2 graphicWidgetV3" data-element-type="graphic" data-widget-type="graphic" id="1673589418"> <svg id="1923786551" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="svg u_1923786551" data-icon-custom="true" data-icon-name="Asset 1.svg"> <defs> <style>.cls-1-1046057225{fill:#7fcc28;stroke-width:0px;}</style> 
+</defs> 
+ <g id="Layer_1-2"> <path class="cls-1-1046057225" d="M43.22,30.92c-1.33-.62-2.69-1.16-4.08-1.62-.33-1.2-.88-2.34-1.61-3.35-1.32-1.74-3.07-3.1-5.08-3.96,2.18-2.77,3.36-6.2,3.32-9.72.02-1.81-.32-3.61-.99-5.3C33.01,2.61,28.7-.17,24,0c-4.69-.18-9,2.59-10.78,6.93h0c-.67,1.69-1.01,3.5-.99,5.32-.04,3.49,1.11,6.89,3.25,9.65-2.15.87-4.04,2.3-5.46,4.15-.76,1.03-1.33,2.19-1.66,3.42-1.22.42-2.42.9-3.59,1.45-2.85,1.25-4.71,4.05-4.77,7.16v9.19c.01.4.35.72.75.7.38-.01.69-.32.7-.7v-9.19c.06-2.55,1.6-4.83,3.94-5.85.84-.4,1.73-.77,2.67-1.12-.12,1.27-.03,2.56.28,3.8-1.36.66-2.4,1.83-2.89,3.26-.66,1.83-.7,3.83-.11,5.69.35,1.17.91,2.25,1.67,3.21.25.32.7.37,1.02.13.32-.25.37-.7.13-1.02,0,0,0-.01-.01-.02-.64-.81-1.11-1.73-1.41-2.71-.49-1.55-.47-3.22.07-4.75.4-1.24,1.37-2.21,2.6-2.63,1.26-.33,2.61-.05,3.62.77,1.3.98,2.24,2.36,2.67,3.93.3.98.41,2.02.32,3.04-.04.4.26.76.66.79,0,0,0,0,0,0,.4.03.75-.26.79-.65.11-1.21-.02-2.43-.37-3.6-.53-1.87-1.66-3.52-3.22-4.69-1.18-.9-2.67-1.31-4.14-1.13-.32-1.29-.37-2.62-.14-3.93.36-.12.73-.24,1.1-.35.91-.27,1.67-.48,2.41-.65.26-.06.51-.14.75-.23,1.22,3.26,7.53,6.31,9.4,7.15v10.77c.01.4.35.72.75.7.38-.01.69-.32.7-.7v-10.77c1.86-.85,8.17-3.91,9.4-7.17.25.09.49.17.75.24.73.17,1.49.38,2.4.65.22.07.43.14.65.21.35,1.97.23,3.99-.33,5.91-.41-.14-.85-.22-1.29-.23-2.3-.03-4.19,1.82-4.22,4.12-.03,2.3,1.82,4.19,4.12,4.22s4.19-1.82,4.22-4.12c.01-1.27-.55-2.48-1.54-3.28.61-1.97.82-4.04.6-6.09,1.1.4,2.15.82,3.12,1.27,2.34,1.02,3.88,3.3,3.94,5.85v9.19c0,.4.33.73.73.73.4,0,.73-.33.73-.73v-9.18c-.06-3.12-1.92-5.91-4.77-7.17ZM24,1.46c3.78-.15,7.31,1.89,9.07,5.23-.01,0-.01.01-.02.03-1.71.42-3.38,1.01-4.97,1.76-1.16.57-2.38,1.01-3.64,1.3-5,.89-8.01-.9-9.7-2.7,1.68-3.56,5.32-5.77,9.25-5.61ZM13.68,12.26c0-1.25.16-2.49.51-3.68,2.02,1.89,5.33,3.55,10.52,2.64,1.37-.31,2.71-.78,3.97-1.41,1.59-.77,3.26-1.35,4.98-1.75.46,1.35.68,2.77.67,4.2,0,6.93-4.63,12.57-10.32,12.57s-10.32-5.64-10.32-12.57h0ZM12.78,28.18c-.76.18-1.55.4-2.48.67-.07.02-.14.05-.21.07.28-.71.65-1.38,1.11-1.99,1.38-1.76,3.22-3.1,5.32-3.86.31.31.64.61.98.88-.53,1.7-1.78,3.08-3.41,3.77-.42.2-.85.35-1.3.46h0ZM24,35.25c-3.29-1.45-8.14-4.28-8.81-6.46,1.64-.85,2.91-2.27,3.55-4,3.23,2,7.31,2,10.53,0,.67,1.7,1.93,3.1,3.55,3.96-.67,2.18-5.53,5.03-8.82,6.5ZM35.2,28.17c-.44-.12-.86-.29-1.26-.48-1.62-.71-2.86-2.07-3.42-3.75.32-.25.61-.53.91-.82,1.95.75,3.66,2.03,4.93,3.69.44.61.8,1.27,1.07,1.96-.82-.24-1.54-.44-2.23-.6ZM38.97,40.24c0,1.47-1.19,2.67-2.67,2.67-1.47,0-2.67-1.19-2.67-2.67,0-1.47,1.19-2.66,2.66-2.67,1.47,0,2.67,1.19,2.67,2.67h0Z"></path> 
+ <circle class="cls-1-1046057225" cx="36.3" cy="40.24" r=".73"></circle> 
+</g> 
+</svg> 
+</div> 
+ <div class="u_1874998374 dmNewParagraph" id="1874998374" style="transition:opacity 1s ease-in-out;line-height:initial;" data-element-type="paragraph" data-version="5"> <h3 class="text-align-center m-size-19 size-24"><span style="display: initial; color: rgb(128, 204, 39); font-weight: 700;" class="font-size-24 m-font-size-19">Physician Practices</span></h3> 
+</div></div> 
+ <div class="dmRespCol large-3 medium-3 small-12" id="1114795620"> <div class="u_1860256529 graphicWidget graphicWidgetV2 graphicWidgetV3" data-element-type="graphic" data-widget-type="graphic" id="1860256529"> <svg id="1867319550" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 143.97 143.97" class="svg u_1867319550" data-icon-custom="true" data-icon-name="Asset 3.svg"> <defs> <style>.cls-1-1027043877{fill:none;}.cls-1,.cls-2-1027043877{stroke-width:0px;}.cls-2{fill:#7fcc28;fill-rule:evenodd;}</style> 
+</defs> 
+ <g id="Layer_1-2"> <rect class="cls-1-1027043877" width="143.97" height="143.97"></rect> 
+ <g id="Layer_1-3"> <path class="cls-2-1027043877" d="M103.8,96.1c-6.98,0-13.03-1.87-16.56-4.75v3.1c0,3.6,6.77,7.49,16.56,7.49s16.56-3.89,16.56-7.49v-3.1c-3.53,2.88-9.57,4.75-16.56,4.75ZM130.15,67.67v-23.9c-9.14-.79-16.48-8.13-17.28-17.28H42.9c-.79,9.14-8.13,16.48-17.28,17.28v23.9c9.14.79,16.48,8.13,17.28,17.28h41.03c.65-9.36,19.94-12.96,31.67-8.28,3.17-5.18,8.57-8.49,14.54-9ZM25.63,84.94h13.97c-.79-7.34-6.62-13.25-13.97-13.97v13.97ZM83.94,88.18H23.97c-.94,0-1.66-.72-1.66-1.58v-10.22h-10.08c-.94,0-1.66-.72-1.66-1.58V13.03c0-.86.72-1.66,1.66-1.66h109.99c.86,0,1.58.79,1.58,1.66v10.15c2.02,0,6.91-.14,8.49.07.65.14,1.15.94,1.15,1.58v61.76c0,.43-.5,1.08-.5,1.15l-.07.07-1.08.36h-8.13v33.69c0,6.05-8.71,10.73-19.87,10.73s-19.87-4.68-19.87-10.73v-33.69ZM123.67,84.94h6.48v-13.97c-4.75.43-9,3.1-11.59,7.13,3.02,1.8,4.9,4.18,5.11,6.84ZM13.82,73.14h8.49V24.84c0-.94.72-1.66,1.66-1.66h96.6v-8.49H13.82v58.45ZM116.18,26.49c.72,7.34,6.62,13.17,13.97,13.97v-13.97h-13.97ZM25.63,26.49v13.97c7.34-.79,13.17-6.62,13.97-13.97h-13.97ZM78.75,74.87c-10.58,0-19.22-8.57-19.22-19.15s8.64-19.22,19.22-19.22,19.15,8.64,19.15,19.22-8.57,19.15-19.15,19.15ZM78.75,39.81c-8.78,0-15.98,7.13-15.98,15.91s7.2,15.91,15.98,15.91,15.91-7.13,15.91-15.91-7.13-15.91-15.91-15.91ZM78.75,68.03c-1.94,0-1.66-2.23-1.66-3.53-1.3,0-3.6.36-3.6-1.58,0-.94.72-1.66,1.66-1.66h5.54v-3.89h-5.54c-.94,0-1.66-.79-1.66-1.66,0-9-.86-8.85,3.6-8.85,0-1.3-.29-3.46,1.66-3.46s1.58,2.16,1.58,3.46c1.37,0,3.6-.29,3.6,1.66,0,.94-.72,1.66-1.66,1.66h-5.54v3.89h5.54c.94,0,1.66.72,1.66,1.66,0,8.93.86,8.78-3.6,8.78,0,1.3.29,3.53-1.58,3.53ZM118.49,57.37h-10.65c-2.09,0-2.09-3.31,0-3.31h10.65c2.16,0,2.16,3.31,0,3.31ZM47.87,57.37h-10.65c-2.09,0-2.09-3.31,0-3.31h10.65c2.16,0,2.16,3.31,0,3.31ZM87.25,100.49v3.1c0,3.53,6.77,7.49,16.56,7.49s16.56-3.96,16.56-7.49v-3.1c-7.7,6.26-25.41,6.26-33.11,0ZM87.25,109.56v3.17c0,3.53,6.77,7.49,16.56,7.49s16.56-3.96,16.56-7.49v-3.17c-7.7,6.33-25.41,6.33-33.11,0ZM87.25,118.7v3.17c0,3.53,6.77,7.49,16.56,7.49s16.56-3.96,16.56-7.49v-3.17c-7.7,6.33-25.41,6.33-33.11,0ZM87.25,85.3c0,3.6,6.77,7.56,16.56,7.56s16.56-3.96,16.56-7.56-6.77-7.49-16.56-7.49-16.56,3.96-16.56,7.49Z"></path> 
+</g> 
+</g> 
+</svg> 
+</div> 
+ <div class="u_1373387470 dmNewParagraph" id="1373387470" style="transition:opacity 1s ease-in-out;line-height:initial;" data-element-type="paragraph" data-version="5"> <h3 class="m-size-19 text-align-center size-24"><span style="font-weight: 700; color: rgb(128, 204, 39); display: initial;" class="m-font-size-19 font-size-24">Billing Companies</span></h3> 
+</div></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_Integrations dmRespRow fullBleedChanged fullBleedMode" id="Integrations" data-anchor="Integrations"> <div class="dmRespColsWrapper" id="1145823737"> <div class="dmRespCol large-12 medium-12 small-12" id="1623748657"> <div class="u_1855071988 dmNewParagraph" id="1855071988" style="transition: opacity 1s ease-in-out 0s; text-align: left;" data-element-type="paragraph" data-version="5"> <h3 class="text-align-center size-50 m-size-40"><span class="font-size-50 m-font-size-40" style="color: rgb(41, 142, 80); display: initial;">Integrations</span></h3> 
+</div> <div class="dmRespRow fullBleedChanged fullBleedMode" id="1195026039"> <div class="dmRespColsWrapper" id="1355638705"> <div class="u_1585342406 dmRespCol small-12 large-6 medium-6" id="1585342406"> <div class="u_1886696383 dmNewParagraph" id="1886696383" style="transition: opacity 1s ease-in-out 0s; text-align: left;" data-element-type="paragraph" data-version="5"> <h3 class="m-size-24 text-align-center size-30"><span style="display: initial; color: rgb(41, 142, 80);" class="m-font-size-24 font-size-30">Current Integrations</span></h3> 
+</div> <div class="u_1355104297 dmPhotoGallery newPhotoGallery dmPhotoGalleryResp" galleryoptionsparams="{thumbnailsPerRow: 3, rowsToShow: 3, imageScaleMethod: true}" data-desktop-layout="square" data-desktop-columns="4" data-element-type="dPhotoGalleryId" data-desktop-text-layout="bottom" id="1355104297" data-placeholder="false" data-desktop-caption-alignment="center_left" data-mobile-columns="1" editablewidget="true" data-widget-type="photoGallery"> <ul class="dmPhotoGalleryHolder clearfix gallery shadowEffectToChildren gallery4inArow" id="1356418963"> <li class="photoGalleryThumbs" id="1275484663"> <div class="image-container" id="1418112827"> <a data-dm-multisize-attr="href" data-image-url="https://irp.cdn-website.com/d2116928/dms3rep/multi/3-e713862d.svg" id="1910542039"><img irh="" irw="" alt="" data-src="https://irp.cdn-website.com/d2116928/dms3rep/multi/3-e713862d.svg" id="1509508240" onerror="handleImageLoadError(this)"></a> 
+</div> 
+ <div class="caption-container" style="display:none" id="1724649782"> <span class="caption-inner" id="1976989400"> <a class="caption-button dmWidget clearfix" id="1807118856"> <span class="iconBg" id="1741855226"> <span class="icon hasFontIcon icon-star" id="1902364541"></span> 
+</span> 
+ <span class="text" id="1747548852">Button</span> 
+</a> 
+</span> 
+</div> 
+</li> 
+ <li class="photoGalleryThumbs" id="1255560462"> <div class="image-container" id="1963369259"> <a data-dm-multisize-attr="href" data-image-url="https://irp.cdn-website.com/d2116928/dms3rep/multi/1-047bc83b.svg" id="1008986877"><img irh="" irw="" alt="" data-src="https://irp.cdn-website.com/d2116928/dms3rep/multi/1-047bc83b.svg" id="1952390432" onerror="handleImageLoadError(this)"></a> 
+</div> 
+ <div class="caption-container" style="display:none" id="1133729527"> <span class="caption-inner" id="1779574881"> <a class="caption-button dmWidget clearfix" id="1102518689"> <span class="iconBg" id="1515777710"> <span class="icon hasFontIcon icon-star" id="1290471610"></span> 
+</span> 
+ <span class="text" id="1363023411">Button</span> 
+</a> 
+</span> 
+</div> 
+</li> 
+ <li class="photoGalleryThumbs" id="1043700732"> <div class="image-container" id="1090936970"> <a data-dm-multisize-attr="href" data-image-url="https://irp.cdn-website.com/d2116928/dms3rep/multi/5-c7f1de30.svg" id="1043980815"><img irh="" irw="" alt="" data-src="https://irp.cdn-website.com/d2116928/dms3rep/multi/5-c7f1de30.svg" id="1820501128" onerror="handleImageLoadError(this)"></a> 
+</div> 
+ <div class="caption-container" style="display:none" id="1626799296"> <span class="caption-inner" id="1450883322"> <a class="caption-button dmWidget clearfix" id="1696079438"> <span class="iconBg" id="1647300826"> <span class="icon hasFontIcon icon-star" id="1695046652"></span> 
+</span> 
+ <span class="text" id="1814942413">Button</span> 
+</a> 
+</span> 
+</div> 
+</li> 
+ <li class="photoGalleryThumbs" id="1190388262"> <div class="image-container" id="1155644314"> <a data-dm-multisize-attr="href" data-image-url="https://irp.cdn-website.com/d2116928/dms3rep/multi/VigeoDash+Integrations-f8e3f633.png" id="1649929413" class="u_1649929413"><img irh="" irw="" alt="" data-src="https://lirp.cdn-website.com/d2116928/dms3rep/multi/opt/VigeoDash+Integrations-f8e3f633-1920w.png" id="1653275888" class="" onerror="handleImageLoadError(this)"></a> 
+</div> 
+ <div class="caption-container" style="display:none" id="1645359466"> <span class="caption-inner" id="1584463575"> <a class="caption-button dmWidget clearfix" id="1845789094"> <span class="iconBg" id="1457560398"> <span class="icon hasFontIcon icon-star" id="1438976515"></span> 
+</span> 
+ <span class="text" id="1754673766">Button</span> 
+</a> 
+</span> 
+</div> 
+</li> 
+</ul> 
+ <div class="photoGalleryViewAll link" isall="true" data-viewall="View more" data-viewless="View less" style="display:none;" id="1344697953"></div> 
+</div> 
+</div> 
+ <div class="u_1309238546 dmRespCol small-12 large-6 medium-6" id="1309238546"> <div class="u_1243470798 dmNewParagraph" id="1243470798" style="transition: opacity 1s ease-in-out 0s; text-align: left;" data-element-type="paragraph" data-version="5"> <h3 class="m-size-24 text-align-center size-30"><span style="display: initial; color: rgb(41, 142, 80);" class="m-font-size-24 font-size-30">Coming Next</span></h3> 
+</div> <div class="u_1770801841 dmPhotoGallery newPhotoGallery dmPhotoGalleryResp hide-for-small" galleryoptionsparams="{thumbnailsPerRow: 3, rowsToShow: 3, imageScaleMethod: true}" data-desktop-layout="square" data-desktop-columns="4" data-element-type="dPhotoGalleryId" data-desktop-text-layout="bottom" id="1770801841" data-placeholder="false" data-desktop-caption-alignment="center_left" data-rows-to-show="100" editablewidget="true" data-widget-type="photoGallery"> <ul class="dmPhotoGalleryHolder clearfix gallery shadowEffectToChildren gallery4inArow" id="1455889428"> <li class="photoGalleryThumbs" id="1287122026"> <div class="image-container" id="1268004122"> <a data-dm-multisize-attr="href" data-image-url="https://irp.cdn-website.com/d2116928/dms3rep/multi/VigeoDash+Integrations.png" id="1825558170"><img irh="" irw="" alt="" data-src="https://lirp.cdn-website.com/d2116928/dms3rep/multi/opt/VigeoDash+Integrations-1920w.png" id="1778984080" onerror="handleImageLoadError(this)"></a> 
+</div> 
+ <div class="caption-container" style="display:none" id="1010191337"> <span class="caption-inner" id="1041132859"> <a class="caption-button dmWidget clearfix" id="1549250629"> <span class="iconBg" id="1991904883"> <span class="icon hasFontIcon icon-star" id="1615884008"></span> 
+</span> 
+ <span class="text" id="1048097281">Button</span> 
+</a> 
+</span> 
+</div> 
+</li> 
+ <li class="photoGalleryThumbs" id="1125968197"> <div class="image-container" id="1711160527"> <a data-dm-multisize-attr="href" data-image-url="https://irp.cdn-website.com/d2116928/dms3rep/multi/2-2c0ee40d.svg" id="1157882620"><img irh="" irw="" alt="" data-src="https://irp.cdn-website.com/d2116928/dms3rep/multi/2-2c0ee40d.svg" id="1196339331" onerror="handleImageLoadError(this)"></a> 
+</div> 
+ <div class="caption-container" style="display:none" id="1831718496"> <span class="caption-inner" id="1506882579"> <a class="caption-button dmWidget clearfix" id="1524318027"> <span class="iconBg" id="1737871951"> <span class="icon hasFontIcon icon-star" id="1841588595"></span> 
+</span> 
+ <span class="text" id="1202305694">Button</span> 
+</a> 
+</span> 
+</div> 
+</li> 
+ <li class="photoGalleryThumbs" id="1875377575"> <div class="image-container" id="1187348061"> <a data-dm-multisize-attr="href" data-image-url="https://irp.cdn-website.com/d2116928/dms3rep/multi/6.svg" id="1851584443"><img irh="" irw="" alt="" data-src="https://irp.cdn-website.com/d2116928/dms3rep/multi/6.svg" id="1291696379" onerror="handleImageLoadError(this)"></a> 
+</div> 
+ <div class="caption-container" style="display:none" id="1712464544"> <span class="caption-inner" id="1122747873"> <a class="caption-button dmWidget clearfix" id="1099949781"> <span class="iconBg" id="1233638645"> <span class="icon hasFontIcon icon-star" id="1248925251"></span> 
+</span> 
+ <span class="text" id="1374293250">Button</span> 
+</a> 
+</span> 
+</div> 
+</li> 
+ <li class="photoGalleryThumbs" id="1996248797"> <div class="image-container" id="1091109855"> <a data-dm-multisize-attr="href" data-image-url="https://irp.cdn-website.com/d2116928/dms3rep/multi/VigeoDash+Integrations.png" id="1656941108"><img irh="" irw="" alt="" data-src="https://lirp.cdn-website.com/d2116928/dms3rep/multi/opt/VigeoDash+Integrations-1920w.png" id="1103360659" onerror="handleImageLoadError(this)"></a> 
+</div> 
+ <div class="caption-container" style="display:none" id="1167632314"> <span class="caption-inner" id="1144884489"> <a class="caption-button dmWidget clearfix" id="1130308721"> <span class="iconBg" id="1830266323"> <span class="icon hasFontIcon icon-star" id="1779710374"></span> 
+</span> 
+ <span class="text" id="1737411332">Button</span> 
+</a> 
+</span> 
+</div> 
+</li> 
+</ul> 
+ <div class="photoGalleryViewAll link" isall="true" data-viewall="View more" data-viewless="View less" style="display:none;" id="1034921616"></div> 
+</div> 
+ <div class="u_1686754196 dmPhotoGallery newPhotoGallery dmPhotoGalleryResp hide-for-medium hide-for-large" galleryoptionsparams="{thumbnailsPerRow: 3, rowsToShow: 3, imageScaleMethod: true}" data-desktop-layout="square" data-desktop-columns="4" data-element-type="dPhotoGalleryId" data-desktop-text-layout="bottom" id="1686754196" data-placeholder="false" data-desktop-caption-alignment="center_left" data-rows-to-show="100" editablewidget="true" data-widget-type="photoGallery"> <ul class="dmPhotoGalleryHolder clearfix gallery shadowEffectToChildren gallery4inArow" id="1204214709"> <li class="photoGalleryThumbs" id="1437868800"> <div class="image-container" id="1786827841"> <a data-dm-multisize-attr="href" data-image-url="https://irp.cdn-website.com/d2116928/dms3rep/multi/2-2c0ee40d.svg" id="1438014693"><img irh="" irw="" alt="" data-src="https://irp.cdn-website.com/d2116928/dms3rep/multi/2-2c0ee40d.svg" id="1085460594" onerror="handleImageLoadError(this)"></a> 
+</div> 
+ <div class="caption-container" style="display:none" id="1160810561"> <span class="caption-inner" id="1195340380"> <a class="caption-button dmWidget clearfix" id="1223481739"> <span class="iconBg" id="1861623885"> <span class="icon hasFontIcon icon-star" id="1631291345"></span> 
+</span> 
+ <span class="text" id="1724776199">Button</span> 
+</a> 
+</span> 
+</div> 
+</li> 
+ <li class="photoGalleryThumbs" id="1926034405"> <div class="image-container" id="1564115373"> <a data-dm-multisize-attr="href" data-image-url="https://irp.cdn-website.com/d2116928/dms3rep/multi/6.svg" id="1069470645"><img irh="" irw="" alt="" data-src="https://irp.cdn-website.com/d2116928/dms3rep/multi/6.svg" id="1438870401" onerror="handleImageLoadError(this)"></a> 
+</div> 
+ <div class="caption-container" style="display:none" id="1380138995"> <span class="caption-inner" id="1362379538"> <a class="caption-button dmWidget clearfix" id="1209845612"> <span class="iconBg" id="1314783831"> <span class="icon hasFontIcon icon-star" id="1909481454"></span> 
+</span> 
+ <span class="text" id="1463114032">Button</span> 
+</a> 
+</span> 
+</div> 
+</li> 
+</ul> 
+ <div class="photoGalleryViewAll link" isall="true" data-viewall="View more" data-viewless="View less" style="display:none;" id="1711271740"></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1680449996 fullBleedChanged fullBleedMode dmSectionNoParallax hasBackgroundOverlay" id="1680449996"> <div class="dmRespColsWrapper" id="1675502500"> <div class="dmRespCol small-12 u_1745335190 medium-12 large-12" id="1745335190"> <div class="dmRespRow u_1654476710" id="1654476710"> <div class="dmRespColsWrapper" id="1297418053"> <div class="u_1676858423 dmRespCol small-12 large-6 medium-6" id="1676858423"> <div data-element-type="spacer" class="u_1805321993 dmSpacer" id="1805321993"></div> 
+ <div class="u_1684480801 widget-f6a6cd dmCustomWidget noCursor" data-lazy-load="" data-title="" id="1684480801" dmle_extension="custom_extension" data-element-type="custom_extension" icon="false" surround="false" data-widget-id="f6a6cdf9cb5c46769b5603c7960cc686" data-widget-version="162" data-widget-config="eyJsb3R0aWUiOiJodHRwczovL2Fzc2V0czIubG90dGllZmlsZXMuY29tL3BhY2thZ2VzL2xmMjBfdGFjM3F5bnkuanNvbiIsImxvdHRpZU9wdGlvbnMiOiJsb29wIn0=" data-widget-initialized=""> <div class="lottie"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px);"><defs><clippath id="__lottie_element_2"><rect width="1000" height="1000" x="0" y="0"></rect></clippath><filter id="__lottie_element_5" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%"><fecomponenttransfer in="SourceGraphic"><fefunca type="table" tableValues="1.0 0.0"></fefunca></fecomponenttransfer></filter><mask id="__lottie_element_4" mask-type="alpha"><g filter="url(#__lottie_element_5)"><rect width="1000" height="1000" x="0" y="0" fill="#ffffff" opacity="0"></rect><g style="display: none;"><g><path></path></g></g></g></mask></defs><g clip-path="url(#__lottie_element_2)"><g transform="matrix(0.9100000262260437,0,0,0.9190999865531921,480,540)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(-1.113864541053772,-0.11707188189029694,0.11707188189029694,-1.113864541053772,2,-75)"><path fill="rgb(120,224,143)" fill-opacity="0.15" d=" M-60.24140167236328,-396.2807922363281 C174.87930297851562,-457.9580993652344 430.7217102050781,-284.5985107421875 384.7217102050781,-1.5985000133514404 C349.8987121582031,212.6374969482422 173.8402099609375,397.19854736328125 -28,400.2782897949219 C-229.64480590820312,403.3201904296875 -335.2318420410156,214.61146545410156 -382.16009521484375,3.9212000370025635 C-437.3546142578125,-253.32269287109375 -255.37608337402344,-345.019287109375 -60.24140167236328,-396.2807922363281z"></path></g><g opacity="1" transform="matrix(1,0,0,1,2,-19)"><path fill="rgb(120,224,143)" fill-opacity="0.2" d=" M-60.24140167236328,-396.2807922363281 C174.87930297851562,-457.9580993652344 430.7217102050781,-284.5985107421875 384.7217102050781,-1.5985000133514404 C349.8987121582031,212.6374969482422 173.8402099609375,397.19854736328125 -28,400.2782897949219 C-229.64480590820312,403.3201904296875 -335.2318420410156,214.61146545410156 -382.16009521484375,3.9212000370025635 C-437.3546142578125,-253.32269287109375 -255.37608337402344,-345.019287109375 -60.24140167236328,-396.2807922363281z"></path></g></g><g transform="matrix(0.5600000023841858,0,0,0.5600000023841858,-522.8927612304688,-92.48309326171875)" opacity="0.99" style="display: block;"><g opacity="1" transform="matrix(5.671279430389404,1.766406774520874,-1.766406774520874,5.671279430389404,1785.1390380859375,947.1640014648438)"><path fill="rgb(0,0,0)" fill-opacity="0.2" d=" M78.73500061035156,-34.70800018310547 C78.73500061035156,-34.70800018310547 103.17500305175781,43.82400131225586 103.17500305175781,43.82400131225586 C103.53500366210938,44.98099899291992 103.67500305175781,46.15999984741211 103.625,47.301998138427734 C103.44499969482422,51.4640007019043 100.68499755859375,55.25699996948242 96.48500061035156,56.564998626708984 C96.48500061035156,56.564998626708984 -39.904998779296875,99.01399993896484 -39.904998779296875,99.01399993896484 C-44.125,100.3290023803711 -48.564998626708984,98.73899841308594 -51.064998626708984,95.38700103759766 C-51.744998931884766,94.48400115966797 -52.275001525878906,93.4540023803711 -52.6349983215332,92.31800079345703 C-52.6349983215332,92.31800079345703 -77.06500244140625,13.819000244140625 -77.06500244140625,13.819000244140625 C-77.77200317382812,11.545999526977539 -77.41999816894531,9.932999610900879 -76.63200378417969,7.874000072479248 C-75.6989974975586,5.434999942779541 -21.424999237060547,-10.03600025177002 -6.934999942779541,-15.232000350952148 C-4.73799991607666,-16.020000457763672 -2.174999952316284,-16.81999969482422 0.09000000357627869,-17.42300033569336 C15.008999824523926,-21.39699935913086 72.32599639892578,-41.59400177001953 74.43499755859375,-40.27299880981445 C76.41300201416016,-39.034000396728516 77.97699737548828,-37.111000061035156 78.73500061035156,-34.70800018310547z M78.73500061035156,-34.70800018310547 C78.73500061035156,-34.70800018310547 103.17500305175781,43.82400131225586 103.17500305175781,43.82400131225586 C103.53500366210938,44.98099899291992 103.67500305175781,46.15999984741211 103.625,47.301998138427734 C103.44499969482422,51.4640007019043 100.68499755859375,55.25699996948242 96.48500061035156,56.564998626708984 C96.48500061035156,56.564998626708984 -39.904998779296875,99.01399993896484 -39.904998779296875,99.01399993896484 C-44.125,100.3290023803711 -48.564998626708984,98.73899841308594 -51.064998626708984,95.38700103759766 C-51.744998931884766,94.48400115966797 -52.275001525878906,93.4540023803711 -52.6349983215332,92.31800079345703 C-52.6349983215332,92.31800079345703 -77.06500244140625,13.819000244140625 -77.06500244140625,13.819000244140625 C-77.77200317382812,11.545999526977539 -77.41999816894531,9.932999610900879 -76.63200378417969,7.874000072479248 C-75.6989974975586,5.434999942779541 -21.424999237060547,-10.03600025177002 -6.934999942779541,-15.232000350952148 C-4.73799991607666,-16.020000457763672 -2.174999952316284,-16.81999969482422 0.09000000357627869,-17.42300033569336 C15.008999824523926,-21.39699935913086 72.32599639892578,-41.59400177001953 74.43499755859375,-40.27299880981445 C76.41300201416016,-39.034000396728516 77.97699737548828,-37.111000061035156 78.73500061035156,-34.70800018310547z"></path></g><g opacity="1" transform="matrix(5.671279430389404,1.766406774520874,-1.766406774520874,5.671279430389404,1801.1390380859375,934.1640014648438)"><path fill="rgb(41,52,142)" fill-opacity="1" d=" M78.73500061035156,-34.70800018310547 C78.73500061035156,-34.70800018310547 103.17500305175781,43.82400131225586 103.17500305175781,43.82400131225586 C103.53500366210938,44.98099899291992 103.67500305175781,46.15999984741211 103.625,47.301998138427734 C103.44499969482422,51.4640007019043 100.68499755859375,55.25699996948242 96.48500061035156,56.564998626708984 C96.48500061035156,56.564998626708984 -39.904998779296875,99.01399993896484 -39.904998779296875,99.01399993896484 C-44.125,100.3290023803711 -48.564998626708984,98.73899841308594 -51.064998626708984,95.38700103759766 C-51.744998931884766,94.48400115966797 -52.275001525878906,93.4540023803711 -52.6349983215332,92.31800079345703 C-52.6349983215332,92.31800079345703 -77.06500244140625,13.819000244140625 -77.06500244140625,13.819000244140625 C-77.77200317382812,11.545999526977539 -77.41999816894531,9.932999610900879 -76.63200378417969,7.874000072479248 C-75.6989974975586,5.434999942779541 -21.424999237060547,-10.03600025177002 -6.934999942779541,-15.232000350952148 C-4.73799991607666,-16.020000457763672 -2.174999952316284,-16.81999969482422 0.09000000357627869,-17.42300033569336 C15.008999824523926,-21.39699935913086 72.32599639892578,-41.59400177001953 74.43499755859375,-40.27299880981445 C76.41300201416016,-39.034000396728516 77.97699737548828,-37.111000061035156 78.73500061035156,-34.70800018310547z M78.73500061035156,-34.70800018310547 C78.73500061035156,-34.70800018310547 103.17500305175781,43.82400131225586 103.17500305175781,43.82400131225586 C103.53500366210938,44.98099899291992 103.67500305175781,46.15999984741211 103.625,47.301998138427734 C103.44499969482422,51.4640007019043 100.68499755859375,55.25699996948242 96.48500061035156,56.564998626708984 C96.48500061035156,56.564998626708984 -39.904998779296875,99.01399993896484 -39.904998779296875,99.01399993896484 C-44.125,100.3290023803711 -48.564998626708984,98.73899841308594 -51.064998626708984,95.38700103759766 C-51.744998931884766,94.48400115966797 -52.275001525878906,93.4540023803711 -52.6349983215332,92.31800079345703 C-52.6349983215332,92.31800079345703 -77.06500244140625,13.819000244140625 -77.06500244140625,13.819000244140625 C-77.77200317382812,11.545999526977539 -77.41999816894531,9.932999610900879 -76.63200378417969,7.874000072479248 C-75.6989974975586,5.434999942779541 -21.424999237060547,-10.03600025177002 -6.934999942779541,-15.232000350952148 C-4.73799991607666,-16.020000457763672 -2.174999952316284,-16.81999969482422 0.09000000357627869,-17.42300033569336 C15.008999824523926,-21.39699935913086 72.32599639892578,-41.59400177001953 74.43499755859375,-40.27299880981445 C76.41300201416016,-39.034000396728516 77.97699737548828,-37.111000061035156 78.73500061035156,-34.70800018310547z"></path></g><g opacity="1" transform="matrix(5.671279430389404,1.766406774520874,-1.766406774520874,5.671279430389404,1801.1390380859375,977.1640014648438)"><g opacity="1" transform="matrix(1,0,0,1,-1792,-1153)"><path fill="rgb(236,242,251)" fill-opacity="1" d=" M1861.2080078125,1111.7490234375 C1861.2080078125,1111.7490234375 1886.1209716796875,1191.5579833984375 1886.1209716796875,1191.5579833984375 C1887.27294921875,1195.248046875 1885.2139892578125,1199.1729736328125 1881.5240478515625,1200.324951171875 C1881.5240478515625,1200.324951171875 1753.446044921875,1240.4090576171875 1753.446044921875,1240.4090576171875 C1749.7559814453125,1241.56103515625 1745.8299560546875,1239.5030517578125 1744.677978515625,1235.81298828125 C1744.677978515625,1235.81298828125 1719.7650146484375,1156.0050048828125 1719.7650146484375,1156.0050048828125 C1718.613037109375,1152.31494140625 1720.6719970703125,1148.3890380859375 1724.362060546875,1147.237060546875 C1724.362060546875,1147.237060546875 1852.4410400390625,1107.1529541015625 1852.4410400390625,1107.1529541015625 C1856.1309814453125,1106.0009765625 1860.0560302734375,1108.0589599609375 1861.2080078125,1111.7490234375z M1861.2080078125,1111.7490234375 C1861.2080078125,1111.7490234375 1886.1209716796875,1191.5579833984375 1886.1209716796875,1191.5579833984375 C1887.27294921875,1195.248046875 1885.2139892578125,1199.1729736328125 1881.5240478515625,1200.324951171875 C1881.5240478515625,1200.324951171875 1753.446044921875,1240.4090576171875 1753.446044921875,1240.4090576171875 C1749.7559814453125,1241.56103515625 1745.8299560546875,1239.5030517578125 1744.677978515625,1235.81298828125 C1744.677978515625,1235.81298828125 1719.7650146484375,1156.0050048828125 1719.7650146484375,1156.0050048828125 C1718.613037109375,1152.31494140625 1720.6719970703125,1148.3890380859375 1724.362060546875,1147.237060546875 C1724.362060546875,1147.237060546875 1852.4410400390625,1107.1529541015625 1852.4410400390625,1107.1529541015625 C1856.1309814453125,1106.0009765625 1860.0560302734375,1108.0589599609375 1861.2080078125,1111.7490234375z"></path></g><g opacity="1" transform="matrix(1,0,0,1,-1792,-1153)"><path stroke-linecap="round" stroke-linejoin="round" fill-opacity="0" stroke="rgb(191,206,226)" stroke-opacity="1" stroke-width="5" d="M0 0"></path><g opacity="1" transform="matrix(1,0,0,1,15,45)"></g><g opacity="1" transform="matrix(1,0,0,1,10,30)"></g><g opacity="1" transform="matrix(1,0,0,1,5,15)"></g><g opacity="1" transform="matrix(1,0,0,1,0,0)"></g></g></g><g opacity="1" transform="matrix(5.671279430389404,1.766406774520874,-1.766406774520874,5.671279430389404,1801.1390380859375,934.1640014648438)"><path fill="rgb(1,154,77)" fill-opacity="1" d=" M78.95800018310547,-33.9900016784668 C78.95800018310547,-33.9900016784668 103.17500305175781,43.82400131225586 103.17500305175781,43.82400131225586 C103.53500366210938,44.98099899291992 103.67500305175781,46.15999984741211 103.625,47.301998138427734 C103.44499969482422,51.4640007019043 100.68499755859375,55.25699996948242 96.48500061035156,56.564998626708984 C96.48500061035156,56.564998626708984 -39.904998779296875,99.01399993896484 -39.904998779296875,99.01399993896484 C-44.125,100.3290023803711 -48.564998626708984,98.73899841308594 -51.064998626708984,95.38700103759766 C-51.744998931884766,94.48400115966797 -52.275001525878906,93.4540023803711 -52.6349983215332,92.31800079345703 C-52.6349983215332,92.31800079345703 -76.84100341796875,14.536999702453613 -76.84100341796875,14.536999702453613 C-78.51100158691406,9.164999961853027 -74.7030029296875,6.060999870300293 -68.3290023803711,7.683000087738037 C-68.3290023803711,7.683000087738037 12.317000389099121,29.180999755859375 12.317000389099121,29.180999755859375 C12.317000389099121,29.180999755859375 68.06099700927734,-34.76599884033203 68.06099700927734,-34.76599884033203 C72.19999694824219,-39.37900161743164 77.26799774169922,-39.34400177001953 78.95800018310547,-33.9900016784668z M78.95800018310547,-33.9900016784668 C78.95800018310547,-33.9900016784668 103.17500305175781,43.82400131225586 103.17500305175781,43.82400131225586 C103.53500366210938,44.98099899291992 103.67500305175781,46.15999984741211 103.625,47.301998138427734 C103.44499969482422,51.4640007019043 100.68499755859375,55.25699996948242 96.48500061035156,56.564998626708984 C96.48500061035156,56.564998626708984 -39.904998779296875,99.01399993896484 -39.904998779296875,99.01399993896484 C-44.125,100.3290023803711 -48.564998626708984,98.73899841308594 -51.064998626708984,95.38700103759766 C-51.744998931884766,94.48400115966797 -52.275001525878906,93.4540023803711 -52.6349983215332,92.31800079345703 C-52.6349983215332,92.31800079345703 -76.84100341796875,14.536999702453613 -76.84100341796875,14.536999702453613 C-78.51100158691406,9.164999961853027 -74.7030029296875,6.060999870300293 -68.3290023803711,7.683000087738037 C-68.3290023803711,7.683000087738037 12.317000389099121,29.180999755859375 12.317000389099121,29.180999755859375 C12.317000389099121,29.180999755859375 68.06099700927734,-34.76599884033203 68.06099700927734,-34.76599884033203 C72.19999694824219,-39.37900161743164 77.26799774169922,-39.34400177001953 78.95800018310547,-33.9900016784668z M103.572998046875,47.13399887084961 C103.42400360107422,51.39400100708008 100.68499755859375,55.25699996948242 96.48500061035156,56.564998626708984 C96.48500061035156,56.564998626708984 -39.904998779296875,99.01300048828125 -39.904998779296875,99.01300048828125 C-44.125,100.3280029296875 -48.5880012512207,98.66699981689453 -51.11800003051758,95.21700286865234 C-51.11800003051758,95.21700286865234 5.468999862670898,25.01099967956543 5.468999862670898,25.01099967956543 C5.468999862670898,25.01099967956543 8.102999687194824,21.832000732421875 10.819999694824219,21.020000457763672 C13.536999702453613,20.20800018310547 17.107999801635742,21.540000915527344 17.107999801635742,21.540000915527344 C17.107999801635742,21.540000915527344 103.572998046875,47.13399887084961 103.572998046875,47.13399887084961z M103.572998046875,47.13399887084961 C103.42400360107422,51.39400100708008 100.68499755859375,55.25699996948242 96.48500061035156,56.564998626708984 C96.48500061035156,56.564998626708984 -39.904998779296875,99.01300048828125 -39.904998779296875,99.01300048828125 C-44.125,100.3280029296875 -48.5880012512207,98.66699981689453 -51.11800003051758,95.21700286865234 C-51.11800003051758,95.21700286865234 5.468999862670898,25.01099967956543 5.468999862670898,25.01099967956543 C5.468999862670898,25.01099967956543 8.102999687194824,21.832000732421875 10.819999694824219,21.020000457763672 C13.536999702453613,20.20800018310547 17.107999801635742,21.540000915527344 17.107999801635742,21.540000915527344 C17.107999801635742,21.540000915527344 103.572998046875,47.13399887084961 103.572998046875,47.13399887084961z M103.625,47.301998138427734 C103.44499969482422,51.4640007019043 100.68499755859375,55.25699996948242 96.48500061035156,56.564998626708984 C96.48500061035156,56.564998626708984 -39.904998779296875,99.01399993896484 -39.904998779296875,99.01399993896484 C-44.125,100.3290023803711 -48.564998626708984,98.73899841308594 -51.064998626708984,95.38700103759766 C-51.064998626708984,95.38700103759766 5.9019999504089355,26.402000427246094 5.9019999504089355,26.402000427246094 C5.9019999504089355,26.402000427246094 8.553000450134277,23.277999877929688 11.270000457763672,22.46500015258789 C13.987000465393066,21.652000427246094 17.541000366210938,22.927000045776367 17.541000366210938,22.927000045776367 C17.541000366210938,22.927000045776367 103.625,47.301998138427734 103.625,47.301998138427734z M103.625,47.301998138427734 C103.44499969482422,51.4640007019043 100.68499755859375,55.25699996948242 96.48500061035156,56.564998626708984 C96.48500061035156,56.564998626708984 -39.904998779296875,99.01399993896484 -39.904998779296875,99.01399993896484 C-44.125,100.3290023803711 -48.564998626708984,98.73899841308594 -51.064998626708984,95.38700103759766 C-51.064998626708984,95.38700103759766 5.9019999504089355,26.402000427246094 5.9019999504089355,26.402000427246094 C5.9019999504089355,26.402000427246094 8.553000450134277,23.277999877929688 11.270000457763672,22.46500015258789 C13.987000465393066,21.652000427246094 17.541000366210938,22.927000045776367 17.541000366210938,22.927000045776367 C17.541000366210938,22.927000045776367 103.625,47.301998138427734 103.625,47.301998138427734z M11.967000007629395,33.016998291015625 C-1.0609999895095825,29.871000289916992 -77.56900024414062,11.350000381469727 -77.51599884033203,10.286999702453613 C-77.45600128173828,9.07800006866455 -77.18099975585938,7.901000022888184 -76.71600341796875,6.809000015258789 C-75.58899688720703,4.158999919891357 -73.3489990234375,2.003999948501587 -70.38500213623047,1.0809999704360962 C-70.38500213623047,1.0809999704360962 66.00499725341797,-41.36800003051758 66.00499725341797,-41.36800003051758 C68.90499877929688,-42.27000045776367 71.90499877929688,-41.81100082397461 74.31300354003906,-40.3489990234375 C75.32099914550781,-39.73699951171875 76.22599792480469,-38.94900131225586 76.97599792480469,-38.01100158691406 C77.67500305175781,-37.137001037597656 24.243000030517578,21.976999282836914 15.149999618530273,32.025001525878906 C14.305000305175781,32.95899963378906 13.178999900817871,33.310001373291016 11.967000007629395,33.016998291015625z M11.967000007629395,33.016998291015625 C-1.0609999895095825,29.871000289916992 -77.56900024414062,11.350000381469727 -77.51599884033203,10.286999702453613 C-77.45600128173828,9.07800006866455 -77.18099975585938,7.901000022888184 -76.71600341796875,6.809000015258789 C-75.58899688720703,4.158999919891357 -73.3489990234375,2.003999948501587 -70.38500213623047,1.0809999704360962 C-70.38500213623047,1.0809999704360962 66.00499725341797,-41.36800003051758 66.00499725341797,-41.36800003051758 C68.90499877929688,-42.27000045776367 71.90499877929688,-41.81100082397461 74.31300354003906,-40.3489990234375 C75.32099914550781,-39.73699951171875 76.22599792480469,-38.94900131225586 76.97599792480469,-38.01100158691406 C77.67500305175781,-37.137001037597656 24.243000030517578,21.976999282836914 15.149999618530273,32.025001525878906 C14.305000305175781,32.95899963378906 13.178999900817871,33.310001373291016 11.967000007629395,33.016998291015625z"></path><path fill="rgb(32,32,32)" fill-opacity="0.3" d=" M103.572998046875,47.13399887084961 C103.42400360107422,51.39400100708008 100.68499755859375,55.25699996948242 96.48500061035156,56.564998626708984 C96.48500061035156,56.564998626708984 -39.904998779296875,99.01300048828125 -39.904998779296875,99.01300048828125 C-44.125,100.3280029296875 -48.5880012512207,98.66699981689453 -51.11800003051758,95.21700286865234 C-51.11800003051758,95.21700286865234 5.468999862670898,25.01099967956543 5.468999862670898,25.01099967956543 C5.468999862670898,25.01099967956543 8.102999687194824,21.832000732421875 10.819999694824219,21.020000457763672 C13.536999702453613,20.20800018310547 17.107999801635742,21.540000915527344 17.107999801635742,21.540000915527344 C17.107999801635742,21.540000915527344 103.572998046875,47.13399887084961 103.572998046875,47.13399887084961z M103.572998046875,47.13399887084961 C103.42400360107422,51.39400100708008 100.68499755859375,55.25699996948242 96.48500061035156,56.564998626708984 C96.48500061035156,56.564998626708984 -39.904998779296875,99.01300048828125 -39.904998779296875,99.01300048828125 C-44.125,100.3280029296875 -48.5880012512207,98.66699981689453 -51.11800003051758,95.21700286865234 C-51.11800003051758,95.21700286865234 5.468999862670898,25.01099967956543 5.468999862670898,25.01099967956543 C5.468999862670898,25.01099967956543 8.102999687194824,21.832000732421875 10.819999694824219,21.020000457763672 C13.536999702453613,20.20800018310547 17.107999801635742,21.540000915527344 17.107999801635742,21.540000915527344 C17.107999801635742,21.540000915527344 103.572998046875,47.13399887084961 103.572998046875,47.13399887084961z M103.625,47.301998138427734 C103.44499969482422,51.4640007019043 100.68499755859375,55.25699996948242 96.48500061035156,56.564998626708984 C96.48500061035156,56.564998626708984 -39.904998779296875,99.01399993896484 -39.904998779296875,99.01399993896484 C-44.125,100.3290023803711 -48.564998626708984,98.73899841308594 -51.064998626708984,95.38700103759766 C-51.064998626708984,95.38700103759766 5.9019999504089355,26.402000427246094 5.9019999504089355,26.402000427246094 C5.9019999504089355,26.402000427246094 8.553000450134277,23.277999877929688 11.270000457763672,22.46500015258789 C13.987000465393066,21.652000427246094 17.541000366210938,22.927000045776367 17.541000366210938,22.927000045776367 C17.541000366210938,22.927000045776367 103.625,47.301998138427734 103.625,47.301998138427734z M103.625,47.301998138427734 C103.44499969482422,51.4640007019043 100.68499755859375,55.25699996948242 96.48500061035156,56.564998626708984 C96.48500061035156,56.564998626708984 -39.904998779296875,99.01399993896484 -39.904998779296875,99.01399993896484 C-44.125,100.3290023803711 -48.564998626708984,98.73899841308594 -51.064998626708984,95.38700103759766 C-51.064998626708984,95.38700103759766 5.9019999504089355,26.402000427246094 5.9019999504089355,26.402000427246094 C5.9019999504089355,26.402000427246094 8.553000450134277,23.277999877929688 11.270000457763672,22.46500015258789 C13.987000465393066,21.652000427246094 17.541000366210938,22.927000045776367 17.541000366210938,22.927000045776367 C17.541000366210938,22.927000045776367 103.625,47.301998138427734 103.625,47.301998138427734z M11.967000007629395,33.016998291015625 C-1.0609999895095825,29.871000289916992 -77.56900024414062,11.350000381469727 -77.51599884033203,10.286999702453613 C-77.45600128173828,9.07800006866455 -77.18099975585938,7.901000022888184 -76.71600341796875,6.809000015258789 C-75.58899688720703,4.158999919891357 -73.3489990234375,2.003999948501587 -70.38500213623047,1.0809999704360962 C-70.38500213623047,1.0809999704360962 66.00499725341797,-41.36800003051758 66.00499725341797,-41.36800003051758 C68.90499877929688,-42.27000045776367 71.90499877929688,-41.81100082397461 74.31300354003906,-40.3489990234375 C75.32099914550781,-39.73699951171875 76.22599792480469,-38.94900131225586 76.97599792480469,-38.01100158691406 C77.67500305175781,-37.137001037597656 24.243000030517578,21.976999282836914 15.149999618530273,32.025001525878906 C14.305000305175781,32.95899963378906 13.178999900817871,33.310001373291016 11.967000007629395,33.016998291015625z M11.967000007629395,33.016998291015625 C-1.0609999895095825,29.871000289916992 -77.56900024414062,11.350000381469727 -77.51599884033203,10.286999702453613 C-77.45600128173828,9.07800006866455 -77.18099975585938,7.901000022888184 -76.71600341796875,6.809000015258789 C-75.58899688720703,4.158999919891357 -73.3489990234375,2.003999948501587 -70.38500213623047,1.0809999704360962 C-70.38500213623047,1.0809999704360962 66.00499725341797,-41.36800003051758 66.00499725341797,-41.36800003051758 C68.90499877929688,-42.27000045776367 71.90499877929688,-41.81100082397461 74.31300354003906,-40.3489990234375 C75.32099914550781,-39.73699951171875 76.22599792480469,-38.94900131225586 76.97599792480469,-38.01100158691406 C77.67500305175781,-37.137001037597656 24.243000030517578,21.976999282836914 15.149999618530273,32.025001525878906 C14.305000305175781,32.95899963378906 13.178999900817871,33.310001373291016 11.967000007629395,33.016998291015625z"></path><path fill="rgb(1,154,77)" fill-opacity="1" d=" M103.625,47.301998138427734 C103.44499969482422,51.4640007019043 100.68499755859375,55.25699996948242 96.48500061035156,56.564998626708984 C96.48500061035156,56.564998626708984 -39.904998779296875,99.01399993896484 -39.904998779296875,99.01399993896484 C-44.125,100.3290023803711 -48.564998626708984,98.73899841308594 -51.064998626708984,95.38700103759766 C-51.064998626708984,95.38700103759766 5.9019999504089355,26.402000427246094 5.9019999504089355,26.402000427246094 C5.9019999504089355,26.402000427246094 8.553000450134277,23.277999877929688 11.270000457763672,22.46500015258789 C13.987000465393066,21.652000427246094 17.541000366210938,22.927000045776367 17.541000366210938,22.927000045776367 C17.541000366210938,22.927000045776367 103.625,47.301998138427734 103.625,47.301998138427734z M103.625,47.301998138427734 C103.44499969482422,51.4640007019043 100.68499755859375,55.25699996948242 96.48500061035156,56.564998626708984 C96.48500061035156,56.564998626708984 -39.904998779296875,99.01399993896484 -39.904998779296875,99.01399993896484 C-44.125,100.3290023803711 -48.564998626708984,98.73899841308594 -51.064998626708984,95.38700103759766 C-51.064998626708984,95.38700103759766 5.9019999504089355,26.402000427246094 5.9019999504089355,26.402000427246094 C5.9019999504089355,26.402000427246094 8.553000450134277,23.277999877929688 11.270000457763672,22.46500015258789 C13.987000465393066,21.652000427246094 17.541000366210938,22.927000045776367 17.541000366210938,22.927000045776367 C17.541000366210938,22.927000045776367 103.625,47.301998138427734 103.625,47.301998138427734z M11.967000007629395,33.016998291015625 C-1.0609999895095825,29.871000289916992 -77.56900024414062,11.350000381469727 -77.51599884033203,10.286999702453613 C-77.45600128173828,9.07800006866455 -77.18099975585938,7.901000022888184 -76.71600341796875,6.809000015258789 C-75.58899688720703,4.158999919891357 -73.3489990234375,2.003999948501587 -70.38500213623047,1.0809999704360962 C-70.38500213623047,1.0809999704360962 66.00499725341797,-41.36800003051758 66.00499725341797,-41.36800003051758 C68.90499877929688,-42.27000045776367 71.90499877929688,-41.81100082397461 74.31300354003906,-40.3489990234375 C75.32099914550781,-39.73699951171875 76.22599792480469,-38.94900131225586 76.97599792480469,-38.01100158691406 C77.67500305175781,-37.137001037597656 24.243000030517578,21.976999282836914 15.149999618530273,32.025001525878906 C14.305000305175781,32.95899963378906 13.178999900817871,33.310001373291016 11.967000007629395,33.016998291015625z M11.967000007629395,33.016998291015625 C-1.0609999895095825,29.871000289916992 -77.56900024414062,11.350000381469727 -77.51599884033203,10.286999702453613 C-77.45600128173828,9.07800006866455 -77.18099975585938,7.901000022888184 -76.71600341796875,6.809000015258789 C-75.58899688720703,4.158999919891357 -73.3489990234375,2.003999948501587 -70.38500213623047,1.0809999704360962 C-70.38500213623047,1.0809999704360962 66.00499725341797,-41.36800003051758 66.00499725341797,-41.36800003051758 C68.90499877929688,-42.27000045776367 71.90499877929688,-41.81100082397461 74.31300354003906,-40.3489990234375 C75.32099914550781,-39.73699951171875 76.22599792480469,-38.94900131225586 76.97599792480469,-38.01100158691406 C77.67500305175781,-37.137001037597656 24.243000030517578,21.976999282836914 15.149999618530273,32.025001525878906 C14.305000305175781,32.95899963378906 13.178999900817871,33.310001373291016 11.967000007629395,33.016998291015625z"></path><path fill="rgb(41,52,142)" fill-opacity="1" d=" M11.967000007629395,33.016998291015625 C-1.0609999895095825,29.871000289916992 -77.56900024414062,11.350000381469727 -77.51599884033203,10.286999702453613 C-77.45600128173828,9.07800006866455 -77.18099975585938,7.901000022888184 -76.71600341796875,6.809000015258789 C-75.58899688720703,4.158999919891357 -73.3489990234375,2.003999948501587 -70.38500213623047,1.0809999704360962 C-70.38500213623047,1.0809999704360962 66.00499725341797,-41.36800003051758 66.00499725341797,-41.36800003051758 C68.90499877929688,-42.27000045776367 71.90499877929688,-41.81100082397461 74.31300354003906,-40.3489990234375 C75.32099914550781,-39.73699951171875 76.22599792480469,-38.94900131225586 76.97599792480469,-38.01100158691406 C77.67500305175781,-37.137001037597656 24.243000030517578,21.976999282836914 15.149999618530273,32.025001525878906 C14.305000305175781,32.95899963378906 13.178999900817871,33.310001373291016 11.967000007629395,33.016998291015625z M11.967000007629395,33.016998291015625 C-1.0609999895095825,29.871000289916992 -77.56900024414062,11.350000381469727 -77.51599884033203,10.286999702453613 C-77.45600128173828,9.07800006866455 -77.18099975585938,7.901000022888184 -76.71600341796875,6.809000015258789 C-75.58899688720703,4.158999919891357 -73.3489990234375,2.003999948501587 -70.38500213623047,1.0809999704360962 C-70.38500213623047,1.0809999704360962 66.00499725341797,-41.36800003051758 66.00499725341797,-41.36800003051758 C68.90499877929688,-42.27000045776367 71.90499877929688,-41.81100082397461 74.31300354003906,-40.3489990234375 C75.32099914550781,-39.73699951171875 76.22599792480469,-38.94900131225586 76.97599792480469,-38.01100158691406 C77.67500305175781,-37.137001037597656 24.243000030517578,21.976999282836914 15.149999618530273,32.025001525878906 C14.305000305175781,32.95899963378906 13.178999900817871,33.310001373291016 11.967000007629395,33.016998291015625z"></path></g></g><g transform="matrix(0.6698147654533386,0.01575431600213051,-0.01575431600213051,0.6698147654533386,-1122.2242431640625,5.72344970703125)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,2140.425048828125,652.02099609375)"><path fill="rgb(0,0,0)" fill-opacity="0.18" d=" M-4,-52.45249938964844 C31.019433975219727,-52.45249938964844 59.45249938964844,-24.019433975219727 59.45249938964844,11 C59.45249938964844,46.01943588256836 31.019433975219727,74.45249938964844 -4,74.45249938964844 C-39.01943588256836,74.45249938964844 -67.45249938964844,46.01943588256836 -67.45249938964844,11 C-67.45249938964844,-24.019433975219727 -39.01943588256836,-52.45249938964844 -4,-52.45249938964844z"></path></g><g opacity="1" transform="matrix(1,0,0,1,2140.425048828125,652.02099609375)"><path fill="rgb(225,234,245)" fill-opacity="1" d=" M0,-63.45249938964844 C35.01943588256836,-63.45249938964844 63.45249938964844,-35.01943588256836 63.45249938964844,0 C63.45249938964844,35.01943588256836 35.01943588256836,63.45249938964844 0,63.45249938964844 C-35.01943588256836,63.45249938964844 -63.45249938964844,35.01943588256836 -63.45249938964844,0 C-63.45249938964844,-35.01943588256836 -35.01943588256836,-63.45249938964844 0,-63.45249938964844z M17.93600082397461,34.33000183105469 C12.602999687194824,37.12900161743164 5.40500020980835,38.59600067138672 -1.3930000066757202,38.59600067138672 C-21.2549991607666,38.59600067138672 -35.51900100708008,25.93199920654297 -35.51900100708008,3.6700000762939453 C-35.51900100708008,-21.791000366210938 -17.6560001373291,-37.7869987487793 2.740000009536743,-37.7869987487793 C23.402000427246094,-37.7869987487793 34.597999572753906,-24.323999404907227 34.597999572753906,-6.99399995803833 C34.597999572753906,8.336000442504883 27.398000717163086,15.73900032043457 21.667999267578125,15.534000396728516 C17.93600082397461,15.401000022888184 17.003000259399414,11.802000045776367 18.336000442504883,3.937000036239624 C18.336000442504883,3.937000036239624 22.334999084472656,-20.724000930786133 22.334999084472656,-20.724000930786133 C19.00200080871582,-22.59000015258789 12.336999893188477,-24.05699920654297 6.4720001220703125,-24.05699920654297 C-12.723999977111816,-24.05699920654297 -24.722000122070312,-9.260000228881836 -24.722000122070312,7.002999782562256 C-24.722000122070312,17.93400001525879 -18.45599937438965,24.332000732421875 -9.791000366210938,24.332000732421875 C-2.7260000705718994,24.332000732421875 3.2720000743865967,20.867000579833984 7.40500020980835,14.067999839782715 C7.40500020980835,14.067999839782715 7.671000003814697,14.067999839782715 7.671000003814697,14.067999839782715 C8.338000297546387,21.132999420166016 12.869999885559082,24.332000732421875 19.13599967956543,24.332000732421875 C33.53200149536133,24.332000732421875 44.4630012512207,12.067999839782715 44.4630012512207,-7.394000053405762 C44.4630012512207,-29.788999557495117 27.66699981689453,-45.91899871826172 4.205999851226807,-45.91899871826172 C-25.92099952697754,-45.91899871826172 -45.650001525878906,-22.323999404907227 -45.650001525878906,4.869999885559082 C-45.650001525878906,30.99799919128418 -26.187000274658203,46.861000061035156 -4.059999942779541,46.861000061035156 C5.40500020980835,46.861000061035156 12.336999893188477,45.6609992980957 20.334999084472656,42.0620002746582 C20.334999084472656,42.0620002746582 17.93600082397461,34.33000183105469 17.93600082397461,34.33000183105469z M6.604000091552734,-0.32899999618530273 C5.4039998054504395,7.4029998779296875 0.20600000023841858,13.668000221252441 -4.72599983215332,13.668000221252441 C-9.12399959564209,13.668000221252441 -11.390999794006348,10.468999862670898 -11.390999794006348,5.4029998779296875 C-11.390999794006348,-4.861000061035156 -4.459000110626221,-13.526000022888184 4.339000225067139,-13.526000022888184 C6.071000099182129,-13.526000022888184 7.4039998054504395,-13.260000228881836 8.470000267028809,-12.993000030517578 C8.470000267028809,-12.993000030517578 6.604000091552734,-0.32899999618530273 6.604000091552734,-0.32899999618530273z"></path><path fill="rgb(141,198,63)" fill-opacity="1" d=" M17.93600082397461,34.33000183105469 C12.602999687194824,37.12900161743164 5.40500020980835,38.59600067138672 -1.3930000066757202,38.59600067138672 C-21.2549991607666,38.59600067138672 -35.51900100708008,25.93199920654297 -35.51900100708008,3.6700000762939453 C-35.51900100708008,-21.791000366210938 -17.6560001373291,-37.7869987487793 2.740000009536743,-37.7869987487793 C23.402000427246094,-37.7869987487793 34.597999572753906,-24.323999404907227 34.597999572753906,-6.99399995803833 C34.597999572753906,8.336000442504883 27.398000717163086,15.73900032043457 21.667999267578125,15.534000396728516 C17.93600082397461,15.401000022888184 17.003000259399414,11.802000045776367 18.336000442504883,3.937000036239624 C18.336000442504883,3.937000036239624 22.334999084472656,-20.724000930786133 22.334999084472656,-20.724000930786133 C19.00200080871582,-22.59000015258789 12.336999893188477,-24.05699920654297 6.4720001220703125,-24.05699920654297 C-12.723999977111816,-24.05699920654297 -24.722000122070312,-9.260000228881836 -24.722000122070312,7.002999782562256 C-24.722000122070312,17.93400001525879 -18.45599937438965,24.332000732421875 -9.791000366210938,24.332000732421875 C-2.7260000705718994,24.332000732421875 3.2720000743865967,20.867000579833984 7.40500020980835,14.067999839782715 C7.40500020980835,14.067999839782715 7.671000003814697,14.067999839782715 7.671000003814697,14.067999839782715 C8.338000297546387,21.132999420166016 12.869999885559082,24.332000732421875 19.13599967956543,24.332000732421875 C33.53200149536133,24.332000732421875 44.4630012512207,12.067999839782715 44.4630012512207,-7.394000053405762 C44.4630012512207,-29.788999557495117 27.66699981689453,-45.91899871826172 4.205999851226807,-45.91899871826172 C-25.92099952697754,-45.91899871826172 -45.650001525878906,-22.323999404907227 -45.650001525878906,4.869999885559082 C-45.650001525878906,30.99799919128418 -26.187000274658203,46.861000061035156 -4.059999942779541,46.861000061035156 C5.40500020980835,46.861000061035156 12.336999893188477,45.6609992980957 20.334999084472656,42.0620002746582 C20.334999084472656,42.0620002746582 17.93600082397461,34.33000183105469 17.93600082397461,34.33000183105469z M6.604000091552734,-0.32899999618530273 C5.4039998054504395,7.4029998779296875 0.20600000023841858,13.668000221252441 -4.72599983215332,13.668000221252441 C-9.12399959564209,13.668000221252441 -11.390999794006348,10.468999862670898 -11.390999794006348,5.4029998779296875 C-11.390999794006348,-4.861000061035156 -4.459000110626221,-13.526000022888184 4.339000225067139,-13.526000022888184 C6.071000099182129,-13.526000022888184 7.4039998054504395,-13.260000228881836 8.470000267028809,-12.993000030517578 C8.470000267028809,-12.993000030517578 6.604000091552734,-0.32899999618530273 6.604000091552734,-0.32899999618530273z"></path></g></g><g transform="matrix(0.8199999928474426,0,0,0.8199999928474426,478.1941223144531,860.7658081054688)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,200.25,-287)"><path fill="rgb(0,0,0)" fill-opacity="0.17" d=" M127.75,-39.5 C127.75,-39.5 127.75,51.5 127.75,51.5 C127.75,57.01900100708008 123.26899719238281,61.5 117.75,61.5 C117.75,61.5 -129.75,61.5 -129.75,61.5 C-135.2689971923828,61.5 -139.75,57.01900100708008 -139.75,51.5 C-139.75,51.5 -139.75,-39.5 -139.75,-39.5 C-139.75,-45.01900100708008 -135.2689971923828,-49.5 -129.75,-49.5 C-129.75,-49.5 117.75,-49.5 117.75,-49.5 C123.26899719238281,-49.5 127.75,-45.01900100708008 127.75,-39.5z M127.75,-39.5 C127.75,-39.5 127.75,51.5 127.75,51.5 C127.75,57.01900100708008 123.26899719238281,61.5 117.75,61.5 C117.75,61.5 -129.75,61.5 -129.75,61.5 C-135.2689971923828,61.5 -139.75,57.01900100708008 -139.75,51.5 C-139.75,51.5 -139.75,-39.5 -139.75,-39.5 C-139.75,-45.01900100708008 -135.2689971923828,-49.5 -129.75,-49.5 C-129.75,-49.5 117.75,-49.5 117.75,-49.5 C123.26899719238281,-49.5 127.75,-45.01900100708008 127.75,-39.5z M133.75,-45.5 C133.75,-45.5 133.75,45.5 133.75,45.5 C133.75,51.01900100708008 129.2689971923828,55.5 123.75,55.5 C123.75,55.5 -123.75,55.5 -123.75,55.5 C-129.2689971923828,55.5 -133.75,51.01900100708008 -133.75,45.5 C-133.75,45.5 -133.75,-45.5 -133.75,-45.5 C-133.75,-51.01900100708008 -129.2689971923828,-55.5 -123.75,-55.5 C-123.75,-55.5 123.75,-55.5 123.75,-55.5 C129.2689971923828,-55.5 133.75,-51.01900100708008 133.75,-45.5z M133.75,-45.5 C133.75,-45.5 133.75,45.5 133.75,45.5 C133.75,51.01900100708008 129.2689971923828,55.5 123.75,55.5 C123.75,55.5 -123.75,55.5 -123.75,55.5 C-129.2689971923828,55.5 -133.75,51.01900100708008 -133.75,45.5 C-133.75,45.5 -133.75,-45.5 -133.75,-45.5 C-133.75,-51.01900100708008 -129.2689971923828,-55.5 -123.75,-55.5 C-123.75,-55.5 123.75,-55.5 123.75,-55.5 C129.2689971923828,-55.5 133.75,-51.01900100708008 133.75,-45.5z M-74,-46.75 C-48.198673248291016,-46.75 -27.25,-25.80132484436035 -27.25,0 C-27.25,25.80132484436035 -48.198673248291016,46.75 -74,46.75 C-99.80132293701172,46.75 -120.75,25.80132484436035 -120.75,0 C-120.75,-25.80132484436035 -99.80132293701172,-46.75 -74,-46.75z M-74,-46.75 C-48.198673248291016,-46.75 -27.25,-25.80132484436035 -27.25,0 C-27.25,25.80132484436035 -48.198673248291016,46.75 -74,46.75 C-99.80132293701172,46.75 -120.75,25.80132484436035 -120.75,0 C-120.75,-25.80132484436035 -99.80132293701172,-46.75 -74,-46.75z M-74,-32 C-63.36899948120117,-32 -54.75,-23.381000518798828 -54.75,-12.75 C-54.75,-3.9839999675750732 -60.60900115966797,7.322999954223633 -68.625,11.020999908447266 C-69.45600128173828,11.404999732971191 -45,13.625 -43.935001373291016,27.259000778198242 C-48.75,33.875 -60.625,40.25 -74,40.25 C-88.3759994506836,40.25 -100.375,32.125 -105.00199890136719,26.947999954223633 C-104.375,13.25 -79.21700286865234,11.142999649047852 -80.26799774169922,10.572999954223633 C-87.8219985961914,6.478000164031982 -93.25,-4.313000202178955 -93.25,-12.75 C-93.25,-23.381000518798828 -84.63099670410156,-32 -74,-32z M-74,-32 C-63.36899948120117,-32 -54.75,-23.381000518798828 -54.75,-12.75 C-54.75,-3.9839999675750732 -60.60900115966797,7.322999954223633 -68.625,11.020999908447266 C-69.45600128173828,11.404999732971191 -45,13.625 -43.935001373291016,27.259000778198242 C-48.75,33.875 -60.625,40.25 -74,40.25 C-88.3759994506836,40.25 -100.375,32.125 -105.00199890136719,26.947999954223633 C-104.375,13.25 -79.21700286865234,11.142999649047852 -80.26799774169922,10.572999954223633 C-87.8219985961914,6.478000164031982 -93.25,-4.313000202178955 -93.25,-12.75 C-93.25,-23.381000518798828 -84.63099670410156,-32 -74,-32z"></path><path fill="rgb(255,255,255)" fill-opacity="1" d=" M133.75,-45.5 C133.75,-45.5 133.75,45.5 133.75,45.5 C133.75,51.01900100708008 129.2689971923828,55.5 123.75,55.5 C123.75,55.5 -123.75,55.5 -123.75,55.5 C-129.2689971923828,55.5 -133.75,51.01900100708008 -133.75,45.5 C-133.75,45.5 -133.75,-45.5 -133.75,-45.5 C-133.75,-51.01900100708008 -129.2689971923828,-55.5 -123.75,-55.5 C-123.75,-55.5 123.75,-55.5 123.75,-55.5 C129.2689971923828,-55.5 133.75,-51.01900100708008 133.75,-45.5z M133.75,-45.5 C133.75,-45.5 133.75,45.5 133.75,45.5 C133.75,51.01900100708008 129.2689971923828,55.5 123.75,55.5 C123.75,55.5 -123.75,55.5 -123.75,55.5 C-129.2689971923828,55.5 -133.75,51.01900100708008 -133.75,45.5 C-133.75,45.5 -133.75,-45.5 -133.75,-45.5 C-133.75,-51.01900100708008 -129.2689971923828,-55.5 -123.75,-55.5 C-123.75,-55.5 123.75,-55.5 123.75,-55.5 C129.2689971923828,-55.5 133.75,-51.01900100708008 133.75,-45.5z M-74,-46.75 C-48.198673248291016,-46.75 -27.25,-25.80132484436035 -27.25,0 C-27.25,25.80132484436035 -48.198673248291016,46.75 -74,46.75 C-99.80132293701172,46.75 -120.75,25.80132484436035 -120.75,0 C-120.75,-25.80132484436035 -99.80132293701172,-46.75 -74,-46.75z M-74,-46.75 C-48.198673248291016,-46.75 -27.25,-25.80132484436035 -27.25,0 C-27.25,25.80132484436035 -48.198673248291016,46.75 -74,46.75 C-99.80132293701172,46.75 -120.75,25.80132484436035 -120.75,0 C-120.75,-25.80132484436035 -99.80132293701172,-46.75 -74,-46.75z M-74,-32 C-63.36899948120117,-32 -54.75,-23.381000518798828 -54.75,-12.75 C-54.75,-3.9839999675750732 -60.60900115966797,7.322999954223633 -68.625,11.020999908447266 C-69.45600128173828,11.404999732971191 -45,13.625 -43.935001373291016,27.259000778198242 C-48.75,33.875 -60.625,40.25 -74,40.25 C-88.3759994506836,40.25 -100.375,32.125 -105.00199890136719,26.947999954223633 C-104.375,13.25 -79.21700286865234,11.142999649047852 -80.26799774169922,10.572999954223633 C-87.8219985961914,6.478000164031982 -93.25,-4.313000202178955 -93.25,-12.75 C-93.25,-23.381000518798828 -84.63099670410156,-32 -74,-32z M-74,-32 C-63.36899948120117,-32 -54.75,-23.381000518798828 -54.75,-12.75 C-54.75,-3.9839999675750732 -60.60900115966797,7.322999954223633 -68.625,11.020999908447266 C-69.45600128173828,11.404999732971191 -45,13.625 -43.935001373291016,27.259000778198242 C-48.75,33.875 -60.625,40.25 -74,40.25 C-88.3759994506836,40.25 -100.375,32.125 -105.00199890136719,26.947999954223633 C-104.375,13.25 -79.21700286865234,11.142999649047852 -80.26799774169922,10.572999954223633 C-87.8219985961914,6.478000164031982 -93.25,-4.313000202178955 -93.25,-12.75 C-93.25,-23.381000518798828 -84.63099670410156,-32 -74,-32z"></path><path fill="rgb(223,229,243)" fill-opacity="1" d=" M-74,-46.75 C-48.198673248291016,-46.75 -27.25,-25.80132484436035 -27.25,0 C-27.25,25.80132484436035 -48.198673248291016,46.75 -74,46.75 C-99.80132293701172,46.75 -120.75,25.80132484436035 -120.75,0 C-120.75,-25.80132484436035 -99.80132293701172,-46.75 -74,-46.75z M-74,-46.75 C-48.198673248291016,-46.75 -27.25,-25.80132484436035 -27.25,0 C-27.25,25.80132484436035 -48.198673248291016,46.75 -74,46.75 C-99.80132293701172,46.75 -120.75,25.80132484436035 -120.75,0 C-120.75,-25.80132484436035 -99.80132293701172,-46.75 -74,-46.75z M-74,-32 C-63.36899948120117,-32 -54.75,-23.381000518798828 -54.75,-12.75 C-54.75,-3.9839999675750732 -60.60900115966797,7.322999954223633 -68.625,11.020999908447266 C-69.45600128173828,11.404999732971191 -45,13.625 -43.935001373291016,27.259000778198242 C-48.75,33.875 -60.625,40.25 -74,40.25 C-88.3759994506836,40.25 -100.375,32.125 -105.00199890136719,26.947999954223633 C-104.375,13.25 -79.21700286865234,11.142999649047852 -80.26799774169922,10.572999954223633 C-87.8219985961914,6.478000164031982 -93.25,-4.313000202178955 -93.25,-12.75 C-93.25,-23.381000518798828 -84.63099670410156,-32 -74,-32z M-74,-32 C-63.36899948120117,-32 -54.75,-23.381000518798828 -54.75,-12.75 C-54.75,-3.9839999675750732 -60.60900115966797,7.322999954223633 -68.625,11.020999908447266 C-69.45600128173828,11.404999732971191 -45,13.625 -43.935001373291016,27.259000778198242 C-48.75,33.875 -60.625,40.25 -74,40.25 C-88.3759994506836,40.25 -100.375,32.125 -105.00199890136719,26.947999954223633 C-104.375,13.25 -79.21700286865234,11.142999649047852 -80.26799774169922,10.572999954223633 C-87.8219985961914,6.478000164031982 -93.25,-4.313000202178955 -93.25,-12.75 C-93.25,-23.381000518798828 -84.63099670410156,-32 -74,-32z"></path><path fill="rgb(255,255,255)" fill-opacity="1" d=" M-74,-32 C-63.36899948120117,-32 -54.75,-23.381000518798828 -54.75,-12.75 C-54.75,-3.9839999675750732 -60.60900115966797,7.322999954223633 -68.625,11.020999908447266 C-69.45600128173828,11.404999732971191 -45,13.625 -43.935001373291016,27.259000778198242 C-48.75,33.875 -60.625,40.25 -74,40.25 C-88.3759994506836,40.25 -100.375,32.125 -105.00199890136719,26.947999954223633 C-104.375,13.25 -79.21700286865234,11.142999649047852 -80.26799774169922,10.572999954223633 C-87.8219985961914,6.478000164031982 -93.25,-4.313000202178955 -93.25,-12.75 C-93.25,-23.381000518798828 -84.63099670410156,-32 -74,-32z M-74,-32 C-63.36899948120117,-32 -54.75,-23.381000518798828 -54.75,-12.75 C-54.75,-3.9839999675750732 -60.60900115966797,7.322999954223633 -68.625,11.020999908447266 C-69.45600128173828,11.404999732971191 -45,13.625 -43.935001373291016,27.259000778198242 C-48.75,33.875 -60.625,40.25 -74,40.25 C-88.3759994506836,40.25 -100.375,32.125 -105.00199890136719,26.947999954223633 C-104.375,13.25 -79.21700286865234,11.142999649047852 -80.26799774169922,10.572999954223633 C-87.8219985961914,6.478000164031982 -93.25,-4.313000202178955 -93.25,-12.75 C-93.25,-23.381000518798828 -84.63099670410156,-32 -74,-32z"></path></g><g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="round" stroke-linejoin="round" fill-opacity="0" stroke="rgb(222,228,243)" stroke-opacity="1" stroke-width="10" d=" M192.5,-298 C192.5,-298 313,-298 313,-298 M192.5,-298 C192.5,-298 313,-298 313,-298 M192.5,-256 C192.5,-256 313,-256 313,-256 M192.5,-277 C192.5,-277 313,-277 313,-277 M192.5,-298 C192.5,-298 313,-298 313,-298"></path><g opacity="1" transform="matrix(1,0,0,1,0,42)"></g><g opacity="1" transform="matrix(1,0,0,1,0,21)"></g><g opacity="1" transform="matrix(1,0,0,1,0,0)"></g></g><g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="round" stroke-linejoin="round" fill-opacity="0" stroke="rgb(141,198,63)" stroke-opacity="1" stroke-width="10" d=" M192.5,-319.5 C192.5,-319.5 250.5,-319.5 250.5,-319.5 M192.5,-319.5 C192.5,-319.5 250.5,-319.5 250.5,-319.5"></path></g></g><g mask="url(#__lottie_element_4)" style="display: block;"><g transform="matrix(0.5613787174224854,-0.3276490569114685,0.3276490569114685,0.5613787174224854,-615.491943359375,509.1552734375)" opacity="1"><g opacity="1" transform="matrix(1,0,0,1,790.9019775390625,773.677978515625)"><path fill="rgb(0,0,0)" fill-opacity="0.2" d=" M-22.172760009765625,17.180004119873047 C-22.172760009765625,17.180004119873047 7.1793365478515625,39.675777435302734 7.1793365478515625,39.675777435302734 C7.1793365478515625,39.675777435302734 -3.0049893856048584,-16.355297088623047 -3.0049893856048584,-16.355297088623047 C-3.0049893856048584,-16.355297088623047 -6.617090225219727,3.535567045211792 -6.617090225219727,3.535567045211792 C-6.617090225219727,3.535567045211792 -23.976627349853516,-6.814608573913574 -23.976627349853516,-6.814608573913574 C-23.976627349853516,-6.814608573913574 -22.172760009765625,17.180004119873047 -22.172760009765625,17.180004119873047z M7.1793365478515625,39.675777435302734 C7.1793365478515625,39.675777435302734 -21.046682357788086,-13.164432525634766 -21.046682357788086,-13.164432525634766 C-21.046682357788086,-13.164432525634766 -94.51506805419922,-24.12310028076172 -94.51506805419922,-24.12310028076172 C-94.51506805419922,-24.12310028076172 7.1793365478515625,39.675777435302734 7.1793365478515625,39.675777435302734z M-3.0049893856048584,-16.355297088623047 C-3.0049893856048584,-16.355297088623047 7.1793365478515625,39.675777435302734 7.1793365478515625,39.675777435302734 C7.1793365478515625,39.675777435302734 46.838558197021484,-34.90614700317383 46.838558197021484,-34.90614700317383 C46.838558197021484,-34.90614700317383 -3.0049893856048584,-16.355297088623047 -3.0049893856048584,-16.355297088623047z"></path></g><g opacity="1" transform="matrix(1,0,0,1,795.9019775390625,768.677978515625)"><path fill="rgb(166,189,219)" fill-opacity="1" d=" M-22.172760009765625,17.180004119873047 C-22.172760009765625,17.180004119873047 7.1793365478515625,39.675777435302734 7.1793365478515625,39.675777435302734 C7.1793365478515625,39.675777435302734 -3.0049893856048584,-16.355297088623047 -3.0049893856048584,-16.355297088623047 C-3.0049893856048584,-16.355297088623047 -6.617090225219727,3.535567045211792 -6.617090225219727,3.535567045211792 C-6.617090225219727,3.535567045211792 -23.976627349853516,-6.814608573913574 -23.976627349853516,-6.814608573913574 C-23.976627349853516,-6.814608573913574 -22.172760009765625,17.180004119873047 -22.172760009765625,17.180004119873047z M7.1793365478515625,39.675777435302734 C7.1793365478515625,39.675777435302734 -21.046682357788086,-13.164432525634766 -21.046682357788086,-13.164432525634766 C-21.046682357788086,-13.164432525634766 -94.51506805419922,-24.12310028076172 -94.51506805419922,-24.12310028076172 C-94.51506805419922,-24.12310028076172 7.1793365478515625,39.675777435302734 7.1793365478515625,39.675777435302734z M-3.0049893856048584,-16.355297088623047 C-3.0049893856048584,-16.355297088623047 7.1793365478515625,39.675777435302734 7.1793365478515625,39.675777435302734 C7.1793365478515625,39.675777435302734 46.838558197021484,-34.90614700317383 46.838558197021484,-34.90614700317383 C46.838558197021484,-34.90614700317383 -3.0049893856048584,-16.355297088623047 -3.0049893856048584,-16.355297088623047z"></path><path fill="rgb(211,223,237)" fill-opacity="1" d=" M7.1793365478515625,39.675777435302734 C7.1793365478515625,39.675777435302734 -21.046682357788086,-13.164432525634766 -21.046682357788086,-13.164432525634766 C-21.046682357788086,-13.164432525634766 -94.51506805419922,-24.12310028076172 -94.51506805419922,-24.12310028076172 C-94.51506805419922,-24.12310028076172 7.1793365478515625,39.675777435302734 7.1793365478515625,39.675777435302734z M-3.0049893856048584,-16.355297088623047 C-3.0049893856048584,-16.355297088623047 7.1793365478515625,39.675777435302734 7.1793365478515625,39.675777435302734 C7.1793365478515625,39.675777435302734 46.838558197021484,-34.90614700317383 46.838558197021484,-34.90614700317383 C46.838558197021484,-34.90614700317383 -3.0049893856048584,-16.355297088623047 -3.0049893856048584,-16.355297088623047z"></path></g></g></g></g></svg></div> 
+ <div class="lottie-link"></div> 
+</div> 
+</div> 
+ <div class="u_1049118976 dmRespCol small-12 large-6 medium-6" id="1049118976"> <div class="u_1964916901 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1964916901" style="transition: none 0s ease 0s; text-align: left; display: block;"> <h2 class="m-size-34 size-48 m-text-align-center" style="line-height: initial;"><span style="color: rgb(2, 8, 135); display: initial;" class="m-font-size-34 font-size-48">Contact Us</span></h2> 
+</div> 
+ <div class="u_1485014208 dmform default native-inputs" data-element-type="dContactUsRespId" data-captcha-position="bottomleft" id="1485014208" data-layout="layout-3"> <h3 class="dmform-title dmwidget-title" id="1047285468" hide="true">Contact Us</h3> 
+ <div class="dmform-wrapper" id="1089963754" captcha-lang="en"> <form method="post" class="dmRespDesignRow" locale="ENGLISH" id="1605792179"> <div class="dmforminput required  small-12 dmRespDesignCol medium-12 large-12" id="1198071316"> <label for="1387503323" id="1362576945" data-dm-for="dmform-0">Full name</label> 
+<input type="text" class="" name="dmform-0" id="1387503323"><input type="hidden" name="label-dmform-0" value="Full name" id="1489759931" class=""></div> 
+ <div class="dmforminput required  small-12 dmRespDesignCol medium-12 large-12" id="1297252875"> <label for="1935852572" id="1905828631" data-dm-for="dmform-1">Email</label> 
+<input type="email" class="" name="dmform-1" id="1935852572"><input type="hidden" name="label-dmform-1" value="Email" id="1699164498" class=""></div> 
+ <div class="dmforminput required  small-12 dmRespDesignCol medium-12 large-12" id="1042311382"> <label for="1601620652" id="1363937990" data-dm-for="dmform-2">Phone</label> 
+<input type="tel" class="" name="dmform-2" id="1601620652"><input type="hidden" name="label-dmform-2" value="Phone" id="1952255160" class=""></div> 
+ <div class="dmforminput large-12 medium-12 dmRespDesignCol small-12" id="1986578138"> <label for="1242220030" id="1344283667" data-dm-for="dmform-3">Message</label> 
+ <textarea name="dmform-3" id="1242220030"></textarea> 
+<input type="hidden" name="label-dmform-3" value="Message" id="1213109836" class=""></div> 
+ <span id="1447467569" class="dmWidgetClear"></span> 
+ <div class="dmformsubmit dmWidget R" id="1651638552"><input class="" name="submit" type="submit" value="SEND MESSAGE" id="1298526324"></div> 
+<input name="dmformsendto" type="hidden" value="O0wrseIfFLtiszfVIBaW+wWzgEKYqXpu4zPmLIQfwQoAilsKyrXVGZ/Z6Al/YuZqf9LuhCadususAaYhG+d22X24z0ikotH64zPmLIQfwQotaW+RI00jFf0GG2/O04Gcdj51BcW5Z7Qpx1xp12bQHS01FjZ+xL4qCLujZjzGSuQ=" id="1319519280" class="" data-dec="true"><input class="dmActionInput" type="hidden" name="action" value="/_dm/s/rt/widgets/dmform.submit.jsp" id="1284899792"><input name="dmformsubject" type="hidden" value="Contact Form Submission" id="1176445293" class="" data-email-subject="Contact Form Submission"><input name="dmformfrom" type="hidden" value="VigeoDash Website" id="1797880872" class=""><input name="dmformsubmitparams" type="hidden" value="8mpKnCSiNQXK/d9M7IDrSxTMRsFZNSUHLq91dOGX3MwnuNHYIOcY3iBQudKqkRFW34VnZM3Es1XihwQnKF9C1nqgaqqWwx3WlYXu9xhgDU2d2OnbZZuO8iBQudKqkRFWU0Gu5DRlix11dU92Vi+/gb7varMEvc7XNGd1IOc6Z/ax8xFrPkwBRUUc2sqGSAIaicajZqnyqzsfVQNoH3TTE64aVNqWFhQXCR+JWPoYELdS7zboAZqNAI2ZN9P3PnkemJM4Uu2ykLOpm2YnRixN0BQa8NB2jlvn5az5NHcF7x9NxuuQvvxrnvbFLAj+vvzVrIQIHcLaZF2dDm8UzT+7GS011gELkb1WCYZeJYTmqfmkOToz/Cc3Ug==" data-dec="true"><input type="hidden" name="page_uuid" value="c499b217ae52467a91c48470bb99ef0f"></form> 
+</div> 
+ <div class="dmform-success" style="display:none" id="1884573423">Thank you for contacting us.<br id="1861392270">We will get back to you as soon as possible.</div> 
+ <div class="dmform-error" style="display:none" id="1105260338">Oops, there was an error sending your message.<br id="1372051388">Please try again later.</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmFooterContainer"> <div id="fcontainer" class="u_fcontainer f_hcontainer dmFooter p_hfcontainer"> <div dm:templateorder="250" class="dmFooterResp generalFooter" id="1943048428"> <div class="dmRespRow u_1632155419" style="text-align: center;" id="1632155419"> <div class="dmRespColsWrapper" id="1253858808"> <div class="u_1063824722 dmRespCol small-12 large-6 medium-6" id="1063824722"> <div class="u_1901167991 imageWidget align-center" data-widget-type="image" id="1901167991" data-element-type="image" editablewidget="true"> <a href="https://www.vigeodash.com/" id="1067941554"><img src="./vigeodash_files/vigeodash+logo+tm-4x-324w.png" id="1669146944" class="" data-dm-image-path="https://irp.cdn-website.com/d2116928/dms3rep/multi/vigeodash+logo+tm-4x.png" width="1057" height="425" alt="VigeoDash Logo" title="VigeoDash Logo" onerror="handleImageLoadError(this)"></a> 
+</div> 
+</div> 
+ <div class="dmRespCol large-6 medium-6 small-12" id="1748696546"> <a data-display-type="block" class="u_1466293393 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="https://calendly.com/d/cp3p-x3w-xd4/vigeodash-discovery?month=2024-04" data-element-type="dButtonLinkId" id="1466293393" target="_blank"> <span class="iconBg" id="1941895181"> <span class="icon hasFontIcon icon-star" id="1770086540"></span> 
+</span> 
+ <span class="text" id="1380088026">Schedule Demo</span> 
+</a> 
+ <div class="widget-1f5975 u_1308700937 dmCustomWidget" data-lazy-load="" data-title="" id="1308700937" dmle_extension="custom_extension" data-element-type="custom_extension" icon="false" surround="false" data-widget-id="1f5975986930429f819d4cd2154b5c4a" data-widget-version="22" data-widget-config="eyJjb3B5cmlnaHRUZXh0IjoiPHAgY2xhc3M9XCJydGVCbG9ja1wiPkFsbCBSaWdodHMgUmVzZXJ2ZWQgfCBWaWdlbyBEYXNoPC9wPiJ9" data-widget-initialized=""> <div class="copyright"> <div>© 2024&nbsp;</div> 
+ <div><p class="rteBlock">All Rights Reserved | Vigeo Dash</p></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div id="1236746004" dmle_extension="powered_by" data-element-type="powered_by" icon="true" surround="false"></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+
+    </div>
+</div>
+<!--  Add full CSS and Javascript before the close tag of the body if needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Google Fonts Include -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- loadCSS function fonts.jsp-->
+
+
+
+<link rel="stylesheet" href="./vigeodash_files/css2" as="style" fetchpriority="low" onload="loadCSS(this)" type="text/css">
+
+
+
+
+
+<!-- RT CSS Include d-css-runtime-desktop-one-package-structured-global-->
+<link rel="stylesheet" as="style" fetchpriority="low" onload="loadCSS(this)" href="./vigeodash_files/d-css-runtime-desktop-one-package-structured-global.min.css" type="text/css">
+
+<!-- End of RT CSS Include -->
+
+<link rel="stylesheet" href="./vigeodash_files/e59bd0fe5ea0fe8fa91a2149f499a144.css" id="widgetCSS" as="style" fetchpriority="low" onload="loadCSS(this)" type="text/css">
+
+<!-- Support `img` size attributes -->
+<style>img[width][height] {
+    height: auto;
+}</style>
+
+<!-- Support showing sticky element on page only -->
+<style>
+    body[data-page-alias="home"] #dm [data-show-on-page-only="home"] {
+        display: block !important;
+    }
+</style>
+
+<!-- This is populated in Ajax navigation -->
+<style id="pageAdditionalWidgetsCss" type="text/css">
+</style>
+
+
+
+
+<!-- Site CSS -->
+<link rel="stylesheet" href="./vigeodash_files/d2116928_withFlex_1.min.css" id="siteGlobalCss" as="style" fetchpriority="low" onload="loadCSS(this)" type="text/css">
+
+
+
+<style id="customWidgetStyle" type="text/css">
+    
+</style>
+<style id="innerPagesStyle" type="text/css">
+    
+</style>
+
+
+<style id="additionalGlobalCss" type="text/css">
+</style>
+
+<!-- Page CSS -->
+<link rel="stylesheet" href="./vigeodash_files/d2116928_home_withFlex_1.min.css" id="homeCssLink" as="style" fetchpriority="low" onload="loadCSS(this)" type="text/css">
+
+<style id="pagestyle" type="text/css">
+    
+</style>
+
+<style id="pagestyleDevice" type="text/css">
+    
+</style>
+
+<!-- Flex Sections CSS -->
+
+
+
+
+
+<style id="globalFontSizeStyle" type="text/css">
+    .font-size-22, .size-22, .size-22 > font { font-size: 22px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-50, .size-50, .size-50 > font { font-size: 50px !important; }.font-size-60, .size-60, .size-60 > font { font-size: 60px !important; }.font-size-20, .size-20, .size-20 > font { font-size: 20px !important; }.font-size-45, .size-45, .size-45 > font { font-size: 45px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-30, .size-30, .size-30 > font { font-size: 30px !important; }.font-size-48, .size-48, .size-48 > font { font-size: 48px !important; }
+</style>
+<style id="pageFontSizeStyle" type="text/css">
+</style>
+
+<!-- ========= JS Section ========= -->
+<script>
+    var isWLR = true;
+
+    window.customWidgetsFunctions = {};
+    window.customWidgetsStrings = {};
+    window.collections = {};
+    window.currentLanguage = "ENGLISH"
+    window.isSitePreview = false;
+</script>
+<script>
+    window.customWidgetsFunctions["1f5975986930429f819d4cd2154b5c4a~22"] = function (element, data, api) {
+        null
+    };
+</script>
+<script>
+    window.customWidgetsFunctions["f6a6cdf9cb5c46769b5603c7960cc686~162"] = function (element, data, api) {
+        var animation;
+var started = false;
+var frames;
+var linkHref = element.querySelector('a') && element.querySelector('a').href;
+if(!linkHref && data.config.lottieOptions === 'loop' ) {
+    element.classList.add('noCursor');
+}
+
+
+if(!window.bodymovin && !window.bodymovinProsmie) {
+    var script = document.createElement('script');
+    script.src = "https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.9/lottie.min.js";
+    document.head.appendChild(script);
+    window.bodymovinProsmie = new Promise(function(resolve) {
+        script.onload = function() {
+            resolve();
+            animation = createAnimation();
+            startAnimation();
+        }
+    })
+
+} else if(window.bodymovin) {
+
+    animation = createAnimation();
+    startAnimation();
+
+} else if(window.bodymovinProsmie) {
+    window.bodymovinProsmie.then(function() {
+        animation = createAnimation();
+        startAnimation();
+    })
+}
+
+var lottieOptionsMap = {
+    'loop': onLoop,
+    'hover': onHover,
+    'click': onClick
+}
+
+function startAnimation() {
+    animation.addEventListener('data_ready', function() {
+        frames = animation.getDuration(true);
+        lottieOptionsMap[data.config.lottieOptions]();
+        started = true;
+    })
+
+}
+
+function onLoop() {
+    initiateLink()
+    animation.play();
+}
+
+function createAnimation () {
+    var lottieAnimation = element.querySelector('.lottie svg');
+    var container =  element.querySelector('.lottie')
+    if(lottieAnimation) {
+        container.removeChild(lottieAnimation)
+    }
+
+    return bodymovin.loadAnimation({
+        container: container, // Required
+        path: data.config.lottie, // Required
+        renderer: 'svg', // Required
+        loop: data.config.lottieOptions === 'loop', // Optional
+        autoplay: data.config.lottieOptions === 'loop', // Optional
+    })
+}
+
+function onClick() {
+    var clicked = false;
+    var savedEvent = null;
+    var eventName = data.device === 'mobile' ? 'touchend' : 'click'
+    
+    element.addEventListener(eventName, function(event) {
+        savedEvent = event;
+        
+        if(window.parent.$ && window.parent.$.Editor && !window.parent.document.body.classList.contains('previewMode')) {
+            return;
+        }
+        
+        if(clicked) {
+            return;
+        }
+        event.preventDefault();
+        event.stopPropagation();
+        clicked = true;
+        animation.play();
+    }, { capture: true })
+    
+    
+    animation.addEventListener('complete', function(event) {
+        var link = element.querySelector('.lottie-link a');
+        if(link) {
+            var href = link.href;
+            if(/^(mailto:|sms:|tel:)/.test(href)) {
+                document.location.href = href;
+                return;  
+            } 
+            if(link.type === 'url' || link.type === 'file') {
+                link.click();
+                return;
+            }
+            window._modules.runtime.routerAPI.navigationService.ajaxNavigationService._ajaxNavigateToLink(href, link, savedEvent);
+            delete savedEvent;
+
+        }
+    });
+}
+
+function initiateLink() {
+    var eventName = data.device === 'mobile' ? 'touchend' : 'click'
+    var savedEvent = null;
+    var lottieElement = element.querySelector('.lottie');
+    if(!lottieElement) {
+        return;
+    }
+    
+    lottieElement.addEventListener(eventName, function(event) {
+        var link = element.querySelector('.lottie-link a');
+        if(link) {
+            var href = link.href;
+            if(/^(mailto:|sms:|tel:)/.test(href)) {
+                document.location.href = href;
+                return;  
+            }
+            if(link.type === 'url' || link.type === 'file') {
+                link.click();
+                return;
+            }
+            window._modules.runtime.routerAPI.navigationService.ajaxNavigationService._ajaxNavigateToLink(link.href, link, event);
+        }
+    }, { capture: true })
+
+}
+
+function onHover() {
+    initiateLink();
+    var rect = element.getBoundingClientRect();
+    element.addEventListener('mousemove', function(event){
+        if(!frames) {
+            return;
+        }
+    
+        var relativeLocation = frames*((event.clientX - rect.left)/rect.width);
+        var currentFrame = Math.max(Math.min(Math.floor(relativeLocation), frames), 0);
+        window.requestAnimationFrame(function() {
+            animation.goToAndStop(currentFrame, true)
+        })
+        
+    }, { capture: true });
+}
+
+    };
+</script>
+<script type="text/javascript">
+
+    var d_version = "production_5021";
+    var build = "2024-12-16T15_12_44";
+    window['v' + 'ersion'] = d_version;
+
+    function buildEditorParent() {
+        window.isMultiScreen = true;
+        window.editorParent = {};
+        window.previewParent = {};
+        window.assetsCacheQueryParam = "?version=2024-12-16T15_12_44";
+        try {
+            var _p = window.parent;
+            if (_p && _p.document && _p.$ && _p.$.dmfw) {
+                window.editorParent = _p;
+            } else if (_p.isSitePreview) {
+                window.previewParent = _p;
+            }
+        } catch (e) {
+
+        }
+    }
+
+    buildEditorParent();
+</script>
+
+<!-- Load jQuery -->
+<script type="text/javascript" id="d-js-jquery" src="./vigeodash_files/jquery-3.7.0.min.js"></script>
+<!-- End Load jQuery -->
+<!-- Injecting site-wide before scripts -->
+<!-- End Injecting site-wide to the head -->
+
+
+<script>
+    var _jquery = window.$;
+
+    var jqueryAliases = ['$', 'jquery', 'jQuery'];
+
+    jqueryAliases.forEach((alias) => {
+        Object.defineProperty(window, alias, {
+            get() {
+                return _jquery;
+            },
+            set() {
+                console.warn("Trying to over-write the global jquery object!");
+            }
+        });
+    });
+    window.jQuery.migrateMute = true;
+</script>
+<script>
+    window.cookiesNotificationMarkupPreview = 'null';
+</script>
+
+<!-- HEAD RT JS Include -->
+<script id="d-js-params">
+    window.INSITE = window.INSITE || {};
+    window.INSITE.device = "desktop";
+
+    window.rtCommonProps = {};
+    rtCommonProps["rt.ajax.ajaxScriptsFix"] =true;
+    rtCommonProps["rt.pushnotifs.sslframe.encoded"] = 'aHR0cHM6Ly97c3ViZG9tYWlufS5wdXNoLW5vdGlmcy5jb20=';
+    rtCommonProps["runtimecollector.url"] = 'https://rtc.multiscreensite.com';
+    rtCommonProps["performance.tabletPreview.removeScroll"] = 'false';
+    rtCommonProps["inlineEditGrid.snap"] =true;
+    rtCommonProps["popup.insite.cookie.ttl"] = '0.5';
+    rtCommonProps["rt.pushnotifs.force.button"] =true;
+    rtCommonProps["common.mapbox.token"] = 'pk.eyJ1IjoiZGFubnliMTIzIiwiYSI6ImNqMGljZ256dzAwMDAycXBkdWxwbDgzeXYifQ.Ck5P-0NKPVKAZ6SH98gxxw';
+    rtCommonProps["common.mapbox.js.override"] =false;
+    rtCommonProps["common.here.appId"] = 'iYvDjIQ2quyEu0rg0hLo';
+    rtCommonProps["common.here.appCode"] = '1hcIxLJcbybmtBYTD9Z1UA';
+    rtCommonProps["isCoverage.test"] =false;
+    rtCommonProps["ecommerce.ecwid.script"] = 'https://app.multiscreenstore.com/script.js';
+    rtCommonProps["feature.flag.mappy.kml"] =false;
+    rtCommonProps["common.resources.dist.cdn"] =true;
+    rtCommonProps["common.build.dist.folder"] = 'production/5021';
+    rtCommonProps["common.resources.cdn.host"] = 'https://static.cdn-website.com';
+    rtCommonProps["common.resources.folder"] = 'https://static.cdn-website.com/mnlt/production/5021';
+    rtCommonProps["feature.flag.runtime.backgroundSlider.preload.slowly"] =true;
+    rtCommonProps["feature.flag.runtime.newAnimation.enabled"] =true;
+    rtCommonProps["feature.flag.runtime.newAnimation.respectCssAnimationProps.enabled"] =true;
+    rtCommonProps["feature.flag.runtime.newAnimation.jitAnimation.enabled"] =true;
+    rtCommonProps["feature.flag.sites.google.analytics.gtag"] =true;
+    rtCommonProps["feature.flag.runOnReadyNewTask"] =true;
+    rtCommonProps["isAutomation.test"] =false;
+
+    
+    rtCommonProps['common.mapsProvider'] = 'mapbox';
+    
+    rtCommonProps['common.mapsProvider.version'] = '0.52.0';
+    rtCommonProps['common.geocodeProvider'] = 'mapbox';
+    rtCommonProps['common.map.defaults.radiusSize'] = '1500';
+    rtCommonProps['common.map.defaults.radiusBg'] = 'rgba(255, 255, 255, 0.4)';
+    rtCommonProps['common.map.defaults.strokeColor'] = 'rgba(255, 255, 255, 1)';
+    rtCommonProps['common.map.defaults.strokeSize'] = '2';
+    rtCommonProps['server.for.resources'] = '';
+    rtCommonProps['feature.flag.lazy.widgets'] = true;
+    rtCommonProps['feature.flag.single.wow'] = false;
+    rtCommonProps['feature.flag.disallowPopupsInEditor'] = true;
+    rtCommonProps['feature.flag.mark.anchors'] = true;
+    rtCommonProps['captcha.public.key'] = '6LffcBsUAAAAAMU-MYacU-6QHY4iDtUEYv_Ppwlz';
+    rtCommonProps['captcha.invisible.public.key'] = '6LeiWB8UAAAAAHYnVJM7_-7ap6bXCUNGiv7bBPME';
+    rtCommonProps["images.sizes.small"] =160;
+    rtCommonProps["images.sizes.mobile"] =640;
+    rtCommonProps["images.sizes.tablet"] =1280;
+    rtCommonProps["images.sizes.desktop"] =1920;
+    rtCommonProps["modules.resources.cdn"] =true;
+    rtCommonProps["import.images.storage.imageCDN"] = 'https://lirp.cdn-website.com/';
+    rtCommonProps["facebook.api.version"] = '7.0';
+    rtCommonProps["feature.flag.runtime.inp.threshold"] =150;
+    rtCommonProps["feature.flag.performance.logs"] =true;
+    rtCommonProps["site.widget.form.captcha.type"] = 'g_recaptcha';
+    rtCommonProps["friendly.captcha.site.key"] = 'FCMGSQG9GVNMFS8K';
+    rtCommonProps["cookiebot.mapbox.consent.category"] = 'marketing';
+    rtCommonProps["platform.monolith.personalization.dateTimeCondition.popupMsgAction.moveToclient.enabled"] =false;
+
+    // feature flags that's used out of runtime module (in  legacy files)
+    rtCommonProps["site.runtime.video.background.ssr"] =true;
+
+    window.rtFlags = {};
+    rtFlags["unsuspendEcwidStoreOnRuntime.enabled"] =true;
+    rtFlags["scripts.widgetCount.enabled"] =true;
+    rtFlags["ecom.ecwid.categoryPage.modifyLinks"] = true;
+    rtFlags["ecom.ecwidNewUrlStructure.enabled"] = false;
+    rtFlags["ecom.ecwid.old.store.fix.scrolling.enabled"] = true;
+    rtFlags["ecom.ecwid.old.store.fix.facebook.share"] = true;
+    rtFlags["ecom.ecwid.fallBackInCaseLinksNotFound.enabled"] = true;
+    rtFlags["feature.flag.photo.gallery.exact.size"] =true;
+    rtFlags["new.store.fix.ecwid.back.bug"] =true;
+    rtFlags["facebook.runtime.widgets.upgrade"] =true;
+    rtFlags["ecom.ecwid.solve.url.modifications"] = true;
+    rtFlags["ecom.ecwid.configOptions"] = true;
+    rtFlags["geocode.search.localize"] =false;
+    rtFlags["feature.flag.runtime.newAnimation.asyncInit.setTimeout.enabled"] =false;
+    rtFlags["site.contact.form.fix.for.attribute"] =true;
+    rtFlags["contact.form.date.format.enabled"] = true;
+    rtFlags["twitter.heightLimit.enabled"] = true;
+    rtFlags["ecom.ecwid.fixTranslations.enabled"] = true;
+    rtFlags["runtime.load.script.native"] =true;
+    rtFlags["editor.classicHybrid.photogallery.fix"] =true;
+    rtFlags["runtime.lottieOverflow"] =false;
+    rtFlags["runtime.monitoring.sentry.ignoreErrors"] = "";
+    rtFlags["ecom.ecwid.old.store.fix.scrolling.detect.enable"] =true;
+    rtFlags["contact.form.browserValidation.enabled"] =true;
+    rtFlags["feature.flag.notifications.push.from.top"] =false;
+    rtFlags["streamline.monolith.personalization.supportMultipleConditions.enabled"] =false;
+</script>
+<script src="./vigeodash_files/d-js-one-runtime-unified-desktop.min.js" id="d-js-core"></script>
+<!-- End of HEAD RT JS Include -->
+<script src="./vigeodash_files/d-js-jquery-migrate.min.js"></script>
+<script>
+    
+    $(window).bind("orientationchange", function (e) {
+        $.layoutManager.initLayout();
+        
+    });
+    $(document).resize(function () {
+        
+    });
+</script>
+<script type="text/javascript" id="d_track_campaign">
+(function() {
+    if (!window.location.search) {
+        return;
+    }
+	const cleanParams = window.location.search.substring(1); // Strip ?
+	const queryParams = cleanParams.split('&');
+
+	const expires = 'expires=' + new Date().getTime() + 24 * 60 * 60 * 1000;
+	const domain = 'domain=' + window.location.hostname;
+	const path = "path=/";
+
+	queryParams.forEach((param) => {
+		const [key, value = ''] = param.split('=');
+		if (key.startsWith('utm_')) {
+			const cookieName = "_dm_rt_" + key.substring(4);
+			const cookie = cookieName + "=" + value;
+			const joined = [cookie, expires, domain, path].join(";");
+			document.cookie = joined;
+		}
+	});
+}());
+</script>
+<script type="text/javascript">
+  var _dm_gaq = {};
+  var _gaq = _gaq || [];
+  var _dm_insite = [];
+</script>
+
+<script type="text/javascript" id="d_track_sp">
+;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
+p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
+};p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
+n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","//d32hwlnfiv2gyn.cloudfront.net/sp-2.0.0-dm-0.1.min.js","snowplow"));
+window.dmsnowplow  = window.snowplow;
+
+dmsnowplow('newTracker', 'cf', 'd32hwlnfiv2gyn.cloudfront.net', { // Initialise a tracker
+  appId: 'd2116928'
+});
+
+// snowplow queries element styles so we wait until CSS calculations are done.
+requestAnimationFrame(() => {
+	dmsnowplow('trackPageView');
+	_dm_insite.forEach((rule) => {
+		// Specifically in popup only the client knows if it is shown or not so we don't always want to track its impression here
+		// the tracking is in popup.js
+		if (rule.actionName !== "popup") {
+			dmsnowplow('trackStructEvent', 'insite', 'impression', rule.ruleType, rule.ruleId);
+		}
+		window?.waitForDeferred?.('dmAjax', () => {
+			$.DM.events.trigger('event-ruleTriggered', {value: rule});
+		});
+	});
+});
+</script>
+   <div style="display:none;" id="P6iryBW0Wu"></div>
+
+<!-- photoswipe markup -->
+
+
+
+
+
+
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<div id="fb-root" data-locale="en"></div>
+<!-- Alias: d2116928 -->
+<div class="dmPopupMask" id="dmPopupMask"></div>
+<div id="dmPopup" class="dmPopup">
+	<div class="dmPopupCloseWrapper"> <div class="dmPopupClose dm-common-icons-close oneIcon" onclick="dmHidePopup(event);"></div> </div>
+ 	<div class="dmPopupTitle"> <span></span> Share by:</div> 
+	<div class="data"></div>
+</div><script id="d_track_personalization">
+	window?.waitForDeferred?.('dmAjax', () => {
+		// Collects client data and updates cookies used by smart sites
+		window.expireDays = 365;
+		window.visitLength = 30 * 60000;
+		$.setCookie("dm_timezone_offset", (new Date()).getTimezoneOffset(), window.expireDays);
+			setSmartSiteCookiesInternal("dm_this_page_view","dm_last_page_view","dm_total_visits","dm_last_visit");
+	});
+</script>
+<script type="text/javascript">
+    
+    Parameters.NavigationAreaParams.MoreButtonText = 'MORE';
+    
+    Parameters.NavigationAreaParams.LessButtonText = 'LESS';
+    Parameters.HomeLinkText = 'Home';
+    </script>
+<!--  End Script tags -->
+<!--  Site Wide Html Markup -->
+<!--  Site Wide Html Markup -->
+
+
+</body></html>
