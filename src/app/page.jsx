@@ -6,7 +6,7 @@ export default async function Home() {
         <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
           <div className="px-6 pb-24 pt-10 sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-48 lg:pt-40 xl:col-span-6">
             <div className="mx-auto max-w-lg lg:mx-0">
-              <h1 className="mt-24 text-pretty text-5xl font-semibold tracking-tight text-gray-900 sm:mt-10 sm:text-7xl animate-fade-in">
+              <h1 className="mt-24 text-pretty text-5xl tracking-tight text-gray-900 sm:mt-10 sm:text-7xl animate-fade-in">
                 Your Trusted Partner for Healthcare Success
               </h1>
               <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8 animate-fade-in">

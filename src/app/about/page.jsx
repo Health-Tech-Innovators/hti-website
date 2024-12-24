@@ -59,28 +59,28 @@ const features3 = [
 
 export default function AboutPage() {
   return (
-    <div className="py-24 sm:py-32">
+    <div className="py-10 sm:py-10">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+          <h2 className="text-pretty text-4xl tracking-tight text-[#0d9e85] sm:text-5xl">
             About Us
           </h2>
-          <p className="mt-6 text-lg/8 text-gray-600">
+          <p className="mt-6 text-lg/8 text-[#f0f7f5]">
           We specialize in consulting and revenue cycle management, offering innovative solutions tailored to your needs. Our flagship product, VigeoDASH, maximizes patient and business outcomes.
           With over 25 years of experience across the healthcare spectrum, we identify your challenges and establish frameworks for success. Let us guide you through the healthcare continuum. Partner with Healthcare Integrative Solutions today!
           </p>
         </div>
-        <div className="bg-white mx-auto mt-16 max-w-7xl sm:mt-10 lg:mt-14 px-8 py-12 rounded-lg">
+        <div className="bg-[#50657d] mx-auto mt-16 max-w-7xl sm:mt-10 lg:mt-14 px-8 py-12 rounded-lg">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
             {features1.map((feature) => (
               <div key={feature.name} className="flex flex-col">
-                <dt className="text-base/7 font-semibold text-gray-900">
-                  <div className="mb-6 flex size-10 items-center justify-center rounded-lg bg-[#0d9e85]">
-                    <feature.icon aria-hidden="true" className="size-6 text-white" />
+                <dt className="text-base/7 font-semibold text-[#f0f7f5]">
+                  <div className="mb-6 flex size-10 items-center justify-center bg-[#0d9e85]">
+                    <feature.icon aria-hidden="true" className="size-6 text-[#f0f7f5]" />
                   </div>
                   {feature.name}
                 </dt>
-                <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
+                <dd className="mt-1 flex flex-auto flex-col text-base/7 text-[#f0f7f5]">
                   <p className="flex-auto">{feature.description}</p>
                 </dd>
               </div>
@@ -90,21 +90,21 @@ export default function AboutPage() {
       </div>
       <div className="mx-auto mt-16 max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+          <h2 className="text-pretty text-4xl tracking-tight text-[#0d9e85] sm:text-5xl">
             What We Offer
           </h2>
         </div>
-        <div className="bg-white mx-auto mt-16 max-w-7xl sm:mt-10 lg:mt-14 px-8 py-12 rounded-lg">
+        <div className="bg-[#50657d] mx-auto mt-16 max-w-7xl sm:mt-10 lg:mt-14 px-8 py-12 rounded-lg">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
             {features2.map((feature) => (
               <div key={feature.name} className="flex flex-col">
-                <dt className="text-base/7 font-semibold text-gray-900">
-                  <div className="mb-6 flex size-10 items-center justify-center rounded-lg bg-[#0d9e85]">
-                    <feature.icon aria-hidden="true" className="size-6 text-white" />
+                <dt className="text-base/7 font-semibold text-[#f0f7f5]">
+                  <div className="mb-6 flex size-10 items-center justify-center bg-[#0d9e85]">
+                    <feature.icon aria-hidden="true" className="size-6 text-[#f0f7f5]" />
                   </div>
                   {feature.name}
                 </dt>
-                <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
+                <dd className="mt-1 flex flex-auto flex-col text-base/7 text-[#f0f7f5]">
                   <p className="flex-auto">{feature.description}</p>
                 </dd>
               </div>
@@ -114,21 +114,21 @@ export default function AboutPage() {
       </div>
       <div className="mx-auto mt-16 max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+          <h2 className="text-pretty text-4xl tracking-tight text-[#0d9e85] sm:text-5xl">
             Differentiators
           </h2>
         </div>
-        <div className="bg-white mx-auto mt-16 max-w-7xl sm:mt-10 lg:mt-14 px-8 py-12 rounded-lg">
+        <div className="bg-[#50657d] mx-auto mt-16 max-w-7xl sm:mt-10 lg:mt-14 px-8 py-12 rounded-lg">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
             {features3.map((feature) => (
               <div key={feature.name} className="flex flex-col">
-                <dt className="text-base/7 font-semibold text-gray-900">
-                  <div className="mb-6 flex size-10 items-center justify-center rounded-lg bg-[#0d9e85]">
-                    <feature.icon aria-hidden="true" className="size-6 text-white" />
+                <dt className="text-base/7 font-semibold text-[#f0f7f5]">
+                  <div className="mb-6 flex size-10 items-center justify-center bg-[#0d9e85]">
+                    <feature.icon aria-hidden="true" className="size-6 text-[#f0f7f5]" />
                   </div>
                   {feature.name}
                 </dt>
-                <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
+                <dd className="mt-1 flex flex-auto flex-col text-base/7 text-[#f0f7f5]">
                   <p className="flex-auto">{feature.description}</p>
                 </dd>
               </div>

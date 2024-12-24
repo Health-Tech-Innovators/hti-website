@@ -13,7 +13,7 @@ export default function ContactPage() {
             <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
               <div className="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-gray-100 lg:w-1/2">
               </div>
-              <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+              <h2 className="text-pretty text-4xl tracking-tight text-gray-900 sm:text-5xl">
                 Get in touch
               </h2>
               <p className="mt-6 text-lg/8 text-gray-600">

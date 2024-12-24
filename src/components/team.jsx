@@ -1,7 +1,6 @@
 'use client'
 import { useState, useRef, useEffect } from 'react'
 import { Container } from "@/components/container"
-import { Heading, Subheading } from "@/components/text2"
 
 function Card({ person, isExpanded, onExpand }) {
   const cardRef = useRef(null)
@@ -29,11 +28,13 @@ function Card({ person, isExpanded, onExpand }) {
       <img
         alt={person.name}
         src={person.imageUrl}
-        className="absolute inset-0 object-cover"
+        className={`absolute inset-0 object-cover ${
+          isExpanded ? 'w-[300px] h-[400px] left-4 top-4 rounded-3xl' : ''
+        }`}
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 rounded-3xl bg-gradient-to-t from-[#25313f] from-5% to-45% ring-1 ring-inset ring-gray-950/10 lg:from-25%"
+        className="absolute inset-0 rounded-3xl bg-gradient-to-t from-[#25313f] from-5% to-45% ring-2 ring-inset ring-gray-950/10 lg:from-25%"
       />
       
       {!isExpanded ? (
@@ -94,7 +95,7 @@ const people = [
       name: 'Nagarajan Sankrithi',
       role: 'Founder / CEO',
       imageUrl: '/team/naga.jpg',
-      bio: `Nagarajan S. Sankrithi is a healthcare strategist/ consultant for Healthcare Integrative Solutions, LLC. He brings his extensive expertise in public health, pharmaceutical informatics to the healthcare space. For the past 17 years, he has built and delivered appropriate informatics solutions to transform research operations for early drug-discovery to pre-clinical research for Abbott/AbbVie, Merck and Massachusetts Public health Laboratory. His informatics career blossomed while he was working as an assay development scientist for a central nervous system (CNS) drug discovery start-up pharmaceutical company EnVivo (Forum). He built the informatics solutions that was instrumental in automating a high throughput behavioral assay data platform and established a cheminformatics data science backbone. He used it to select the clinical candidate for Alzheimer's/ Schizophrenia (EVP-6124/Encenicline).
+      bio: `Nagarajan S. Sankrithi is a healthcare strategist and consultant for HealthTech Innovators. He brings his extensive expertise in public health, pharmaceutical informatics to the healthcare space. For the past 17 years, he has built and delivered appropriate informatics solutions to transform research operations for early drug-discovery to pre-clinical research for Abbott/AbbVie, Merck and Massachusetts Public health Laboratory. His informatics career blossomed while he was working as an assay development scientist for a central nervous system (CNS) drug discovery start-up pharmaceutical company EnVivo (Forum). He built the informatics solutions that was instrumental in automating a high throughput behavioral assay data platform and established a cheminformatics data science backbone. He used it to select the clinical candidate for Alzheimer's/ Schizophrenia (EVP-6124/Encenicline).
             
             Nagarajan is currently consulting at AstraZeneca where he is helping the Antibody and Protein Engineering Group to develop an informatics solution for the proteomics, metabolomics and lipidomics lab. While pursuing the pharmaceutical research consulting, he is co-implementing a full-service Transitional Care Program.
             
@@ -105,20 +106,24 @@ const people = [
       name: 'Aanika Rahman',
       role: 'Solutions Architect',
       imageUrl: '/team/aanika.jpg',
-      bio: `Aanika serves as the Solutions Developer at HealthTech Innovators, seamlessly undertaking the roles of a solutions architect, data engineer, and tech lead.
+      bio: `Aanika serves as the Solutions Architect at HealthTech Innovators, seamlessly undertaking the roles of a solutions developer, data engineer, and tech lead.
   
             In her multifaceted role, Aanika leverages the broad experience she acquired from various startups and previous collaborations with clients in the financial, technology, health, and energy sectors. She established the groundwork for her career by earning a Bachelor of Science in Mathematics and Computer Science from McGill University. Her technical expertise now spans data analytics, data visualization, fullstack development, and machine learning.
   
             Dedicated to fostering learning and community engagement, Aanika co-chaired the Canadian University Software Engineering Conference, attracting 500+ students nationwide. She also participated in and coordinated the AI4Good Lab, demonstrating her commitment to leveraging technology for social good. Beyond the tech realm, Aanika has also made meaningful impact by working closely with children with disabilities in Bermuda and Montreal.
   
-            Fueled by a passion for both technology and community, Aanika stands as a driving force in Healthcare Integrative Solutions. Embracing challenges with a strategic mindset, Aanika continues to strive for innovative software solutions that redefine the future of healthcare.`,
+            Fueled by a passion for both technology and community, Aanika stands as a driving force in HealthTech Innovators. Embracing challenges with a strategic mindset, Aanika continues to strive for innovative software solutions that redefine the future of healthcare.`,
       linkedinUrl: 'https://www.linkedin.com/in/aanikarahman/',
     },
     {
       name: 'Maharshee Karia',
       role: 'Lead Solutions Developer',
-      imageUrl: '/images/team/maharshee.jpg',
-      bio: '',
+      imageUrl: '/team/maharshee.jpg',
+      bio: `Maharshee began her career as a Big Data Developer, honing her skills in managing and analyzing large datasets to derive actionable insights. This early experience, combined with her strong foundation in mathematics, earned through her Bachelor of Science degree from McGill University, laid the groundwork for her ability to tackle complex technical challenges.
+
+            Now a Lead Solutions Developer at HealthTech Innovators, she excels in designing and implementing innovative solutions. Her analytical mindset and passion for problem-solving enable her to bridge the gap between technical complexity and user-friendly design. She is currently focused on expanding her expertise in full-stack development, seamlessly combining her interest in UI/UX design with technical proficiency to craft applications that are not only functional but also intuitive and visually appealing.
+
+            Outside of her professional pursuits, Maharshee channels her creativity into activities like dance, where she finds inspiration and balance. Her dedication to continuous growth, both technically and creatively, defines her approach to work and life.`,
       linkedinUrl: 'https://www.linkedin.com/in/maharshee-karia/',
     },
   ]
@@ -127,25 +132,29 @@ export function TeamContent() {
   const [expandedPerson, setExpandedPerson] = useState(null)
 
   return (
-    <div className="flex flex-col items-center gap-16">
-      <Container>
-        <div>
-          <Subheading>A dynamic group of individuals passionate about what we do and dedicated to delivering the best results</Subheading>
-          <Heading as="h3" className="mt-2">
-            About the team
-          </Heading>
-        </div>
-      </Container>
+    <div className="overflow-hidden bg-gray py-10 sm:py-10">
+      <div className="flex flex-col items-center gap-16">
+        <Container>
+          <div>
+            {/* <h3 className="text-pretty text-base tracking-tight text-[#25313f] sm:text-2xl mb-4">   
+                A dynamic group of individuals passionate about what we do and dedicated to delivering the best results
+            </h3> */}
+            <h2 className="text-pretty text-6xl tracking-tight text-[#0d9e85] sm:text-5xl mt-10">
+                About the team
+            </h2>
+          </div>
+        </Container>
 
-      <div className="flex flex-wrap items-start justify-center gap-6 px-4">
-        {people.map((person) => (
-          <Card 
-            key={person.name} 
-            person={person}
-            isExpanded={expandedPerson === person.name}
-            onExpand={(name) => setExpandedPerson(name === expandedPerson ? null : name)}
-          />
-        ))}
+        <div className="flex flex-wrap items-start justify-center gap-6 px-4">
+          {people.map((person) => (
+            <Card 
+              key={person.name} 
+              person={person}
+              isExpanded={expandedPerson === person.name}
+              onExpand={(name) => setExpandedPerson(name === expandedPerson ? null : name)}
+            />
+          ))}
+        </div>
       </div>
     </div>
   )

@@ -71,14 +71,14 @@ export default async function ProductsPage() {
     <>
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div className="max-sm:w-full sm:flex-1">
-          <div className="py-24 sm:py-32">
+          <div className="py-10 sm:py-10">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
               <div className="mx-auto max-w-6xl text-center">
-                <p className="mt-2 text-balance text-4xl font-semibold tracking-tight text-[#0d9e85] sm:text-5xl">
+                <p className="mt-2 text-balance text-4xl tracking-tight text-[#0d9e85] sm:text-5xl">
                   With our dynamic dashboard, unlock the power of your data to improve
                 </p>
               </div>
-              <p className="mx-auto mt-6 max-w-1xl text-pretty text-center text-lg font-medium text-gray-600 sm:text-xl/8">
+              <p className="mx-auto mt-6 max-w-1xl text-pretty text-center text-lg font-medium text-[#f0f7f5] sm:text-xl/8">
               Utilize billing information with our claim transparency feature for comprehensive RCM insights, spanning admission to collections.
               Improve payer partnerships by harnessing performance metrics for more effective negotiation strategies.
               Access proactive analytics for real-time cash flow management, rather than waiting until month-end.

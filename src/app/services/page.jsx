@@ -47,11 +47,11 @@ const features = [
   
   export default function ServicesPage() {
     return (
-      <div className="relative bg-[#3c4c5e] py-24 sm:py-32 lg:py-40 rounded-xl">
+      <div className="relative bg-[#3c4c5e] py-10 sm:py-10 lg:py-10 rounded-xl">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="text-pretty text-4xl font-semibold tracking-tight text-[#0d9e85] sm:text-5xl mb-10">Services for your business</h2>
-            <h3 className="text-pretty text-2xl font-semibold tracking-tight text-[#0d9e85] sm:text-3xl mb-10">Healthcare Consulting</h3>
+            <h2 className="text-pretty text-4xl tracking-tight text-[#0d9e85] sm:text-5xl mb-10">Services for your business</h2>
+            <h3 className="text-pretty text-2xl tracking-tight text-[#0d9e85] sm:text-3xl mb-10">Healthcare Consulting</h3>
             <p className="mt-2 text-lg/8 text-[#f0f7f5]">Elevate your healthcare strategies with tailored guidance in home health, physician practice, and pharmaceutical management, fostering strategic excellence in an ever-evolving landscape.</p>
           </div>
         </div>
@@ -77,14 +77,14 @@ const features = [
         <Divider className="mt-20 mb-20 bg-[#0d9e85]" />
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            <h3 className="text-pretty text-2xl font-semibold tracking-tight text-[#0d9e85] sm:text-3xl mb-10">Snowflake Consulting</h3>
+            <h3 className="text-pretty text-2xl tracking-tight text-[#0d9e85] sm:text-3xl mb-10">Snowflake Consulting</h3>
             <p className="mt-2 text-lg/8 text-[#f0f7f5]">Leverage the power of Snowflake to unlock new insights and drive business growth. Our expert consultants provide tailored solutions to optimize your data architecture, enhance data governance, and drive innovation.</p>
           </div>
         </div>
         <Divider className="mt-20 mb-20 bg-[#0d9e85]" />
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            <h3 className="text-pretty text-2xl font-semibold tracking-tight text-[#0d9e85] sm:text-3xl mb-10">Pharma Data Management</h3>
+            <h3 className="text-pretty text-2xl tracking-tight text-[#0d9e85] sm:text-3xl mb-10">Pharma Data Management</h3>
             <p className="mt-2 text-lg/8 text-[#f0f7f5]">Advance your pharmaceutical research endeavors with strategic guidance tailored to your specific needs. From optimizing laboratory processes to enhancing data analytics capabilities, we offer expertise in LIMS, ELN, data analytics, and more.</p>
           </div>
         </div>
