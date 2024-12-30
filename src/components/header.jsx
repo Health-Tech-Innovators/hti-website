@@ -79,10 +79,10 @@ export default function Header() {
       <div className="mx-auto max-w-7.25xl px-4 sm:px-6 lg:px-10">
         <div className="flex h-24 items-center justify-between">
           <div className="shrink-0">
-            <a href="/hti-website" onClick={() => setActiveLink('home')}>
+            <a href={`${process.env.NEXT_PUBLIC_BASE_PATH}/`} onClick={() => setActiveLink('home')}>
               <img
                 alt="Your Company"
-                src="/logo/hti_long.jpg"
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH}/logo/hti_long.jpg`}
                 className="h-24 w-auto cursor-pointer"
               />
             </a>
@@ -96,12 +96,12 @@ export default function Header() {
               >
                 Home
               </a> */}
-              <Menu as="div" className="relative">
+              {/* <Menu as="div" className="relative">
                 <MenuButton className={getLinkClass('products')}>
                   Products
                 </MenuButton>
                 <ProductsDropdownMenu />
-              </Menu>
+              </Menu> */}
               {/* <Menu as="div" className="relative">
                 <MenuButton className={getLinkClass('services')}>
                   Services
@@ -109,21 +109,28 @@ export default function Header() {
                 <ServicesDropdownMenu />
               </Menu> */}
               <a
-                href="/hti-website/services"
+                href={`${process.env.NEXT_PUBLIC_BASE_PATH}/products/vigeodash`}
+                onClick={() => setActiveLink('products')}
+                className={getLinkClass('products')}
+              >
+                Products
+              </a>
+              <a
+                href={`${process.env.NEXT_PUBLIC_BASE_PATH}/services`}
                 onClick={() => setActiveLink('services')}
                 className={getLinkClass('services')}
               >
                 Services
               </a>
               <a
-                href="/hti-website/team"
+                href={`${process.env.NEXT_PUBLIC_BASE_PATH}/team`}
                 onClick={() => setActiveLink('team')}
                 className={getLinkClass('team')}
               >
                 Team
               </a>
               <a
-                href="/hti-website/contact"
+                href={`${process.env.NEXT_PUBLIC_BASE_PATH}/contact`}
                 onClick={() => setActiveLink('contact')}
                 className={getLinkClass('contact')}
               >

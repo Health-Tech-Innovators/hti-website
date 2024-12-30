@@ -4,7 +4,7 @@ const tiers = [
   {
     name: 'Essential',
     id: 'tier-essential',
-    href: '/hti-website/contact',
+    href: `${process.env.NEXT_PUBLIC_BASE_PATH}/contact`, 
     // priceMonthly: '$',
     description: 'Ideal for organizations that require process transparency for existing teams',
     features: [
@@ -18,7 +18,7 @@ const tiers = [
   {
     name: 'Pro',
     id: 'tier-pro',
-    href: '/hti-website/contact',
+    href: `${process.env.NEXT_PUBLIC_BASE_PATH}/contact`, 
     // priceMonthly: '$',
     description: 'Designed for organizations that require operational and business intelligence for existing teams',
     features: [
@@ -36,7 +36,7 @@ const tiers = [
   {
     name: 'Enterprise',
     id: 'tier-enterprise',
-    href: '/hti-website/contact',
+    href: `${process.env.NEXT_PUBLIC_BASE_PATH}/contact`, 
     // priceMonthly: '$',
     description: 'Perfect for organizations that require process transparency and resources for complete Revenue Cycle Management',
     features: [

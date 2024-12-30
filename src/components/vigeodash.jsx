@@ -23,11 +23,11 @@ const features = [
 ]
 
 const carouselImages = [
-  '/product/vigeodash_files/1-1fc9bf12-1440w.png',
-  '/product/vigeodash_files/2-a476f3c4-1440w.png',
-  '/product/vigeodash_files/3-bfbcee7e-1440w.png',
-  '/product/vigeodash_files/4-da63deff-1440w.png',
-  '/product/vigeodash_files/5-4d4db788-1440w.png',
+  `${process.env.NEXT_PUBLIC_BASE_PATH}/product/vigeodash_files/1-1fc9bf12-1440w.png`,
+  `${process.env.NEXT_PUBLIC_BASE_PATH}/product/vigeodash_files/2-a476f3c4-1440w.png`,
+  `${process.env.NEXT_PUBLIC_BASE_PATH}/product/vigeodash_files/3-bfbcee7e-1440w.png`,
+  `${process.env.NEXT_PUBLIC_BASE_PATH}/product/vigeodash_files/4-da63deff-1440w.png`,
+  `${process.env.NEXT_PUBLIC_BASE_PATH}/product/vigeodash_files/5-4d4db788-1440w.png`,
 ]
 
 export default function VigeodashContent() {
@@ -99,7 +99,7 @@ export default function VigeodashContent() {
             
             <div className="mt-10 text-center">
               <a
-                href="/hti-website/products/pricing"
+                href={`${process.env.NEXT_PUBLIC_BASE_PATH}/products/pricing`}
                 className="inline-flex items-center rounded-md bg-[#0d9e85] px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-[#0b8a74] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0d9e85]"
               >
                 VigeoDASH Pricing
