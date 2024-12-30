@@ -1,7 +1,7 @@
 // linkedin, facebook
 const navigation = {
   main: [
-    { name: 'About Us', href: '/about' },
+    { name: 'About Us', href: 'hti-website/about' },
     // { name: 'Blog', href: '#' },
     // { name: 'Jobs', href: '#' },
     // { name: 'Press', href: '#' },

@@ -79,7 +79,7 @@ export default function Header() {
       <div className="mx-auto max-w-7.25xl px-4 sm:px-6 lg:px-10">
         <div className="flex h-24 items-center justify-between">
           <div className="shrink-0">
-            <a href="/" onClick={() => setActiveLink('home')}>
+            <a href="/hti-website" onClick={() => setActiveLink('home')}>
               <img
                 alt="Your Company"
                 src="/logo/hti_long.jpg"
@@ -109,21 +109,21 @@ export default function Header() {
                 <ServicesDropdownMenu />
               </Menu> */}
               <a
-                href="/services"
+                href="/hti-website/services"
                 onClick={() => setActiveLink('services')}
                 className={getLinkClass('services')}
               >
                 Services
               </a>
               <a
-                href="/team"
+                href="/hti-website/team"
                 onClick={() => setActiveLink('team')}
                 className={getLinkClass('team')}
               >
                 Team
               </a>
               <a
-                href="/contact"
+                href="/hti-website/contact"
                 onClick={() => setActiveLink('contact')}
                 className={getLinkClass('contact')}
               >

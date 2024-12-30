@@ -14,12 +14,12 @@ export default async function Home() {
               </p>
               <div className="mt-10 flex items-center gap-x-6 animate-fade-in">
                 <a
-                  href="/contact"
+                  href="hti-website/contact"
                   className="rounded-md bg-[#0d9e85] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#25313f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#25313f] transition-all duration-300 hover:scale-105"
                 >
                   Contact Us
                 </a>
-                <a href="/about" className="text-sm/6 font-semibold text-gray-900 transition-all duration-300 hover:translate-x-2">
+                <a href="hti-website/about" className="text-sm/6 font-semibold text-gray-900 transition-all duration-300 hover:translate-x-2">
                   Learn more <span aria-hidden="true">→</span>
                 </a>
               </div>
