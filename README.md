@@ -1,6 +1,4 @@
-# Catalyst Demo
-
-To run the Catalyst demo, first install the npm dependencies:
+Install the npm dependencies:
 
 ```bash
 npm install

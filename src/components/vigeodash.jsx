@@ -49,7 +49,7 @@ export default function VigeodashContent() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-10">
             <img 
-              src="/product/vigeodash_files/vigeodash+logo+tm-4x-1920w.png" 
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH}/product/vigeodash_files/vigeodash+logo+tm-4x-1920w.png`} 
               alt="VigeoDASH" 
               className="h-28 w-auto mx-auto"
             />
