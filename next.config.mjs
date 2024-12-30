@@ -1,9 +1,13 @@
 /** @type {import('next').NextConfig} */
 
-const isProd = process.env.NODE_ENV === 'production'
+// const isProd = process.env.NODE_ENV === 'production'
+const basePath = process.env.NODE_ENV === 'production' 
+  ? process.env.NEXT_PUBLIC_BASE_PATH || '/hti-website' 
+  : '';
 
 const nextConfig = {
-    basePath: isProd ? '/hti-website' : '',
+    basePath: basePath,
+    // basePath: isProd ? '/hti-website' : '',
     output: 'export',
     distDir: 'dist',
     images: {
