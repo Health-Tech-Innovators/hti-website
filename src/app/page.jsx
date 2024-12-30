@@ -14,12 +14,12 @@ export default async function Home() {
               </p>
               <div className="mt-10 flex items-center gap-x-6 animate-fade-in">
                 <a
-                  href="hti-website/contact"
+                  href="/hti-website/contact"
                   className="rounded-md bg-[#0d9e85] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#25313f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#25313f] transition-all duration-300 hover:scale-105"
                 >
                   Contact Us
                 </a>
-                <a href="hti-website/about" className="text-sm/6 font-semibold text-gray-900 transition-all duration-300 hover:translate-x-2">
+                <a href="/hti-website/about" className="text-sm/6 font-semibold text-gray-900 transition-all duration-300 hover:translate-x-2">
                   Learn more <span aria-hidden="true">→</span>
                 </a>
               </div>
@@ -28,7 +28,7 @@ export default async function Home() {
           <div className="relative lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0">
             <img
               alt=""
-              src="/product/home.jpg"
+              src="/hti-website/product/home.jpg"
               className="aspect-[3/2] w-full bg-gray-50 object-cover lg:absolute lg:inset-0 lg:aspect-auto lg:h-full"
             />
           </div>

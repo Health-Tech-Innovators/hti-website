@@ -99,7 +99,7 @@ export default function VigeodashContent() {
             
             <div className="mt-10 text-center">
               <a
-                href="hti-website/products/pricing"
+                href="/hti-website/products/pricing"
                 className="inline-flex items-center rounded-md bg-[#0d9e85] px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-[#0b8a74] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0d9e85]"
               >
                 VigeoDASH Pricing
