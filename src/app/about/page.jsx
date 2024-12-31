@@ -1,17 +1,17 @@
-import { InboxIcon, TrashIcon, UsersIcon } from '@heroicons/react/24/outline'
+import { UsersIcon, ClockIcon, ChartBarIcon, ChartPieIcon, DocumentTextIcon, LightBulbIcon, PresentationChartLineIcon, WrenchScrewdriverIcon } from '@heroicons/react/24/outline'
 
 const features1 = [
   {
     name: 'Our Mission',
     description: 'Enhancing health outcomes through collaborative efforts, data analytics, technological innovation, and operational excellence services.',
     href: '#',
-    icon: InboxIcon,
+    icon: ChartBarIcon,
   },
   {
     name: 'Our Vision',
     description: 'Revolutionizing healthcare delivery by integrating services and eliminating industry fragmentation, with a core focus on patient health.', 
     href: '#',
-    icon: UsersIcon,
+    icon: LightBulbIcon,
   },
 ]
 
@@ -20,19 +20,19 @@ const features2 = [
       name: 'Customization',
       description: 'We understand that every practice is different. That\'s why we offer both turn-key solutions and tailored options to suit your specific requirements.',
       href: '#',
-      icon: InboxIcon,
+      icon: DocumentTextIcon,
     },
     {
       name: 'Innovation',
       description: 'Innovation is at the heart of everything we do. We utilize cutting-edge telehealth strategies to coordinate care and improve accessibility for patients.', 
       href: '#',
-      icon: UsersIcon,
+      icon: PresentationChartLineIcon,
     },
     {
       name: 'Analytics',
       description: 'We leverage the power of analytics to identify early warning signs of potential issues and take proactive measures to address them before they escalate.',
       href: '#',
-      icon: TrashIcon,
+      icon: ChartPieIcon,
     },
   ]
 
@@ -41,19 +41,19 @@ const features3 = [
     name: 'Health Outcomes Driver',
     description: 'Our focus is on improving patient outcomes, both during and after their time under your care. We work tirelessly to ensure that every patient experiences the best possible health outcomes.',
     href: '#',
-    icon: InboxIcon,
+    icon: WrenchScrewdriverIcon,
 },
 {
     name: 'Quadruple Aim Strategy',
     description: 'We believe in going above and beyond the traditional Triple Aim strategy by adding an extra layer of focus on provider well-being, ensuring that everyone involved in the care process experiences positive outcomes.', 
     href: '#',
-    icon: UsersIcon,
+    icon: ClockIcon,
 },
 {
     name: 'Patient Focused',
     description: 'Above all, we are committed to putting patients first. By increasing patient engagement and satisfaction, we create a healthcare experience that is truly centered around the individual.',
     href: '#',
-    icon: TrashIcon,
+    icon: UsersIcon,
 },
 ]
 
