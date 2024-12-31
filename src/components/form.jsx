@@ -15,7 +15,7 @@ export default function Form() {
     e.preventDefault()
     
     try {
-      const response = await fetch(`/api`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_PATH}/api`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
