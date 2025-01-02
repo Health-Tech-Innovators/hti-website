@@ -76,70 +76,119 @@ export default function Header() {
 
   return (
     <Disclosure as="nav" className="bg-[#25313f]">
-      <div className="mx-auto max-w-7.25xl px-4 sm:px-6 lg:px-10">
-        <div className="flex h-24 items-center justify-between">
-          <div className="shrink-0">
-            <a href={`${process.env.NEXT_PUBLIC_BASE_PATH}/`} onClick={() => setActiveLink('home')}>
-              <img
-                alt="Your Company"
-                src={`${process.env.NEXT_PUBLIC_BASE_PATH}/logo/hti_long.jpg`}
-                className="h-24 w-auto cursor-pointer"
-              />
-            </a>
-          </div>
-          <div className="hidden sm:block">
-            <div className="flex space-x-5 ">
-              {/* <a 
-                href="/" 
-                onClick={() => setActiveLink('home')}
-                className={getLinkClass('home')}
-              >
-                Home
-              </a> */}
-              {/* <Menu as="div" className="relative">
-                <MenuButton className={getLinkClass('products')}>
+      {({ open }) => (
+        <div className="mx-auto max-w-7.25xl px-4 sm:px-6 lg:px-10">
+          <div className="flex h-24 items-center justify-between">
+            <div className="shrink-0">
+              <a href={`${process.env.NEXT_PUBLIC_BASE_PATH}/`} onClick={() => setActiveLink('home')}>
+                <img
+                  alt="Your Company"
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH}/logo/hti_long.jpg`}
+                  className="h-24 w-auto cursor-pointer"
+                />
+              </a>
+            </div>
+            <div className="hidden sm:block">
+              <div className="flex space-x-5 ">
+                {/* <a 
+                  href="/" 
+                  onClick={() => setActiveLink('home')}
+                  className={getLinkClass('home')}
+                >
+                  Home
+                </a> */}
+                {/* <Menu as="div" className="relative">
+                  <MenuButton className={getLinkClass('products')}>
+                    Products
+                  </MenuButton>
+                  <ProductsDropdownMenu />
+                </Menu> */}
+                {/* <Menu as="div" className="relative">
+                  <MenuButton className={getLinkClass('services')}>
+                    Services
+                  </MenuButton>
+                  <ServicesDropdownMenu />
+                </Menu> */}
+                <a
+                  href={`${process.env.NEXT_PUBLIC_BASE_PATH}/products/vigeodash`}
+                  onClick={() => setActiveLink('products')}
+                  className={getLinkClass('products')}
+                >
                   Products
-                </MenuButton>
-                <ProductsDropdownMenu />
-              </Menu> */}
-              {/* <Menu as="div" className="relative">
-                <MenuButton className={getLinkClass('services')}>
+                </a>
+                <a
+                  href={`${process.env.NEXT_PUBLIC_BASE_PATH}/services`}
+                  onClick={() => setActiveLink('services')}
+                  className={getLinkClass('services')}
+                >
                   Services
-                </MenuButton>
-                <ServicesDropdownMenu />
-              </Menu> */}
-              <a
-                href={`${process.env.NEXT_PUBLIC_BASE_PATH}/products/vigeodash`}
+                </a>
+                <a
+                  href={`${process.env.NEXT_PUBLIC_BASE_PATH}/team`}
+                  onClick={() => setActiveLink('team')}
+                  className={getLinkClass('team')}
+                >
+                  Team
+                </a>
+                <a
+                  href={`${process.env.NEXT_PUBLIC_BASE_PATH}/contact`}
+                  onClick={() => setActiveLink('contact')}
+                  className={getLinkClass('contact')}
+                >
+                  Contact Us
+                </a>
+              </div>
+            </div>
+
+            <div className="sm:hidden">
+              <DisclosureButton className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white">
+                {open ? (
+                  <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                ) : (
+                  <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                )}
+              </DisclosureButton>
+            </div>
+          </div>
+
+          <DisclosurePanel className="sm:hidden">
+            <div className="space-y-1 px-2 pb-3 pt-2">
+              <Disclosure.Button
+                as="a"
+                href={`/products/vigeodash`}
                 onClick={() => setActiveLink('products')}
                 className={getLinkClass('products')}
               >
                 Products
-              </a>
-              <a
-                href={`${process.env.NEXT_PUBLIC_BASE_PATH}/services`}
+              </Disclosure.Button>
+              <Disclosure.Button
+                as="a"
+                href={`/services`}
                 onClick={() => setActiveLink('services')}
                 className={getLinkClass('services')}
               >
                 Services
-              </a>
-              <a
-                href={`${process.env.NEXT_PUBLIC_BASE_PATH}/team`}
+              </Disclosure.Button>
+              <Disclosure.Button
+                as="a"
+                href={`/team`}
                 onClick={() => setActiveLink('team')}
                 className={getLinkClass('team')}
               >
                 Team
-              </a>
-              <a
-                href={`${process.env.NEXT_PUBLIC_BASE_PATH}/contact`}
+              </Disclosure.Button>
+              <Disclosure.Button
+                as="a"
+                href={`/contact`}
                 onClick={() => setActiveLink('contact')}
                 className={getLinkClass('contact')}
               >
                 Contact Us
-              </a>
+              </Disclosure.Button>
             </div>
-          </div>
+          </DisclosurePanel>
         </div>
-      </div>
+      )}
     </Disclosure>
   )
 }

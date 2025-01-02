@@ -23,11 +23,11 @@ const features = [
 ]
 
 const carouselImages = [
-  `${process.env.NEXT_PUBLIC_BASE_PATH}/product/vigeodash_files/1-1fc9bf12-1440w.png`,
-  `${process.env.NEXT_PUBLIC_BASE_PATH}/product/vigeodash_files/2-a476f3c4-1440w.png`,
-  `${process.env.NEXT_PUBLIC_BASE_PATH}/product/vigeodash_files/3-bfbcee7e-1440w.png`,
-  `${process.env.NEXT_PUBLIC_BASE_PATH}/product/vigeodash_files/4-da63deff-1440w.png`,
-  `${process.env.NEXT_PUBLIC_BASE_PATH}/product/vigeodash_files/5-4d4db788-1440w.png`,
+  `/product/vigeodash_files/1-1fc9bf12-1440w.png`,
+  `/product/vigeodash_files/2-a476f3c4-1440w.png`,
+  `/product/vigeodash_files/3-bfbcee7e-1440w.png`,
+  `/product/vigeodash_files/4-da63deff-1440w.png`,
+  `/product/vigeodash_files/5-4d4db788-1440w.png`,
 ]
 
 export default function VigeodashContent() {
