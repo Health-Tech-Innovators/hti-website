@@ -19,7 +19,7 @@ function Card({ person, isExpanded, onExpand }) {
       ref={cardRef}
       className={`relative flex flex-col justify-end overflow-hidden rounded-3xl cursor-pointer transition-all duration-300 ease-in-out
         ${isExpanded 
-          ? 'w-[800px] h-[800px]' 
+          ? 'w-full md:w-[800px] h-auto md:h-[800px] max-w-[95vw]' 
           : 'w-[280px] sm:w-[300px] h-[380px] sm:h-[400px] hover:scale-105'
         }
         ${isExpanded ? 'basis-full' : ''}`}
@@ -29,7 +29,7 @@ function Card({ person, isExpanded, onExpand }) {
         alt={person.name}
         src={person.imageUrl}
         className={`absolute inset-0 object-cover ${
-          isExpanded ? 'w-[300px] h-[400px] left-4 top-4 rounded-3xl' : ''
+          isExpanded ? 'w-full md:w-[300px] h-[250px] md:h-[400px] position-relative md:left-4 md:top-4 rounded-3xl' : ''
         }`}
       />
       <div
@@ -49,7 +49,7 @@ function Card({ person, isExpanded, onExpand }) {
           </figcaption>
         </figure>
       ) : (
-        <div className="relative p-6 bg-white/95 rounded-3xl m-4">
+        <div className="relative p-4 md:p-6 bg-white/95 rounded-3xl m-2 md:m-4">
           <div className="flex justify-between items-start mb-4">
             <div>
               <h3 className="text-2xl font-bold text-[#0d9e85]">{person.name}</h3>
@@ -65,7 +65,7 @@ function Card({ person, isExpanded, onExpand }) {
               ✕
             </button>
           </div>
-          <div className="flex gap-6">
+          <div className="flex flex-col md:flex-row gap-4 md:gap-6">
             <div className="space-y-4 flex-1">
               <p className="text-zinc-700 text-sm whitespace-pre-line">{person.bio}</p>
               {person.linkedinUrl && (
