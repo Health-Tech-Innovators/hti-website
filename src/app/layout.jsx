@@ -1,8 +1,7 @@
-// test out thinner headers
-
 import '@/styles/tailwind.css'
 import { ApplicationLayout } from './application-layout'
 import { DynamicBackground } from '@/components/background'
+import EmailJSInit from '@/components/email'
 
 export const metadata = {
   title: {
@@ -26,6 +25,7 @@ export default async function RootLayout({ children }) {
       </head>
       <body>
         <DynamicBackground>
+          <EmailJSInit />
           <ApplicationLayout>{children}</ApplicationLayout>
         </DynamicBackground>
       </body>

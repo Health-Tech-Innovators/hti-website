@@ -1,6 +1,7 @@
 'use client'
 import { BuildingOffice2Icon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline'
 import { useState } from 'react'
+import emailjs from '@emailjs/browser'
 
 export default function Form() {
   const [formData, setFormData] = useState({
@@ -10,34 +11,35 @@ export default function Form() {
     phoneNumber: '',
     message: ''
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState(null)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    setIsSubmitting(true)
     
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_PATH}/api`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
+      const response = await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        {
+          name: `${e.target.firstName.value} ${e.target.lastName.value}`,
+          email: e.target.email.value,
+          phone: e.target.phoneNumber.value,
+          message: e.target.message.value,
         },
-        body: JSON.stringify(formData),
-      })
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+      )
 
-      if (response.ok) {
-        alert('Message sent successfully!')
-        setFormData({
-          firstName: '',
-          lastName: '',
-          email: '',
-          phoneNumber: '',
-          message: ''
-        })
-      } else {
-        alert('Failed to send message. Please try again.')
+      if (response.status === 200) {
+        setSubmitStatus('success')
+        e.target.reset()
       }
     } catch (error) {
-      console.error('Error:', error)
-      alert('An error occurred. Please try again.')
+      console.error('Error sending email:', error)
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
     }
   }
 
@@ -115,6 +117,16 @@ export default function Form() {
           </div>
           <form onSubmit={handleSubmit} className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48">
             <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
+              {submitStatus === 'success' && (
+                <div className="mb-4 rounded-md bg-green-50 p-4">
+                  <p className="text-sm text-green-700">Message sent successfully!</p>
+                </div>
+              )}
+              {submitStatus === 'error' && (
+                <div className="mb-4 rounded-md bg-red-50 p-4">
+                  <p className="text-sm text-red-700">Failed to send message. Please send us an email at nsankrithi@healthtechinnovators.ai.</p>
+                </div>
+              )}
               <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                 <div>
                   <label htmlFor="first-name" className="block text-sm/6 font-semibold text-gray-900">
@@ -200,8 +212,9 @@ export default function Form() {
                 <button
                   type="submit"
                   className="rounded-md bg-[#0d9e85] px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#25313f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  disabled={isSubmitting}
                 >
-                  Send message
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
               </div>
             </div>
