@@ -6,7 +6,8 @@ const basePath = process.env.NODE_ENV === 'production'
   : '';
 
 const nextConfig = {
-    basePath: basePath,
+    basePath: '',
+    // basePath: basePath,
     // basePath: isProd ? '/hti-website' : '',
     output: 'export',
     distDir: 'dist',
