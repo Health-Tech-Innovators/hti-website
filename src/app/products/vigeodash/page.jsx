@@ -1,7 +1,7 @@
 import VigeodashContent from '@/components/vigeodash'
 
 export const metadata = {
-  title: 'Products',
+  title: 'VigeoDASH',
 }
 
 export default function VigeodashPage() {
