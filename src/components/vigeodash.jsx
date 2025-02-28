@@ -49,7 +49,7 @@ export default function VigeodashContent() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-10">
             <img 
-              src={`${process.env.NEXT_PUBLIC_BASE_PATH}/product/vigeodash_files/vigeodash+logo+tm-4x-1920w.png`} 
+              src={`/product/vigeodash_files/vigeodash+logo+tm-4x-1920w.png`} 
               alt="VigeoDASH" 
               className="h-28 w-auto mx-auto"
             />
@@ -99,7 +99,7 @@ export default function VigeodashContent() {
             
             <div className="mt-10 text-center">
               <a
-                href={`${process.env.NEXT_PUBLIC_BASE_PATH}/products/pricing`}
+                href={`/products/pricing`}
                 className="inline-flex items-center rounded-md bg-[#0d9e85] px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-[#0b8a74] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0d9e85]"
               >
                 VigeoDASH Pricing
