@@ -41,13 +41,13 @@ function ProductsDropdownMenu({ anchor }) {
         <ShieldCheckIcon />
         <DropdownLabel>VigeoDASH</DropdownLabel>
       </DropdownItem>
-      {/* <DropdownItem 
-        href="/products/pricing"
-        className={`cursor-pointer ${pathname === '/products/pricing' ? 'font-bold' : ''}`}
+      <DropdownItem 
+        href="/products/demo"
+        className={`cursor-pointer ${pathname === '/products/demo' ? 'font-bold' : ''}`}
       >
         <LightBulbIcon />
-        <DropdownLabel>VigeoDASH Pricing</DropdownLabel>
-      </DropdownItem> */}
+        <DropdownLabel>Snowflake Challenge 2025</DropdownLabel>
+      </DropdownItem>
     </DropdownMenu>
   )
 }
@@ -97,25 +97,25 @@ export default function Header() {
                 >
                   Home
                 </a> */}
-                {/* <Menu as="div" className="relative">
+                <Menu as="div" className="relative">
                   <MenuButton className={getLinkClass('products')}>
-                    Products
+                    Product
                   </MenuButton>
                   <ProductsDropdownMenu />
-                </Menu> */}
+                </Menu>
                 {/* <Menu as="div" className="relative">
                   <MenuButton className={getLinkClass('services')}>
                     Services
                   </MenuButton>
                   <ServicesDropdownMenu />
                 </Menu> */}
-                <a
+                {/* <a
                   href={`${process.env.NEXT_PUBLIC_BASE_PATH}/products/vigeodash`}
                   onClick={() => setActiveLink('products')}
                   className={getLinkClass('products')}
                 >
                   Products
-                </a>
+                </a> */}
                 <a
                   href={`${process.env.NEXT_PUBLIC_BASE_PATH}/services`}
                   onClick={() => setActiveLink('services')}
@@ -153,13 +153,16 @@ export default function Header() {
 
           <DisclosurePanel className="sm:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
-              <Disclosure.Button
-                as="a"
-                href={`/products/vigeodash`}
-                onClick={() => setActiveLink('products')}
-                className={getLinkClass('products')}
-              >
-                Products
+              <Disclosure.Button>
+              <Menu as="div" className="relative">
+                <MenuButton
+                  as={Disclosure.Button}
+                  className={getLinkClass('products')}
+                >
+                  Product
+                </MenuButton>
+                <ProductsDropdownMenu />
+              </Menu>
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
