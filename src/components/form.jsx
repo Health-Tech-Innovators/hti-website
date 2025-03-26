@@ -93,7 +93,7 @@ export default function Form() {
                   </dt>
                   <dd>
                     <a href="mailto:nsankrithi@healthtechinnovators.ai" className="hover:text-gray-900">
-                      nsankrithi@healthtechinnovators.ai
+                      info@healthtechinnovators.ai
                     </a>
                   </dd>
                 </div>
