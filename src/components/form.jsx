@@ -162,7 +162,7 @@ export default function Form() {
                 </div>
                 <div className="sm:col-span-2">
                   <label htmlFor="email" className="block text-sm/6 font-semibold text-gray-900">
-                    Email
+                    Email <span className="text-red-600">*</span>
                   </label>
                   <div className="mt-2.5">
                     <input
@@ -170,6 +170,7 @@ export default function Form() {
                       name="email"
                       type="email"
                       autoComplete="email"
+                      required
                       className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
                       value={formData.email}
                       onChange={handleChange}
