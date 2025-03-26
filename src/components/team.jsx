@@ -5,84 +5,32 @@ import { Container } from "@/components/container"
 function Card({ person, isExpanded, onExpand }) {
   const cardRef = useRef(null)
 
-  useEffect(() => {
-    if (isExpanded && cardRef.current) {
-      cardRef.current.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'center'
-      })
-    }
-  }, [isExpanded])
-
   return (
     <div 
       ref={cardRef}
-      className={`relative flex flex-col justify-end overflow-hidden rounded-3xl cursor-pointer transition-all duration-300 ease-in-out
-        ${isExpanded 
-          ? 'w-full md:w-[800px] h-auto md:h-[800px] max-w-[95vw]' 
-          : 'w-[280px] sm:w-[300px] h-[380px] sm:h-[400px] hover:scale-105'
-        }
-        ${isExpanded ? 'basis-full' : ''}`}
+      className="relative flex flex-col justify-end overflow-hidden rounded-3xl cursor-pointer transition-all duration-300 ease-in-out w-[280px] sm:w-[300px] h-[380px] sm:h-[400px] hover:scale-105"
       onClick={() => onExpand(person.name)}
     >
       <img
         alt={person.name}
         src={person.imageUrl}
-        className={`absolute inset-0 object-cover ${
-          isExpanded ? 'w-full md:w-[300px] h-[250px] md:h-[400px] position-relative md:left-4 md:top-4 rounded-3xl' : ''
-        }`}
+        className="absolute inset-0 object-cover"
       />
       <div
         aria-hidden="true"
         className="absolute inset-0 rounded-3xl bg-gradient-to-t from-[#25313f] from-5% to-45% ring-2 ring-inset ring-gray-950/10 lg:from-25%"
       />
       
-      {!isExpanded ? (
-        <figure className="relative p-10">
-          <figcaption className="mt-6 border-t border-white/20 pt-6">
-            <p className="text-sm/6 font-medium text-[#f0f4f7]">{person.name}</p>
-            <p className="text-sm/6 font-medium">
-              <span className="bg-[#0d9e85] bg-clip-text text-transparent">
-                {person.role}
-              </span>
-            </p>
-          </figcaption>
-        </figure>
-      ) : (
-        <div className="relative p-4 md:p-6 bg-white/95 rounded-3xl m-2 md:m-4">
-          <div className="flex justify-between items-start mb-4">
-            <div>
-              <h3 className="text-2xl font-bold text-[#0d9e85]">{person.name}</h3>
-              <p className="text-zinc-600">{person.role}</p>
-            </div>
-            <button 
-              onClick={(e) => {
-                e.stopPropagation()
-                onExpand(null)
-              }}
-              className="p-2 hover:bg-zinc-100 rounded-full"
-            >
-              ✕
-            </button>
-          </div>
-          <div className="flex flex-col md:flex-row gap-4 md:gap-6">
-            <div className="space-y-4 flex-1">
-              <p className="text-zinc-700 text-sm whitespace-pre-line">{person.bio}</p>
-              {person.linkedinUrl && (
-                <a 
-                  href={person.linkedinUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-[#0d9e85] hover:text-[#25313f]"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  View LinkedIn Profile
-                </a>
-              )}
-            </div>
-          </div>
-        </div>
-      )}
+      <figure className="relative p-10">
+        <figcaption className="mt-6 border-t border-white/20 pt-6">
+          <p className="text-sm/6 font-medium text-[#f0f4f7]">{person.name}</p>
+          <p className="text-sm/6 font-medium">
+            <span className="bg-[#0d9e85] bg-clip-text text-transparent">
+              {person.role}
+            </span>
+          </p>
+        </figcaption>
+      </figure>
     </div>
   )
 }
@@ -127,6 +75,20 @@ const people = [
 
 export function TeamContent() {
   const [expandedPerson, setExpandedPerson] = useState(null)
+  const expandedContentRef = useRef(null)
+
+  const handleExpand = (name) => {
+    setExpandedPerson(name === expandedPerson ? null : name)
+    
+    if (name && name !== expandedPerson) {
+      setTimeout(() => {
+        expandedContentRef.current?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center'
+        })
+      }, 100)
+    }
+  }
 
   return (
     <div className="overflow-hidden bg-gray py-10 sm:py-10">
@@ -142,15 +104,64 @@ export function TeamContent() {
           </div>
         </Container>
 
-        <div className="flex flex-wrap items-start justify-center gap-6 px-4">
+        <div className="flex flex-wrap items-start justify-center gap-6 px-4 content-start">
           {people.map((person) => (
             <Card 
               key={person.name} 
               person={person}
               isExpanded={expandedPerson === person.name}
-              onExpand={(name) => setExpandedPerson(name === expandedPerson ? null : name)}
+              onExpand={handleExpand}
             />
           ))}
+          
+          {/* Expanded Content */}
+          {expandedPerson && (
+            <div ref={expandedContentRef} className="w-full max-w-5xl mt-6 animate-fade-slide-up">
+              <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-lg overflow-hidden">
+                <div className="gap-6 p-6">
+                  <div className="flex flex-col">
+                    <div className="pb-4">
+                      <button 
+                        onClick={() => setExpandedPerson(null)}
+                        className="float-right p-2 hover:bg-zinc-100 rounded-full"
+                      >
+                        ✕
+                      </button>
+                      <h3 className="text-3xl font-bold text-[#0d9e85] mb-1">
+                        {people.find(p => p.name === expandedPerson).name}
+                      </h3>
+                      <p className="text-lg text-zinc-600 font-medium">
+                        {people.find(p => p.name === expandedPerson).role}
+                      </p>
+                    </div>
+                    
+                    <div className="prose prose-zinc prose-lg max-w-none">
+                      <p className="whitespace-pre-line leading-relaxed">
+                        {people.find(p => p.name === expandedPerson).bio}
+                      </p>
+                    </div>
+
+                    <div className="mt-6">
+                    {people.find(p => p.name === expandedPerson).linkedinUrl && (
+                      <a 
+                        href={people.find(p => p.name === expandedPerson).linkedinUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-3 px-4 py-2 bg-white rounded-full shadow-sm hover:shadow text-[#0d9e85] hover:text-[#25313f] transition-all duration-300"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                        <span>Connect on LinkedIn</span>
+                      </a>
+                    )}
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
