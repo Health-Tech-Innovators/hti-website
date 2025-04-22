@@ -42,11 +42,11 @@ function ProductsDropdownMenu({ anchor }) {
         <DropdownLabel>VigeoDASH</DropdownLabel>
       </DropdownItem>
       <DropdownItem 
-        href="/products/snowflake-challenge-2025"
-        className={`cursor-pointer ${pathname === '/products/snowflake-challenge-2025' ? 'font-bold' : ''}`}
+        href="/products/demo"
+        className={`cursor-pointer ${pathname === '/products/demo' ? 'font-bold' : ''}`}
       >
         <LightBulbIcon />
-        <DropdownLabel>Snowflake Challenge 2025</DropdownLabel>
+        <DropdownLabel>Demo</DropdownLabel>
       </DropdownItem>
     </DropdownMenu>
   )
